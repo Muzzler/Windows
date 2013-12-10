@@ -1,4 +1,4 @@
-Windows
+Muzzler.Windows
 =======
 
-Windows Interface and Hardware Accelerated Library
+Windows interface and hardware accelerated library
