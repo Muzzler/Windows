@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\BorderlessShadowWindow">
+      <UniqueIdentifier>{a71a1b7b-ad30-4523-8c00-30df7c42ae57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\MuzzlerSync">
+      <UniqueIdentifier>{915695ea-ce31-41e7-8903-f311ce790c86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Aurora">
+      <UniqueIdentifier>{4e9d842b-c21a-4109-87e0-ebe22c83a58a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Aurora">
+      <UniqueIdentifier>{02ae4ec5-35d3-438c-8d2c-785ff224e6c2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MuzzlerSync.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2D.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DAbstract.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DAbstractComponent.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DCamera.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DCameraProperties.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DComponent.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DMatrixFactory.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DRenderable.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DRenderData.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DRootPane.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DWindow.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DWindowProperties.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DVertexData.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DTexture.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DGraphics.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DFileInfo.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DImageProperties.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DBackBuffer.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DTextureBuffer.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DPanel.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DAbstractShader.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DTextureShader.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DAbstractTexture.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DAbstractShape.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DQuad.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DAbstractPipelineComponent.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DQuadX.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DTextureX.cpp">
+      <Filter>Source Files\Aurora</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync background [a] 1.jpg">
+      <Filter>Resource Files\BorderlessShadowWindow</Filter>
+    </Image>
+    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync background [a] 1.png">
+      <Filter>Resource Files\BorderlessShadowWindow</Filter>
+    </Image>
+    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync background [a] 2.jpg">
+      <Filter>Resource Files\BorderlessShadowWindow</Filter>
+    </Image>
+    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync background [a] 3.jpg">
+      <Filter>Resource Files\BorderlessShadowWindow</Filter>
+    </Image>
+    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync background [b] 1.jpg">
+      <Filter>Resource Files\BorderlessShadowWindow</Filter>
+    </Image>
+    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync bottomLeftShadow [a] 1.png">
+      <Filter>Resource Files\BorderlessShadowWindow</Filter>
+    </Image>
+    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync bottomRightShadow [a] 1.png">
+      <Filter>Resource Files\BorderlessShadowWindow</Filter>
+    </Image>
+    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync bottomShadow [a] 1.png">
+      <Filter>Resource Files\BorderlessShadowWindow</Filter>
+    </Image>
+    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync leftShadow [a] 1.png">
+      <Filter>Resource Files\BorderlessShadowWindow</Filter>
+    </Image>
+    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync rightShadow [a] 1.png">
+      <Filter>Resource Files\BorderlessShadowWindow</Filter>
+    </Image>
+    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync topLeftShadow [a] 1.png">
+      <Filter>Resource Files\BorderlessShadowWindow</Filter>
+    </Image>
+    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync topRightShadow [a] 1.png">
+      <Filter>Resource Files\BorderlessShadowWindow</Filter>
+    </Image>
+    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync topShadow [a] 1.png">
+      <Filter>Resource Files\BorderlessShadowWindow</Filter>
+    </Image>
+    <Image Include="resources\images\MuzzlerSync.ico">
+      <Filter>Resource Files\MuzzlerSync</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DAbstract.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DAbstractComponent.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DCamera.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DCameraProperties.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DComponent.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DMatrixFactory.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DRenderable.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DRenderData.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DRootPane.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DWindowProperties.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="MuzzlerSync.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2D.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DWindow.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DVertexData.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DTexture.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DGraphics.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DCommon.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DExtLibs.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DFileInfo.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DImageProperties.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DBackBuffer.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DTextureBuffer.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DPanel.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DAbstractShader.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DTextureShader.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DAbstractPipelineComponent.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DRect.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DDims.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DAbstractTexture.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DAbstractShape.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DQuad.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DQuadX.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DTextureX.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\Aurora SDK\Include\A2DShared.h">
+      <Filter>Header Files\Aurora</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="color.fx">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="horizontalblur.fx">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="texture.fx">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="verticalblur.fx">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>
