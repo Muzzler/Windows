@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DAbstract.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DAbstract.h"
 
 A2DAbstract::A2DAbstract(){}
 

@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DCamera.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DCamera.h"
 
 A2DCamera::A2DCamera() :
 aCameraProps(NULL){}

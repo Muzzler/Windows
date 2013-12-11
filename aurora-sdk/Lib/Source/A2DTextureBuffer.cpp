@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DTextureBuffer.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DTextureBuffer.h"
 
 A2DTextureBuffer::A2DTextureBuffer(A2DBackBuffer * xBackBuffer, A2DDims * xSize) :
 A2DAbstractTexture(xBackBuffer)

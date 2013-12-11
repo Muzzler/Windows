@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DTextureX.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DTextureX.h"
 
 void A2DTextureX::SetClip(A2DRect * xClip, int xIndex)
 {

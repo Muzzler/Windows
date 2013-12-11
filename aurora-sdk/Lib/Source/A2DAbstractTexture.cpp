@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DAbstractTexture.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DAbstractTexture.h"
 
 A2DAbstractTexture::A2DAbstractTexture(A2DBackBuffer * xBackBuffer) :
 A2DAbstractPipelineComponent(xBackBuffer),

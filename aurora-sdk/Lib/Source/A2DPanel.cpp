@@ -1,7 +1,7 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DPanel.h"
-#include "../../Include/A2DGraphics.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DPanel.h"
+#include "../../include/A2DGraphics.h"
 
 void A2DPanel::RenderComponent(A2DRenderData * xRenderData)
 {

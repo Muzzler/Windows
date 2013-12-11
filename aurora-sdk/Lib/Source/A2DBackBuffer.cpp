@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DBackBuffer.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DBackBuffer.h"
 
 A2DBackBuffer::A2DBackBuffer(A2DWindow * xWindow, A2DWindowProperties * xWindowProps) :
 aWindowProps(xWindowProps),

@@ -1,7 +1,7 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2D.h"
-#include "../../Include/A2DTextureBuffer.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2D.h"
+#include "../../include/A2DTextureBuffer.h"
 
 A2D::A2D(A2DWindow * xWindow, A2DWindowProperties * xWindowProp) :
 aWindowProps(xWindowProp),

@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DRenderable.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DRenderable.h"
 
 A2DRenderable::A2DRenderable(){}
 A2DRenderable::~A2DRenderable(){}

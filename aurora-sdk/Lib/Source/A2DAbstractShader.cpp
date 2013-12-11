@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DAbstractShader.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DAbstractShader.h"
 
 A2DAbstractShader::A2DAbstractShader(A2DBackBuffer * xBackBuffer) : 
 A2DAbstractPipelineComponent(xBackBuffer){}

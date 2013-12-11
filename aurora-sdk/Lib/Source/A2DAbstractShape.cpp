@@ -1,7 +1,7 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DAbstractShape.h"
-#include "../../Include/A2DBackBuffer.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DAbstractShape.h"
+#include "../../include/A2DBackBuffer.h"
 
 
 A2DAbstractShape::A2DAbstractShape(A2DBackBuffer * xBackBuffer, int xVertexCount) : 

@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DQuad.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DQuad.h"
 
 A2DQuad::A2DQuad(A2DBackBuffer * xBackBuffer, A2DRect * xRect) :
 A2DAbstractShape(xBackBuffer, 6), aQuadWidth(xRect->aWidth), aQuadHeight(xRect->aHeight),

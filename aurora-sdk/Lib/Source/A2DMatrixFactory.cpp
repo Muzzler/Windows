@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DMatrixFactory.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DMatrixFactory.h"
 
 D3DXMATRIX * A2DMatrixFactory::createDefaultWorldMatrix()
 {

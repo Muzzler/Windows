@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DVertexData.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DVertexData.h"
 
 //LPCWSTR A2DVertexData::GetClass()
 //{

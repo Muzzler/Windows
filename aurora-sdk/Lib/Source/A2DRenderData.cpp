@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DRenderData.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DRenderData.h"
 
 A2DRenderData::A2DRenderData() :
 aViewMatrix(NULL),

@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DRootPane.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DRootPane.h"
 
 A2DRootPane::A2DRootPane(A2DWindowProperties * xWindowProps) :
 aWindowProps(xWindowProps){}

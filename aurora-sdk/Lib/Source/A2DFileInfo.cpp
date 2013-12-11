@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DFileInfo.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DFileInfo.h"
 
 A2DFileInfo::A2DFileInfo(LPCWSTR * xFileName) :
 aFileName(xFileName),

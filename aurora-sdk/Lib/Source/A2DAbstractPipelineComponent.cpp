@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DAbstractPipelineComponent.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DAbstractPipelineComponent.h"
 
 A2DAbstractPipelineComponent::A2DAbstractPipelineComponent(A2DBackBuffer * xBackBuffer) :
 aBackBuffer(xBackBuffer){}

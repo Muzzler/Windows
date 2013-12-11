@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DCameraProperties.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DCameraProperties.h"
 
 /////////////////////////////////////////////////////////////////////////////
 // REQUIRED BY ABSTRACT_AURORA

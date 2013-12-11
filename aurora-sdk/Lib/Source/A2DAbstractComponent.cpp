@@ -1,7 +1,7 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DAbstractComponent.h"
-#include "../../Include/A2DGraphics.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DAbstractComponent.h"
+#include "../../include/A2DGraphics.h"
 
 A2DAbstractComponent::A2DAbstractComponent() : 
 aParentComp(NULL),

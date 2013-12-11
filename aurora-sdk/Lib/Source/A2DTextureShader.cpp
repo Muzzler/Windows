@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DTextureShader.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DTextureShader.h"
 
 HRESULT A2DTextureShader::CreateResources(void * xArgs[])
 {

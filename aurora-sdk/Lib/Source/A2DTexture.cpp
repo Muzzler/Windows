@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DTexture.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DTexture.h"
 
 A2DTexture::A2DTexture(A2DBackBuffer * xBackBuffer, LPCWSTR * xSrc) :
 A2DAbstractTexture(xBackBuffer)

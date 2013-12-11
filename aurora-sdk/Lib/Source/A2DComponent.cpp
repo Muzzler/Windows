@@ -1,7 +1,7 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DComponent.h"
-#include "../../Include/A2DGraphics.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DComponent.h"
+#include "../../include/A2DGraphics.h"
 
 void A2DComponent::SetOptBackground(LPCWSTR * xOptBackgroundImage, int xOptBackroundPositionX,	int xOptBackroundPositionY,	
 	int xOptBackroundSizeX,	int xOptBackroundSizeY,	int xOptBackgroundColor, int xOptBackgroundRepeat)

@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DWindowProperties.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DWindowProperties.h"
 
 using namespace std;
 

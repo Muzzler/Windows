@@ -1,6 +1,6 @@
 
-#include "../../Include/A2DExtLibs.h"
-#include "../../Include/A2DWindow.h"
+#include "../../include/A2DExtLibs.h"
+#include "../../include/A2DWindow.h"
 
 A2DWindow::A2DWindow(A2DWindowProperties* xWinProps) :
 aWindowProps(xWinProps)
