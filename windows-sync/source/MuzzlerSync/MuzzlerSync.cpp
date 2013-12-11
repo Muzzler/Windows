@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 #include "MuzzlerSync.h"
-
+/*
 A2DRect * windowRect = A2DUtilities::CreateRect(0, 0, 1200, 700);
 
 LPCWSTR file0 = L"libs/Aurora SDK/Lib/Assets/Images/muzzler windows-sync textureBackground [a] 3.jpg";
@@ -11,7 +11,7 @@ LPCWSTR file1 = L"libs/Aurora SDK/Lib/Assets/Images/muzzler windows-sync texture
 LPCWSTR file2 = L"libs/Aurora SDK/Lib/Assets/Images/muzzler windows-sync textureBackground [a] 5.jpg";
 LPCWSTR file3 = L"libs/Aurora SDK/Lib/Assets/Images/muzzler windows-sync textureAlbumsWall [a] 1.jpg";
 LPCWSTR file4 = L"libs/Aurora SDK/Lib/Assets/Images/muzzler windows-sync textureBackground [b] 1.png";
-
+*/
 
 int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdLine, int xCmdShow )
 {

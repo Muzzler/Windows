@@ -68,6 +68,8 @@ float4 TexturePixelShader(PixelInputType input) : SV_Target
 	// Sample the pixel color from the texture using the sampler at this texture coordinate location.
 	textureColor = shaderTexture.Sample(SampleType, input.tex);
 
+	// textureColor = saturate(blendColor);
+
 	return textureColor;
 }
 
@@ -75,7 +77,7 @@ float4 TexturePixelShader(PixelInputType input) : SV_Target
 ////////////////////////////////////////////////////////////////////////////////
 // Technique
 ////////////////////////////////////////////////////////////////////////////////
-technique10 TextureTechnique
+technique10 MainTechnique
 {
 	pass pass0
 	{

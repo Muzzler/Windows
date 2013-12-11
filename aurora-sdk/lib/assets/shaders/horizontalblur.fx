@@ -128,7 +128,7 @@ float4 HorizontalBlurPixelShader(PixelInputType input) : SV_Target
 	color += shaderTexture.Sample(SampleType, input.texCoord9) * weight4;
 
 	// Set the alpha channel to one.
-	color.a = 1.0f;
+	// color.a = 1.0f;
 
     return color;
 }
