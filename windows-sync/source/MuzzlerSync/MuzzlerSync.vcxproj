@@ -86,193 +86,163 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2D.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2D.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DAbstract.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DAbstract.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DAbstractComponent.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DAbstractComponent.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DAbstractPipelineComponent.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DAbstractPipelineComponent.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DAbstractShader.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DAbstractShader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DAbstractShape.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DAbstractShape.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DAbstractTexture.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DAbstractTexture.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DBackBuffer.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DBackBuffer.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DCamera.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DCamera.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DCameraProperties.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DCameraProperties.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DComponent.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DComponent.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DFileInfo.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DFileInfo.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DGraphics.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DGraphics.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DImageProperties.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DImageProperties.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DMatrixFactory.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DMatrixFactory.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DPanel.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DPanel.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DQuad.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DQuad.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DQuadX.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DQuadX.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DRenderable.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DRenderable.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DRenderData.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DRenderData.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DRootPane.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DRootPane.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DTexture.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DTexture.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DTextureBuffer.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DTextureBuffer.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DTextureShader.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DTextureShader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DTextureX.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DTextureX.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DVertexData.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DTween.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DWindow.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DVertexData.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="libs\Aurora SDK\Lib\Source\A2DWindowProperties.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DWindow.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DWindowProperties.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="MuzzlerSync.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync background [a] 1.jpg" />
-    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync background [a] 1.png" />
-    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync background [a] 2.jpg" />
-    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync background [a] 3.jpg" />
-    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync background [b] 1.jpg" />
-    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync bottomLeftShadow [a] 1.png" />
-    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync bottomRightShadow [a] 1.png" />
-    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync bottomShadow [a] 1.png" />
-    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync leftShadow [a] 1.png" />
-    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync rightShadow [a] 1.png" />
-    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync topLeftShadow [a] 1.png" />
-    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync topRightShadow [a] 1.png" />
-    <Image Include="libs\BorderlessShadowWindow\resources\images\muzzler windows-sync topShadow [a] 1.png" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync background [a] 1.jpg" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync background [a] 1.png" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync background [a] 2.jpg" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync background [a] 3.jpg" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync background [b] 1.jpg" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync background [c] 1.png" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync bottomLeftShadow [a] 1.png" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync bottomRightShadow [a] 1.png" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync bottomShadow [a] 1.png" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync leftShadow [a] 1.png" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync rightShadow [a] 1.png" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync textureAlbumsWall [a] 1.jpg" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync textureBackground [a] 1.jpg" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync textureBackground [a] 2.jpg" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync textureBackground [a] 3.jpg" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync textureBackground [a] 4.jpg" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync textureBackground [a] 5.jpg" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync textureBackground [b] 1.png" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync textureLogo [a] 1.png" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync topLeftShadow [a] 1.png" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync topRightShadow [a] 1.png" />
+    <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync topShadow [a] 1.png" />
     <Image Include="resources\images\MuzzlerSync.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="libs\Aurora SDK\Include\A2D.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="libs\Aurora SDK\Include\A2DAbstract.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="libs\Aurora SDK\Include\A2DAbstractComponent.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="libs\Aurora SDK\Include\A2DAbstractShader.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DAbstractShape.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DAbstractTexture.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DBackBuffer.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DCamera.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="libs\Aurora SDK\Include\A2DCameraProperties.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="libs\Aurora SDK\Include\A2DCommon.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DComponent.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="libs\Aurora SDK\Include\A2DDims.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DExtLibs.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DFileInfo.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DShared.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DGraphics.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="libs\Aurora SDK\Include\A2DImageProperties.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DMatrixFactory.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="libs\Aurora SDK\Include\A2DPanel.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DAbstractPipelineComponent.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DQuad.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DQuadX.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DRect.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DRenderable.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="libs\Aurora SDK\Include\A2DRenderData.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="libs\Aurora SDK\Include\A2DRootPane.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="libs\Aurora SDK\Include\A2DTexture.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="libs\Aurora SDK\Include\A2DTextureBuffer.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DTextureShader.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DTextureX.h" />
-    <ClInclude Include="libs\Aurora SDK\Include\A2DVertexData.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="libs\Aurora SDK\Include\A2DWindow.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="libs\Aurora SDK\Include\A2DWindowProperties.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2D.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DAbstract.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DAbstractComponent.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DAbstractPipelineComponent.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DAbstractShader.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DAbstractShape.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DAbstractTexture.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DBackBuffer.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DCamera.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DCameraProperties.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DCommon.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DComponent.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DDims.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DExtLibs.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DFileInfo.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DGraphics.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DImageProperties.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DMatrixFactory.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DPanel.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DPipelineComponent.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DQuad.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DQuadX.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DRect.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DRenderable.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DRenderData.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DRootPane.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DShared.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DTexture.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DTextureBuffer.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DTextureShader.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DTextureX.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DVertexData.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DWindow.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DWindowProperties.h" />
     <ClInclude Include="MuzzlerSync.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="color.fx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </FxCompile>
-    <FxCompile Include="horizontalblur.fx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </FxCompile>
-    <FxCompile Include="texture.fx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </FxCompile>
-    <FxCompile Include="verticalblur.fx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </FxCompile>
+    <FxCompile Include="..\..\..\aurora-sdk\lib\assets\shaders\horizontalblur.fx" />
+    <FxCompile Include="..\..\..\aurora-sdk\lib\assets\shaders\texture.fx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
