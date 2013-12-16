@@ -4,7 +4,7 @@ Muzzler.Windows
 Windows graphical interface and hardware accelerated library
 
 
-Filename Conventions
+Conventions
 =======
 
 1. All C/C++/H files will be capitalized exccept `stdafx.h` and `targver.h`)
