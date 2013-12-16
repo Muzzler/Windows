@@ -75,14 +75,16 @@ void A2DGraphics::SetActiveBuffer(int xBuffer)
 	}
 }
 
-void A2DGraphics::DrawImage(LPCWSTR * xSrc, A2DRect * aRect, A2DImageProperties * xImageProps)
+void A2DGraphics::DrawImage(A2DPipeline * xPipeline, LPCWSTR * xSrc, A2DRect * aRect, A2DImageProperties * xImageProps)
 {
-	A2DAbstractPipelineComponent * texture = aPipelineComponents[++aRenderIndex];
-	A2DAbstractPipelineComponent * quad = aPipelineComponents[++aRenderIndex];
-	A2DAbstractPipelineComponent * textureShader = aPipelineComponents[++aRenderIndex];
+	A2DAbstractPipelineComponent * texture;
+	A2DAbstractPipelineComponent * quad;
+	A2DAbstractPipelineComponent * textureShader;
 
-	if (aMode == A2D_GRAPHICS_MODE_INITIALIZE)
+	if (xPipeline == NULL)
 	{
+		xPipeline = new A2DPipeline();
+
 		texture = new A2DTexture(aBackBuffer, xSrc);
 		quad = new A2DQuad(aBackBuffer, aRect);
 		textureShader = new A2DTextureShader(aBackBuffer);
@@ -90,8 +92,19 @@ void A2DGraphics::DrawImage(LPCWSTR * xSrc, A2DRect * aRect, A2DImageProperties 
 		quad->Initialize();
 		texture->Initialize();
 		textureShader->Initialize();
+
+		xPipeline->aPipelineComps[0] = texture;
+		xPipeline->aPipelineComps[1] = quad;
+		xPipeline->aPipelineComps[2] = textureShader;
+
+		return;
 	}
-	else if (aMode == A2D_GRAPHCS_MODE_CREATE)
+
+	texture = xPipeline->aPipelineComps[0];
+	quad = xPipeline->aPipelineComps[1];
+	textureShader = xPipeline->aPipelineComps[2];
+
+	if (aMode == A2D_GRAPHCS_MODE_CREATE)
 	{
 		void * textureArgs [] = { xSrc };
 		void * quadArgs [] = { texture };
@@ -100,8 +113,11 @@ void A2DGraphics::DrawImage(LPCWSTR * xSrc, A2DRect * aRect, A2DImageProperties 
 		texture->CreateResources(textureArgs);
 		quad->CreateResources(quadArgs);
 		textureShader->CreateResources(textureShaderArgs);
+
+		return;
 	}
-	else if (aMode == A2D_GRAPHICS_MODE_UPDATE)
+	
+	if (aMode == A2D_GRAPHICS_MODE_UPDATE)
 	{
 		void * textureArgs[] = { xSrc };
 		void * quadArgs[] = { texture, aRect, aWindowProps };
@@ -110,18 +126,25 @@ void A2DGraphics::DrawImage(LPCWSTR * xSrc, A2DRect * aRect, A2DImageProperties 
 		texture->Update(textureArgs);
 		quad->Update(quadArgs);
 		textureShader->CreateResources(textureShaderArgs);
+
+		return;
 	}
-	else if (aMode == A2D_GRAPHICS_MODE_RENDER)
+
+	if (aMode == A2D_GRAPHICS_MODE_RENDER)
 	{
 		quad->Render();
 		textureShader->Render();
 
+		return;
 	}
-	else if (aMode == A2D_GRAPHICS_MODE_DESTROY)
+
+	if (aMode == A2D_GRAPHICS_MODE_DESTROY)
 	{
 		texture->DestroyResources();
 		quad->DestroyResources();
 		textureShader->DestroyResources();
+
+		return;
 	}
 }
 

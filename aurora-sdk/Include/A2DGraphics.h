@@ -30,6 +30,7 @@
 #include "A2DTexture.h"
 #include "A2DQuad.h"
 #include "A2DImageProperties.h"
+#include "A2DPipeline.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 // FORWARD DECLARATIONS
@@ -100,8 +101,8 @@ public:
 	void							RenderSecondaryBuffer();
 	void							RenderBlurBuffer();
 	void							SetActiveBuffer(int xBuffer);
-	void							DrawImage(LPCWSTR * xSrc, A2DRect * aRect, A2DImageProperties * xImageProps);
-	void							DrawImage(A2DTexture * xTexture, float xImageLeft, float xImageTop, float xImageWidth, float xImageHeight, A2DImageProperties * xImageProps, int xBlur);
+	void							DrawImage(A2DPipeline * xGraphicsData, LPCWSTR * xSrc, A2DRect * aRect, A2DImageProperties * xImageProps);
+	void							DrawImage(A2DPipeline * xGraphicsData, A2DTexture * xTexture, float xImageLeft, float xImageTop, float xImageWidth, float xImageHeight, A2DImageProperties * xImageProps, int xBlur);
 
 private:
 	void							CalculateBounds();
