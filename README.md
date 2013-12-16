@@ -1,4 +1,4 @@
 Muzzler.Windows
 =======
 
-Windows interface and hardware accelerated library
+Windows graphical interface and hardware accelerated library
