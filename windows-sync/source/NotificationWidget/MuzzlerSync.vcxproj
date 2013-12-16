@@ -137,6 +137,7 @@
     <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DPanel.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DPipeline.cpp" />
     <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DQuad.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -224,7 +225,7 @@
     <ClInclude Include="..\..\..\aurora-sdk\Include\A2DImageProperties.h" />
     <ClInclude Include="..\..\..\aurora-sdk\Include\A2DMatrixFactory.h" />
     <ClInclude Include="..\..\..\aurora-sdk\Include\A2DPanel.h" />
-    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DPipelineComponent.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DPipeline.h" />
     <ClInclude Include="..\..\..\aurora-sdk\Include\A2DQuad.h" />
     <ClInclude Include="..\..\..\aurora-sdk\Include\A2DQuadX.h" />
     <ClInclude Include="..\..\..\aurora-sdk\Include\A2DRect.h" />

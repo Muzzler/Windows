@@ -32,33 +32,20 @@ A2DAbstractComponent * A2DAbstractComponent::GetParent()
 {
 	return aParentComp;
 }
-float	A2DAbstractComponent::GetOptWidth()
-{
-	return aOptRect.aWidth;
-}
-float	A2DAbstractComponent::GetOptHeight()
-{
-	return aOptRect.aHeight;
-}
-float	A2DAbstractComponent::GetOptTop()
-{
-	return aOptRect.aY;
-}
-float	A2DAbstractComponent::GetOptLeft()
-{
-	return aOptRect.aX;
-}
-void A2DAbstractComponent::SetBounds(float xOptLeft, float xOptTop, float xOptWidth, float xOptHeight)
+
+void A2DAbstractComponent::SetBounds(A2DRect * xRect)
 {
 	A2DGraphics * graphics = GetGraphics();
 	
-	aOptRect.aWidth = xOptWidth;
-	aOptRect.aHeight = xOptHeight;
-	aOptRect.aX = xOptLeft;
-	aOptRect.aY = xOptTop;
+	aOptRect.aWidth = xRect->aWidth;
+	aOptRect.aHeight = xRect->aHeight;
+	aOptRect.aX = xRect->aX;
+	aOptRect.aY = xRect->aY;
 
 	if (graphics)
+	{
 		graphics->Recalculate();
+	}
 }
 
 void A2DAbstractComponent::Render(A2DRenderData * xRenderData)

@@ -132,6 +132,9 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>source\muzzler-sync</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DPipeline.cpp">
+      <Filter>source\aurora</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\images\MuzzlerSync.ico">
@@ -262,9 +265,6 @@
     <ClInclude Include="..\..\..\aurora-sdk\Include\A2DPanel.h">
       <Filter>headers\aurora</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DPipelineComponent.h">
-      <Filter>headers\aurora</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\aurora-sdk\Include\A2DQuad.h">
       <Filter>headers\aurora</Filter>
     </ClInclude>
@@ -315,6 +315,9 @@
     </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>headers\muzzler-sync</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DPipeline.h">
+      <Filter>headers\aurora</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
