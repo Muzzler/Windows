@@ -1,32 +1,42 @@
 
-#include "../../include/A2DGraphicsData.h"
+#include "../../include/A2DPipeline.h"
 
-A2DGraphicsData::A2DGraphicsData(){}
+A2DPipeline::A2DPipeline(){}
 
-A2DGraphicsData::A2DGraphicsData(A2DGraphicsData * xRenderData){}
+A2DPipeline::A2DPipeline(A2DPipeline * xPipeline){}
 
 /////////////////////////////////////////////////////////////////////////////
 // REQUIRED BY A2D_ABSTRACT
 ////////////////////////////////////////////////////////////////////////////
 
-LPCWSTR A2DGraphicsData::GetClass()
+LPCWSTR A2DPipeline::GetClass()
 {
-	return L"A2DGraphicsData";
+	return L"A2DPipeline";
 }
 
-LPCWSTR A2DGraphicsData::ToString()
+LPCWSTR A2DPipeline::ToString()
 {
-	return L"A2DGraphicsData";
+	return L"A2DPipeline";
 }
 
-bool A2DGraphicsData::operator==(A2DAbstract * xAbstract)
+bool A2DPipeline::operator==(A2DAbstract * xAbstract)
 {
 	return false;
 }
 
-HRESULT A2DGraphicsData::Initialize()
+HRESULT A2DPipeline::Initialize()
 {
 	return NULL;
 }
 
-void A2DGraphicsData::Deinitialize(){}
+void A2DPipeline::Deinitialize()
+{
+	for (int i = 0; i < aLength; i++)
+	{
+		if (aPipelineComps[i])
+		{
+			aPipelineComps[i]->Deinitialize();
+			aPipelineComps[i] = 0;
+		}
+	}
+}

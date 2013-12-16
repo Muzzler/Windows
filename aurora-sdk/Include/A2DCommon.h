@@ -16,12 +16,9 @@
 // DEFINE
 ////////////////////////////////////////////////////////////////////////////////
 
-#define A2D_GRAPHICS_MODE_CREATE                              0x2510
-#define A2D_GRAPHICS_MODE_RENDER                              0x2511
-#define A2D_GRAPHICS_MODE_DESTROY                             0x2512
-#define A2D_GRAPHICS_MODE_INITIALIZE						  0x2513
-#define A2D_GRAPHCS_MODE_CREATE								  0x2513
-#define A2D_GRAPHICS_MODE_UPDATE			     			  0x2513
+#define A2D_PIPELINE_PREPROCESS_START                         0x2510
+#define A2D_PIPELINE_PREPROCESS_CREATE                        0x2511
+#define A2D_PIPELINE_PREPROCESS_FINISH                        0x2512
 
 #define A2D_GRAPHICS_ACTIVE_BUFFER_PRIMARY   		          0x3511
 #define A2D_GRAPHICS_ACTIVE_BUFFER_SECONDARY		          0x3512

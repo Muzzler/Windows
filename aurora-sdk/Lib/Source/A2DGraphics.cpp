@@ -81,7 +81,7 @@ void A2DGraphics::DrawImage(A2DPipeline * xPipeline, LPCWSTR * xSrc, A2DRect * a
 	A2DAbstractPipelineComponent * quad;
 	A2DAbstractPipelineComponent * textureShader;
 
-	if (xPipeline == NULL)
+	if (xPipeline = NULL)
 	{
 		xPipeline = new A2DPipeline();
 
@@ -93,9 +93,19 @@ void A2DGraphics::DrawImage(A2DPipeline * xPipeline, LPCWSTR * xSrc, A2DRect * a
 		texture->Initialize();
 		textureShader->Initialize();
 
+		void * textureArgs[] = { xSrc };
+		void * quadArgs[] = { texture };
+		void * textureShaderArgs[] = { aWorldMatrix, aViewMatrix, aProjectionMatrix, texture };
+
+		texture->CreateResources(textureArgs);
+		quad->CreateResources(quadArgs);
+		textureShader->CreateResources(textureShaderArgs);
+		
 		xPipeline->aPipelineComps[0] = texture;
 		xPipeline->aPipelineComps[1] = quad;
 		xPipeline->aPipelineComps[2] = textureShader;
+
+		xPipeline->aLength = 3;
 
 		return;
 	}
@@ -104,64 +114,20 @@ void A2DGraphics::DrawImage(A2DPipeline * xPipeline, LPCWSTR * xSrc, A2DRect * a
 	quad = xPipeline->aPipelineComps[1];
 	textureShader = xPipeline->aPipelineComps[2];
 
-	if (aMode == A2D_GRAPHCS_MODE_CREATE)
-	{
-		void * textureArgs [] = { xSrc };
-		void * quadArgs [] = { texture };
-		void * textureShaderArgs[] = { aWorldMatrix, aViewMatrix, aProjectionMatrix, texture };
+	void * textureArgs[] = { xSrc };
+	void * quadArgs[] = { texture, aRect, aWindowProps };
+	void * textureShaderArgs[] = { texture };
 
-		texture->CreateResources(textureArgs);
-		quad->CreateResources(quadArgs);
-		textureShader->CreateResources(textureShaderArgs);
-
-		return;
-	}
-	
-	if (aMode == A2D_GRAPHICS_MODE_UPDATE)
-	{
-		void * textureArgs[] = { xSrc };
-		void * quadArgs[] = { texture, aRect, aWindowProps };
-		void * textureShaderArgs[] = { texture };
-
-		texture->Update(textureArgs);
-		quad->Update(quadArgs);
-		textureShader->CreateResources(textureShaderArgs);
-
-		return;
-	}
-
-	if (aMode == A2D_GRAPHICS_MODE_RENDER)
-	{
-		quad->Render();
-		textureShader->Render();
-
-		return;
-	}
-
-	if (aMode == A2D_GRAPHICS_MODE_DESTROY)
-	{
-		texture->DestroyResources();
-		quad->DestroyResources();
-		textureShader->DestroyResources();
-
-		return;
-	}
+	texture->Update(textureArgs);
+	quad->Update(quadArgs);
+	textureShader->CreateResources(textureShaderArgs);
+				
+	quad->Render();
+	textureShader->Render();
 }
 
-void A2DGraphics::DrawImage(A2DTexture * xTexture, float xImageLeft, float xImageTop, float xImageWidth, float xImageHeight, A2DImageProperties * xImageProps, int xBlur)
-{
-	if (aMode == A2D_GRAPHICS_MODE_CREATE)
-	{	}
-	else if (aMode == A2D_GRAPHICS_MODE_RENDER)
-	{
-	}
-	else if (aMode == A2D_GRAPHICS_MODE_DESTROY)
-	{		
-
-	}
-
-	NextRender();
-}
+void A2DGraphics::DrawImage(A2DPipeline * xPipeline,  A2DTexture * xTexture, float xImageLeft, float xImageTop, float xImageWidth, float xImageHeight, A2DImageProperties * xImageProps, int xBlur)
+{	}
 
 /////////////////////////////////////////////////////////////////////////////
 // REQUIRED BY A2D_ABSTRACT

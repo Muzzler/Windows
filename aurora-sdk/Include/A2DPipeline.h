@@ -2,13 +2,13 @@
 // GAURDS
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __A2DGRAPHICSDATA_H__
-#define __A2DGRAPHICSDATA_H__
+#ifndef __A2DPIPELINE_H__
+#define __A2DPIPELINE_H__
 
 //+-----------------------------------------------------------------------------
 //
 //  Class:
-//      A2DGRAPHICSDATA
+//      A2DPIPELINE
 //
 //  Synopsis:
 //      Differentiates which of the two possible arcs could match the given arc
@@ -22,6 +22,7 @@
 
 #include "A2DExtLibs.h"
 #include "A2DAbstract.h"
+#include "A2DAbstractPipelineComponent.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 // FORWARD DECLARATIONS
@@ -53,6 +54,9 @@ public:
 
 	// Variables
 	A2DAbstractPipelineComponent  * aPipelineComps[8];
+
+	int							    aMode = A2D_PIPELINE_PREPROCESS_START;
+	int							    aLength = 0;
 
 	// Pure Virtual
 	// { NONE }
