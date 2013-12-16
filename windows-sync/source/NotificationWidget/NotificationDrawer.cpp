@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#include "MuzzlerSync.h"
+#include "NotificationDrawer.h"
 /*
 A2DRect * windowRect = A2DUtilities::CreateRect(0, 0, 1200, 700);
 
@@ -29,7 +29,7 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 	// 4. It wiil validate + set everything it gets from A2DWindow into A2DPreferences
 	// 5. Any changes (via A2DWindow#Propogate) will request A2D to check and redevelop the data from window
 
-	A2D aurora(); // Requires NOTHING TO BE PASSED IN and MADE ON STACK!
+	A2DFrame aurora(); // Requires NOTHING TO BE PASSED IN and MADE ON STACK!
 	//------------------------------------------------------------------------------------
 	aurora.Initialize(); // Will be hidden from user soon.
 

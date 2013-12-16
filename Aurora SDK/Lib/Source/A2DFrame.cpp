@@ -1,30 +1,30 @@
 
 #include "../../include/A2DExtLibs.h"
-#include "../../include/A2D.h"
+#include "../../include/A2DFrame.h"
 #include "../../include/A2DTextureBuffer.h"
 
-A2D::A2D(A2DWindow * xWindow, A2DWindowProperties * xWindowProp) :
+A2DFrame::A2DFrame(A2DWindow * xWindow, A2DWindowProperties * xWindowProp) :
 aWindowProps(xWindowProp),
 aWindow(xWindow){}
 
-A2D::~A2D(){}
+A2DFrame::~A2DFrame(){}
 
-A2DRootPane * A2D::GetRootPane()
+A2DRootPane * A2DFrame::GetRootPane()
 {
 	return aRootPane;
 }
 
-A2DCamera * A2D::GetCamera()
+A2DCamera * A2DFrame::GetCamera()
 {
 	return aCamera;
 }
 
-A2DRenderData * A2D::GetRenderData()
+A2DRenderData * A2DFrame::GetRenderData()
 {
 	return aRenderData;
 }
 
-HRESULT A2D::CreateResources()
+HRESULT A2DFrame::CreateResources()
 {
 	
 	HRESULT hr;
@@ -56,12 +56,12 @@ HRESULT A2D::CreateResources()
 	return hr;
 }
 
-LRESULT A2D::PumpWindowMsg(HWND * xHwnd, UINT * xMessage, WPARAM * xWParam, LPARAM * xLParam)
+LRESULT A2DFrame::PumpWindowMsg(HWND * xHwnd, UINT * xMessage, WPARAM * xWParam, LPARAM * xLParam)
 {
 	return aRootPane->WindowMsg(xHwnd, xMessage,xWParam, xLParam);
 }
 
-void A2D::Update()
+void A2DFrame::Update()
 {
 	aRenderData->aBackBuffer->SetActive();
 
@@ -80,22 +80,22 @@ void A2D::Update()
 // REQUIRED BY A2D_ABSTRACT
 /////////////////////////////////////////////////////////////////////////////
 
-LPCWSTR A2D::GetClass()
+LPCWSTR A2DFrame::GetClass()
 {
-	return L"A2D";
+	return L"A2DFrame";
 }
 
-LPCWSTR A2D::ToString()
+LPCWSTR A2DFrame::ToString()
 {
-	return L"A2D";
+	return L"A2DFrame";
 }
 
-bool A2D::operator==(A2DAbstract * xAbstract)
+bool A2DFrame::operator==(A2DAbstract * xAbstract)
 {
 	return false;
 }
 
-HRESULT A2D::Initialize()
+HRESULT A2DFrame::Initialize()
 {
 	HRESULT hr;
 
@@ -130,7 +130,7 @@ HRESULT A2D::Initialize()
 	return hr;
 }
 
-void A2D::Deinitialize()
+void A2DFrame::Deinitialize()
 {
 	// Release the D3D object.
 	if (aBackBuffer)

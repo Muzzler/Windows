@@ -2,13 +2,13 @@
 // GAURDS
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __A2D_H__
-#define __A2D_H__
+#ifndef __A2DFRAME_H__
+#define __A2DFRAME_H__
 
 //+-----------------------------------------------------------------------------
 //
 //  Class:
-//      A2D
+//      A2DFRAME
 //
 //  Synopsis:
 //      Differentiates which of the two possible arcs could match the given arc
@@ -60,22 +60,20 @@ class	A2DWindow;
 // DEFINE
 ////////////////////////////////////////////////////////////////////////////////
 
-#define A2D_LL(str1, str2)                                    str1 str2
-
 ////////////////////////////////////////////////////////////////////////////////
 // DECLARATION
 ////////////////////////////////////////////////////////////////////////////////
 
-class A2D : public A2DAbstract
+class A2DFrame : public A2DAbstract
 {
 
 public:
     
     // Constructor
-	A2D(A2DWindow * xWindow, A2DWindowProperties * xWindowProp);
+	A2DFrame(A2DWindow * xWindow, A2DWindowProperties * xWindowProp);
 
     // Deconstructor
-    ~A2D();
+	~A2DFrame();
 
 private:
 

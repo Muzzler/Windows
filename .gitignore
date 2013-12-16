@@ -48,3 +48,5 @@ pingme.txt
 LICENSE
 git-score.py
 *.opensdf
+*.suo
+*.aps
