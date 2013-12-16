@@ -49,5 +49,6 @@ LICENSE
 git-score.py
 *.opensdf
 *.suo
+NotificationWidget.v12.suo
 *.v12.suo
 *.aps
