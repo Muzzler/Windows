@@ -21,7 +21,7 @@
 // INCLUDE
 ////////////////////////////////////////////////////////////////////////////////
 
-#include "A2D.h"
+#include "A2DFrame.h"
 #include "A2DAbstract.h"
 #include "A2DWindowProperties.h"
 
@@ -105,7 +105,7 @@ public:
 	HWND					  *		GetChildHwnd();
 
     // Mutators
-	void                            SetAurora2D(A2D * xAurora);
+	void                            SetFrame(A2DFrame * xFrame);
     void                            SetUndecorated(bool xUndecoratedFlag);
     void                            SetWindowPadding(int xPad);
     void                            SetShadow(bool xShadowFlag);

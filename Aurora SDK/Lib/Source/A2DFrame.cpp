@@ -1,7 +1,7 @@
 
-#include "../../include/A2DExtLibs.h"
-#include "../../include/A2DFrame.h"
-#include "../../include/A2DTextureBuffer.h"
+#include "../../Include/A2DExtLibs.h"
+#include "../../Include/A2DFrame.h"
+#include "../../Include/A2DTextureBuffer.h"
 
 A2DFrame::A2DFrame(A2DWindow * xWindow, A2DWindowProperties * xWindowProp) :
 aWindowProps(xWindowProp),
@@ -99,7 +99,7 @@ HRESULT A2DFrame::Initialize()
 {
 	HRESULT hr;
 
-	aWindow->SetAurora2D(this);
+	aWindow->SetFrame(this);
 
 	// -----------------------------------------------------
 	
