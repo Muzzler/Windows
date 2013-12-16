@@ -19,7 +19,7 @@ void A2DComponent::RenderComponent(A2DRenderData * xRenderData)
 {
 	A2DGraphics * graphics = (A2DGraphics *) xRenderData;
 
-	graphics->DrawImage(aOptBackgroundSrc, &aOptRegion, aOptBackgroundProps);
+	graphics->DrawImage(NULL, aOptBackgroundSrc, &aOptRect, aOptBackgroundProps);
 }
 
 void A2DComponent::SetDoubleBuffered(bool xDoubleBuffer)
@@ -30,39 +30,6 @@ void A2DComponent::SetDoubleBuffered(bool xDoubleBuffer)
 bool A2DComponent::IsDoubleBuffered()
 {
 	return aDoubleBuffer;
-}
-
-void A2DComponent::Render(A2DRenderData * xRenderData)
-{
-	A2DGraphics * graphics = (A2DGraphics *)xRenderData;
-
-	// Switch the active buffer to Texture
-	graphics->SetActiveBuffer(A2D_GRAPHICS_ACTIVE_BUFFER_SECONDARY);
-
-	// Move the content from TextureBuffer -> BackBuffer
-	if (blurred)
-	{
-		graphics->RenderBlurBuffer();
-	}
-	
-	// Render the component
-	RenderComponent(xRenderData);
-	
-	// Swtich the active buffer to BackBuffer
-	graphics->SetActiveBuffer(A2D_GRAPHICS_ACTIVE_BUFFER_PRIMARY);
-
-	// Move the content from TextureBuffer -> BackBuffer
-	graphics->RenderSecondaryBuffer();
-
-	// This will call children updates
-	// This is sort of saying: (Render <==> Update)
-	RenderChildren(xRenderData);
-	
-	// Swtich the active buffer to BackBuffer
-	graphics->SetActiveBuffer(A2D_GRAPHICS_ACTIVE_BUFFER_PRIMARY);
-
-	// Render the currect component border
-	RenderComponentBorder(xRenderData);
 }
 
 void A2DComponent::RenderComponentBorder(A2DRenderData * xRenderData){}

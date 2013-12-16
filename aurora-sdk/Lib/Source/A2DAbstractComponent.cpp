@@ -16,8 +16,6 @@ void A2DAbstractComponent::Update()
 	// Create resources must be called first!!!
 	if (graphics == NULL)	return;
 
-	graphics->SetMode(A2D_GRAPHICS_MODE_RENDER);
-
 	// Calling the render algorithm
 	// -> Render component
 	// -> Render its children on top
@@ -36,28 +34,28 @@ A2DAbstractComponent * A2DAbstractComponent::GetParent()
 }
 float	A2DAbstractComponent::GetOptWidth()
 {
-	return aOptRegion.aWidth;
+	return aOptRect.aWidth;
 }
 float	A2DAbstractComponent::GetOptHeight()
 {
-	return aOptRegion.aHeight;
+	return aOptRect.aHeight;
 }
 float	A2DAbstractComponent::GetOptTop()
 {
-	return aOptRegion.aY;
+	return aOptRect.aY;
 }
 float	A2DAbstractComponent::GetOptLeft()
 {
-	return aOptRegion.aX;
+	return aOptRect.aX;
 }
 void A2DAbstractComponent::SetBounds(float xOptLeft, float xOptTop, float xOptWidth, float xOptHeight)
 {
 	A2DGraphics * graphics = GetGraphics();
 	
-	aOptRegion.aWidth = xOptWidth;
-	aOptRegion.aHeight = xOptHeight;
-	aOptRegion.aX = xOptLeft;
-	aOptRegion.aY = xOptTop;
+	aOptRect.aWidth = xOptWidth;
+	aOptRect.aHeight = xOptHeight;
+	aOptRect.aX = xOptLeft;
+	aOptRect.aY = xOptTop;
 
 	if (graphics)
 		graphics->Recalculate();

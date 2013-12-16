@@ -123,7 +123,7 @@ public:
     // Additional
 	virtual void                    RenderComponent(A2DRenderData * xRenderData);
 	virtual void                    RenderComponentBorder(A2DRenderData * xRenderData);
-	virtual void					Render(A2DRenderData * xRenderData);
+	// virtual void					Render(A2DRenderData * xRenderData);
 
     // Pure Virtual
     // { NONE }
