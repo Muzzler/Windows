@@ -89,7 +89,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2D.cpp">
+    <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DFrame.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DAbstract.cpp">
@@ -177,7 +177,7 @@
     <ClCompile Include="..\..\..\aurora-sdk\Lib\Source\A2DWindowProperties.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="MuzzlerSync.cpp" />
+    <ClCompile Include="NotificationDrawer.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -206,7 +206,7 @@
     <Image Include="resources\images\MuzzlerSync.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\aurora-sdk\Include\A2D.h" />
+    <ClInclude Include="..\..\..\aurora-sdk\Include\A2DFrame.h" />
     <ClInclude Include="..\..\..\aurora-sdk\Include\A2DAbstract.h" />
     <ClInclude Include="..\..\..\aurora-sdk\Include\A2DAbstractComponent.h" />
     <ClInclude Include="..\..\..\aurora-sdk\Include\A2DAbstractPipelineComponent.h" />
@@ -240,7 +240,7 @@
     <ClInclude Include="..\..\..\aurora-sdk\Include\A2DVertexData.h" />
     <ClInclude Include="..\..\..\aurora-sdk\Include\A2DWindow.h" />
     <ClInclude Include="..\..\..\aurora-sdk\Include\A2DWindowProperties.h" />
-    <ClInclude Include="MuzzlerSync.h" />
+    <ClInclude Include="NotificationDrawer.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
