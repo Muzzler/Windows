@@ -56,12 +56,6 @@ class A2DComponent : public A2DAbstractComponent
 {
 public:
 
-    // Constructor
-	A2DComponent(){}
-
-    // Deconstructor
-	~A2DComponent(){}
-
 	// Variables
 	double translationX = 0;
 	double translationXG1 = 10;

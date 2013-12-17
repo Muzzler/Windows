@@ -55,12 +55,6 @@ class A2DPanel : public A2DComponent
 {
 public:
 
-	// Constructor
-	A2DPanel(){}
-
-	// Deconstructor
-	~A2DPanel(){}
-
 	// Variables
 	float translationX = 0;
 	float translationXG1 = 10;

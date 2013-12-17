@@ -50,10 +50,10 @@ public:
 	~A2DTexture();
 
 	// Variables
-	LPCWSTR					*		aSrc;
+	LPCTSTR					*		aSrc;
 
 	// Accessors
-	LPCWSTR					*		GetSrc();
+	LPCTSTR					*		GetSrc();
 
 	// Mutators
 	// { NONE }

@@ -31,8 +31,8 @@ HRESULT A2DTexture::CreateResources(void * xArgs[])
 
 	// Store the texture properties
 
-	aSize.aWidth = (float)srcInfo.Width;
-	aSize.aHeight = (float)srcInfo.Height;
+	aDims.aWidth = (float)srcInfo.Width;
+	aDims.aHeight = (float)srcInfo.Height;
 
 	return hr;
 }

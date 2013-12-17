@@ -48,6 +48,21 @@ void A2DAbstractComponent::SetBounds(A2DRect * xRect)
 	}
 }
 
+void A2DAbstractComponent::SetBounds(int xX, int xY, int xWidth, int xHeight)
+{
+	A2DGraphics * graphics = GetGraphics();
+
+	aOptRect.aWidth = xWidth;
+	aOptRect.aHeight = xHeight;
+	aOptRect.aX = xX;
+	aOptRect.aY = xY;
+
+	if (graphics)
+	{
+		graphics->Recalculate();
+	}
+}
+
 void A2DAbstractComponent::Render(A2DRenderData * xRenderData)
 {
 	// Render the current component

@@ -25,7 +25,7 @@
 #include "A2DVertexData.h"
 #include "A2DBackBuffer.h"
 #include "A2DTexture.h"
-#include "A2DComponent.h"
+#include "A2DPanel.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 // FORWARD DECLARATIONS
@@ -51,7 +51,7 @@ class A2DAbstractComponent;
 // DECLARATION
 ////////////////////////////////////////////////////////////////////////////////
 
-class A2DRootPane : public A2DComponent
+class A2DRootPane : public A2DPanel
 {
 	
 public:

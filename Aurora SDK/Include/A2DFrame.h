@@ -41,7 +41,6 @@
 // FORWARD DECLARATIONS
 ////////////////////////////////////////////////////////////////////////////////
 
-class	A2D;
 class	A2DAbstract;
 class	A2DRenderable;
 class	A2DAbstractComponent;
@@ -70,7 +69,7 @@ class A2DFrame : public A2DAbstract
 public:
     
     // Constructor
-	A2DFrame(A2DWindow * xWindow, A2DWindowProperties * xWindowProp);
+	A2DFrame();
 
     // Deconstructor
 	~A2DFrame();
@@ -90,8 +89,19 @@ private:
     // Accessors
     // { NONE }
 
+public:
+
     // Mutators
-    // { NONE }
+	void							SetVisible(bool xVisibility);
+	void							SetName(LPCWSTR * xName);									// Set window name
+	void							SetBounds(A2DRect * xRect);									// Edits A2DPreferences#WindowProperties via float
+	void							SetBounds(int xLeft, int xTop, int xWidth, int xHeight);    // Edits A2DPreferences#WindowProperties via Rect
+	void							SetSize(int xWidth, int xHeight);							// Edits A2DPreferences#WindowProperties float
+	void							SetSize(A2DDims * xDims);									// Edits A2DPreferences#WindowProperties via Dim
+	void							SetUndecorated(bool xDecorated);							// Back to switching thing now...lol
+	void							SetLocationRelativeTo(A2DFrame * xFrame);					// NULL means just center it. Dont worry about other cases.
+	void							SetVsync(bool xVsync);										// A2DPreferences#WindowProperties + Set default values for these (A2DCommons.h), but can be edited by user during runtime.
+	void							SetDefaultCloseOperation(int xOperation);					// Close the whole application on disposing of frame (Look at Java#JFrame)
 
 public:
 
