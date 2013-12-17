@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Include">
@@ -7,9 +7,6 @@
     </Filter>
     <Filter Include="Include\AuroraSDK">
       <UniqueIdentifier>{4e9d842b-c21a-4109-87e0-ebe22c83a58a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Include\NotificationDrawer">
-      <UniqueIdentifier>{75ad42df-244c-412e-874a-b9d007dcb0cd}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resources">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
@@ -31,20 +28,17 @@
     <Filter Include="Source\AuroraSDK">
       <UniqueIdentifier>{02ae4ec5-35d3-438c-8d2c-785ff224e6c2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\NotificationDrawer">
+    <Filter Include="Source\NotificationCenter">
       <UniqueIdentifier>{9f878f53-360b-47e2-8aa7-b843b7126096}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resources\NotificationDrawer">
+    <Filter Include="Resources\NotificationCenter">
       <UniqueIdentifier>{915695ea-ce31-41e7-8903-f311ce790c86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\NotificationCenter">
+      <UniqueIdentifier>{75ad42df-244c-412e-874a-b9d007dcb0cd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Source\NotificationDrawer</Filter>
-    </ClCompile>
-    <ClCompile Include="NotificationDrawer.cpp">
-      <Filter>Source\NotificationDrawer</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora SDK\Lib\Source\A2DAbstract.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
@@ -135,10 +129,13 @@
     <ClCompile Include="..\..\..\Aurora SDK\Lib\Source\A2DWindowProperties.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
+    <ClCompile Include="NotificationDrawer.cpp">
+      <Filter>Source\NotificationCenter</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\images\MuzzlerSync.ico">
-      <Filter>Resources\NotificationDrawer</Filter>
+      <Filter>Resources\NotificationCenter</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync background [a] 1.jpg">
       <Filter>Resources\AuroraSDK\Images</Filter>
@@ -208,15 +205,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="targetver.h">
-      <Filter>Include\NotificationDrawer</Filter>
-    </ClInclude>
-    <ClInclude Include="stdafx.h">
-      <Filter>Include\NotificationDrawer</Filter>
-    </ClInclude>
-    <ClInclude Include="NotificationDrawer.h">
-      <Filter>Include\NotificationDrawer</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora SDK\Include\A2DAbstract.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
@@ -321,6 +309,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora SDK\Include\A2DWindowProperties.h">
       <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="NotificationDrawer.h">
+      <Filter>Include\NotificationCenter</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

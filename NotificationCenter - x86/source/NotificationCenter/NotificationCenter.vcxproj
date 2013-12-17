@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -14,7 +14,7 @@
     <ProjectGuid>{BF71BA65-B8F8-49F9-AD36-ECE0180BAEBF}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>NotificationCenter</RootNamespace>
-    <ProjectName>NotificationWidget</ProjectName>
+    <ProjectName>NotificationCenter</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -119,8 +119,7 @@
     <ClCompile Include="..\..\..\Aurora SDK\Lib\Source\A2DVertexData.cpp" />
     <ClCompile Include="..\..\..\Aurora SDK\Lib\Source\A2DWindow.cpp" />
     <ClCompile Include="..\..\..\Aurora SDK\Lib\Source\A2DWindowProperties.cpp" />
-    <ClCompile Include="NotificationCenter.cpp" />
-    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="NotificationDrawer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync background [a] 1.jpg" />
@@ -184,8 +183,6 @@
     <ClInclude Include="..\..\..\Aurora SDK\Include\A2DWindow.h" />
     <ClInclude Include="..\..\..\Aurora SDK\Include\A2DWindowProperties.h" />
     <ClInclude Include="NotificationDrawer.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\..\..\aurora-sdk\lib\assets\shaders\horizontalblur.fx">
