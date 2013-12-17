@@ -1,9 +1,9 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.20827.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NotificationWidget", "NotificationWidget\MuzzlerSync.vcxproj", "{BF71BA65-B8F8-49F9-AD36-ECE0180BAEBF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NotificationCenter", "NotificationCenter\NotificationCenter.vcxproj", "{BF71BA65-B8F8-49F9-AD36-ECE0180BAEBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
