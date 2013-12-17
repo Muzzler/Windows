@@ -36,6 +36,7 @@
 #include "A2DMatrixFactory.h"
 #include "A2DRootPane.h"
 #include "A2DWindow.h"
+#include "A2DShared.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 // FORWARD DECLARATIONS
@@ -69,7 +70,7 @@ class A2DFrame : public A2DAbstract
 public:
     
     // Constructor
-	A2DFrame();
+	A2DFrame(HINSTANCE * xHInstance);
 
     // Deconstructor
 	~A2DFrame();
@@ -77,6 +78,7 @@ public:
 private:
 
     // Variables
+	HINSTANCE				  *		aHInstance;
     A2DRootPane               *     aRootPane;
 	A2DBackBuffer             *     aBackBuffer;
 	A2DTextureBuffer          *     aTextureBuffer;
@@ -84,7 +86,7 @@ private:
 	A2DWindow                 *     aWindow;
     A2DCamera                 *     aCamera;
     A2DRenderData             *     aRenderData;
-    A2DWindowProperties       *     aWindowProps;
+	A2DWindowProperties       *     aWindowProps;
 
     // Accessors
     // { NONE }

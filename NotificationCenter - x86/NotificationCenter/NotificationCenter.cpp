@@ -17,24 +17,26 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 			title = L"Muzzler - Notification Center";
 
 	HRESULT hr = S_OK;
+	
+	A2DFrame frame(&xHInstance);
 
-	A2DFrame frame;	
 	hr = frame.Initialize();
-	if (!hr)	return hr;
+	if (FAILED(hr))	return hr;
 	
 	frame.SetName(&title);				// Set the title
 	frame.SetBounds(0,0, 500, 500);		// Start at left corner
 	frame.SetLocationRelativeTo(NULL);	// Center on screen
 
 	A2DPanel& root = *frame.GetRootPane(); // Reference to make syntax easier
-	
-	A2DPanel mainPanel;
-	mainPanel.Initialize();
-	if (!hr)	return hr;
 
+	A2DPanel mainPanel;
 	A2DPanel subPanel;
-	subPanel.Initialize();
-	if (!hr)	return hr;
+
+	hr = mainPanel.Initialize();
+	if (FAILED(hr))	return hr;
+
+	hr = subPanel.Initialize();
+	if (FAILED(hr))	return hr;
 	
 	mainPanel.SetBounds(0, 0, 300, 300);
 	subPanel.SetBounds(0, 0, 200, 700);

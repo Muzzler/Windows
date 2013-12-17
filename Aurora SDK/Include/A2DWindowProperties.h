@@ -65,6 +65,7 @@ public:
     ~A2DWindowProperties();
 
 private:
+
     // Variables
 	int								aPadding;
 	int								aShadowPadding;
@@ -76,14 +77,12 @@ private:
 
     bool                            aWinActive;
 
-    LPCWSTR                         aWindowTitle;             // The title bar text
-    LPCWSTR                         aWindowClass;             // the main window class name
-	LPCWSTR							aWindowTitleP;
-	LPCWSTR							aWindowTitleC;
-	LPCWSTR							aWindowClassP;                   // the main window class name
-	LPCWSTR							aWindowClassC;
+    LPCWSTR                         aName;
+
+	A2DWindow				  *		aWindow;
 
 public:
+
     // Accessors
 	A2DRect                   *     GetRealBounds();
 	A2DRect                   *     GetRelativeBounds();
@@ -91,6 +90,8 @@ public:
 	A2DDims					  *     GetRelativeSize();
 	float					        GetPadding();
 	float					        GetShadowPadding();
+	LPCWSTR					  *		GetName();
+	void					  *		SetWindow(A2DWindow * xWindow);
 
     // Mutators
 	void                            SetRealBounds(A2DRect * xRect);

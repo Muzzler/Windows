@@ -3,9 +3,7 @@
 #include "../../Include/A2DFrame.h"
 #include "../../Include/A2DTextureBuffer.h"
 
-A2DFrame::A2DFrame(A2DWindow * xWindow, A2DWindowProperties * xWindowProp) :
-aWindowProps(xWindowProp),
-aWindow(xWindow){}
+A2DFrame::A2DFrame(HINSTANCE * xHInstance) : aHInstance(xHInstance) {}
 
 A2DFrame::~A2DFrame(){}
 
@@ -36,6 +34,7 @@ HRESULT A2DFrame::CreateResources()
 	cameraProperties->aPositionY = 0.0f;
 	cameraProperties->aPositionZ = -10.0f;
 
+	// Create properties once the properties have been set
 	aCamera->CreateResources();
 
 	// Set the RenderData and pass it into RootPane to inialize the render process.
@@ -64,15 +63,12 @@ LRESULT A2DFrame::PumpWindowMsg(HWND * xHwnd, UINT * xMessage, WPARAM * xWParam,
 void A2DFrame::Update()
 {
 	aRenderData->aBackBuffer->SetActive();
-
 	aRenderData->aBackBuffer->Clear();
-
 	aRenderData->aBackBuffer->SetZBuffer(false);
 
-	aRootPane->Update();
-	
-	aRenderData->aBackBuffer->SetZBuffer(true);
+	aRootPane->Update();	
 
+	aRenderData->aBackBuffer->SetZBuffer(true);
 	aRenderData->aBackBuffer->Swap();
 }
 
@@ -97,33 +93,61 @@ bool A2DFrame::operator==(A2DAbstract * xAbstract)
 
 HRESULT A2DFrame::Initialize()
 {
-	HRESULT hr;
-
-	aWindow->SetFrame(this);
+	HRESULT hr;	
 
 	// -----------------------------------------------------
-	
+
+	aWindow = new A2DWindow(aHInstance, aWindowProps);
+
+	hr = aWindow->Initialize();
+	if (FAILED(hr))	return hr;
+
+	// -----------------------------------------------------
+
 	aRootPane = new A2DRootPane(aWindowProps);
-	aBackBuffer = new A2DBackBuffer(aWindow, aWindowProps);
-	aCamera = new A2DCamera();
-	aRenderData = new A2DRenderData();
-	aTextureBuffer = new A2DTextureBuffer(aBackBuffer, aWindowProps->GetRealSize());
-	aBlurBuffer = new A2DTextureBuffer(aBackBuffer, aWindowProps->GetRealSize()); 
-	aWindow = new A2DWindow(&windowProperties, padding, shadowPadding); // Because we don't have to tools to create custom padding now, 
-	// just make it a requirement for constructor. Pull these off 
-	// of the WindowProperties...because they are useless elsewhere.
 
-	window->Initialize(); // Just initialize it to some default size/position (put the default values in A2DCommons.h)
+	hr = aRootPane->Initialize();
+	if (FAILED(hr))	return hr;
 
 	// -----------------------------------------------------
+
+	aBackBuffer = new A2DBackBuffer(aWindow, aWindowProps);
 
 	hr = aBackBuffer->Initialize();
-	hr = aRootPane->Initialize();
-	hr = aCamera->Initialize();
-	hr = aTextureBuffer->Initialize();
-	hr = aBlurBuffer->Initialize();
+	if (FAILED(hr))	return hr;
 
-	aRootPane->SetBounds(0, 0, aWindowProps->aRealWidth, aWindowProps->aRealHeight);
+	// -----------------------------------------------------
+
+	aCamera = new A2DCamera();
+
+	hr = aCamera->Initialize();
+	if (FAILED(hr))	return hr;
+
+	// -----------------------------------------------------
+
+	aTextureBuffer = new A2DTextureBuffer(aBackBuffer, aWindowProps->GetRealSize());
+
+	hr = aTextureBuffer->Initialize();
+	if (FAILED(hr))	return hr;
+
+	// -----------------------------------------------------
+
+	aBlurBuffer = new A2DTextureBuffer(aBackBuffer, aWindowProps->GetRealSize());
+
+	hr = aBlurBuffer->Initialize();
+	if (FAILED(hr))	return hr;
+
+	// -----------------------------------------------------
+
+	aRenderData = new A2DRenderData();
+
+	hr = aRenderData->Initialize();
+	if (FAILED(hr))	return hr;
+
+	// -----------------------------------------------------
+
+	aRootPane->SetBounds(0, 0, aWindowProps->GetRealSize()->aWidth, aWindowProps->GetRealSize()->aHeight);
+	aWindow->SetFrame(this);
 
 	// -----------------------------------------------------
 	

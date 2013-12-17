@@ -2,7 +2,8 @@
 #include "../../include/A2DExtLibs.h"
 #include "../../include/A2DWindow.h"
 
-A2DWindow::A2DWindow(A2DWindowProperties* xWinProps) :
+A2DWindow::A2DWindow(HINSTANCE * xHInstance, A2DWindowProperties* xWinProps) :
+aHInstance(xHInstance),
 aWindowProps(xWinProps)
 {}
 
@@ -33,7 +34,7 @@ void A2DWindow::SetUndecorated(bool xUndecoratedFlag)
 	SetWindowPos(aParentHwnd, NULL, 0, 0, 0, 0, SWP_FRAMECHANGED | SWP_NOMOVE | SWP_NOSIZE | SWP_NOZORDER | SWP_NOOWNERZORDER);
 }
 
-void A2DWindow::SetWindowPadding(int xPad)
+void A2DWindow::SetPadding(int xPad)
 {
 	// Default values will be used. They are defined in SampleWindow resources.
 	// The final goal is to render this using pure GDI+ and cache it and reuse it during resize. 
@@ -130,13 +131,13 @@ ATOM A2DWindow::RegisterClass(HWND xHwnd)
 	wcex.lpfnWndProc = A2DWindow::WndProc;
 	wcex.cbClsExtra = 0;
 	wcex.cbWndExtra = 0;
-	wcex.hInstance = *aWindowProps->aHInstance;
+	wcex.hInstance = *aHInstance;
 	wcex.hIcon = LoadIcon(NULL, IDI_APPLICATION);
 	wcex.hCursor = LoadCursor(NULL, IDC_ARROW);
 	wcex.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
 	wcex.lpszMenuName = NULL;
-	wcex.lpszClassName = aWindowProps->aWindowClass;
-	wcex.hIconSm = LoadIcon(*aWindowProps->aHInstance, IDI_APPLICATION);
+	wcex.lpszClassName = *aWindowProps->GetName();
+	wcex.hIconSm = LoadIcon(*aHInstance, IDI_APPLICATION);
 
 	return RegisterClassEx(&wcex);
 }
@@ -154,7 +155,7 @@ void A2DWindow::RunMessageLoop()
 			DispatchMessage(&msg);
 		}
 
-		if(aAurora) aAurora->Update();
+		if (aFrame) aFrame->Update();
 	}
 }
 
@@ -174,21 +175,11 @@ HRESULT A2DWindow::CreateHandle(HWND& xHandler)
 	lStyle = xHandler == aParentHwnd ? WS_POPUP | WS_OVERLAPPED : WS_POPUP;
 	lExStyle = xHandler == aParentHwnd ? WS_EX_LAYERED | WS_EX_APPWINDOW : 0;
 	hwndParent = xHandler == aParentHwnd ? HWND_DESKTOP : aParentHwnd;
-	className = aWindowProps->aWindowClass;
-	titleName = aWindowProps->aWindowTitle;
+	className = *aWindowProps->GetName();
+	titleName = *aWindowProps->GetName();
 
-	hWnd = CreateWindowEx(lExStyle, 
-						  className, 
-						  titleName, 
-						  lStyle, 
-						  left, 
-						  top, 
-						  width, 
-						  height, 
-						  hwndParent, 
-						  NULL, 
-						  *aWindowProps->aHInstance, 
-						  this);
+	hWnd = CreateWindowEx(lExStyle, className, titleName, lStyle, left, top, 
+						  width, height, hwndParent, NULL, *aHInstance, this);
 
 	if (hWnd == 0)
 	{
@@ -258,9 +249,9 @@ HRESULT A2DWindow::CreateComponentResources()
 
 }
 
-void  A2DWindow::SetAurora2D(A2D * xAurora)
+void  A2DWindow::SetFrame(A2DFrame * xFrame)
 {
-	aAurora = xAurora;
+	aFrame = xFrame;
 }
 
 void A2DWindow::SetVisible(bool xVisible)
@@ -269,7 +260,7 @@ void A2DWindow::SetVisible(bool xVisible)
 	if(xVisible)
 	{
 		// Create resources!
-		aAurora->CreateResources();
+		aFrame->CreateResources();
 
 		ShowWindow(aChildHwnd, SW_SHOWNORMAL);
 		ShowWindow(aParentHwnd, SW_SHOWNORMAL);
@@ -441,9 +432,7 @@ HRESULT A2DWindow::Initialize()
 
 	CacheVariables();
 
-	aWindowProps->aWindowTitle = L"WindowTestTitle";
-	aWindowProps->aWindowClass = L"WindowTestClass";
-	aWindowProps->aWindow = this;
+	aWindowProps->SetWindow(this);
 
 	RegisterClass(aParentHwnd);
 	RegisterClass(aChildHwnd);
@@ -472,13 +461,7 @@ void A2DWindow::Deinitialize()
 		delete aWindowProps;  // <-- delete the pointer NOT the struct since this was passed in to you.
 		aWindowProps = nullptr;
 	}
-	if (aWindowProps)
-	{
-		delete aAurora; // <----- delete the pointer NOT the struct
-		aAurora = nullptr;
-	}
 
 	aParentHwnd = NULL;
 	aChildHwnd = NULL;
-	// HAVE TO WORK ON DIZ
 }

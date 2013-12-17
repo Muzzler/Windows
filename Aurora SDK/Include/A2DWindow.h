@@ -74,14 +74,15 @@ class A2DWindow : public A2DAbstract
 public:
 
     // Constructor
-    A2DWindow(A2DWindowProperties* xWinProps); // <-- WILL ALWAYS CENTER THE WINDOW FOR NOW
+	A2DWindow(HINSTANCE * xHInstance, A2DWindowProperties* xWinProps); // <-- WILL ALWAYS CENTER THE WINDOW FOR NOW
 
     // Deconstructor
     ~A2DWindow();
   
 
     // Variables
-	A2D                       *     aAurora;
+	HINSTANCE				  *		aHInstance;
+	A2DFrame                  *     aFrame;
     A2DWindowProperties       *     aWindowProps;
     HWND                            aParentHwnd;
     HWND                            aChildHwnd;
@@ -107,7 +108,7 @@ public:
     // Mutators
 	void                            SetFrame(A2DFrame * xFrame);
     void                            SetUndecorated(bool xUndecoratedFlag);
-    void                            SetWindowPadding(int xPad);
+    void                            SetPadding(int xPad);
     void                            SetShadow(bool xShadowFlag);
 //  void                            SetBorderColor(Color xColor);
     void                            SetPosition(int xLeft, int xTop);
