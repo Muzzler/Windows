@@ -40,8 +40,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 
-#include "../../../Aurora SDK/include/A2DFrame.h"
-#include "../../../Aurora SDK/include/A2DPanel.h"
+#include "../../Aurora SDK/Include/A2DFrame.h"
 
 /******************************************************************
 *                                                                 *
