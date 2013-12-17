@@ -1,8 +1,8 @@
-// NotificationDrawer.cpp : Defines the entry point for the application.
+// NotificationCenter.cpp : Defines the entry point for the application.
 //
 
 #include "stdafx.h"
-#include "NotificationDrawer.h"
+#include "NotificationCenter.h"
 
 int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdLine, int xCmdShow )
 {

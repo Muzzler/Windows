@@ -39,9 +39,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="NotificationDrawer.cpp">
-      <Filter>Source\NotificationCenter</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Aurora SDK\Lib\Source\A2DAbstract.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
@@ -132,6 +129,9 @@
     <ClCompile Include="..\..\Aurora SDK\Lib\Source\A2DWindowProperties.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
+    <ClCompile Include="NotificationCenter.cpp">
+      <Filter>Source\NotificationCenter</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\images\small.ico">
@@ -205,9 +205,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="NotificationDrawer.h">
-      <Filter>Include\NotificationCenter</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Aurora SDK\Include\A2DAbstract.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
@@ -312,6 +309,9 @@
     </ClInclude>
     <ClInclude Include="..\..\Aurora SDK\Include\A2DWindowProperties.h">
       <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="NotificationCenter.h">
+      <Filter>Include\NotificationCenter</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

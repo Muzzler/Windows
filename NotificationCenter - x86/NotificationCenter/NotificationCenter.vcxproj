@@ -119,7 +119,7 @@
     <ClCompile Include="..\..\Aurora SDK\Lib\Source\A2DVertexData.cpp" />
     <ClCompile Include="..\..\Aurora SDK\Lib\Source\A2DWindow.cpp" />
     <ClCompile Include="..\..\Aurora SDK\Lib\Source\A2DWindowProperties.cpp" />
-    <ClCompile Include="NotificationDrawer.cpp" />
+    <ClCompile Include="NotificationCenter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\Aurora SDK\Lib\Assets\Images\muzzler windows-sync background [a] 1.jpg" />
@@ -182,7 +182,7 @@
     <ClInclude Include="..\..\Aurora SDK\Include\A2DVertexData.h" />
     <ClInclude Include="..\..\Aurora SDK\Include\A2DWindow.h" />
     <ClInclude Include="..\..\Aurora SDK\Include\A2DWindowProperties.h" />
-    <ClInclude Include="NotificationDrawer.h" />
+    <ClInclude Include="NotificationCenter.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\..\Aurora SDK\Lib\Assets\Shaders\color.fx" />
