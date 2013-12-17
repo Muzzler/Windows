@@ -6,12 +6,6 @@ using namespace std;
 
 A2DWindowProperties::A2DWindowProperties(){}
 
-A2DWindowProperties::A2DWindowProperties(HINSTANCE * xHInstance, int xPadding, int xShadowPadding) :
-aHInstance(xHInstance),
-aShadowPadding(xShadowPadding),
-aPadding(xPadding),
-aWinActive(true){}
-
 A2DWindowProperties::~A2DWindowProperties(){}
 
 A2DRect * A2DWindowProperties::GetRealBounds()
@@ -94,9 +88,21 @@ bool A2DWindowProperties::operator==(A2DAbstract * xAbstract)
 	return false;
 }
 
-HRESULT A2DWindowProperties::Initialize(){
+HRESULT A2DWindowProperties::Initialize()
+{
+	aPadding = A2D_WINDOW_PROPERTIES_DEFAULT_PADDING;
+	aShadowPadding = A2D_WINDOW_PROPERTIES_DEFAULT_SHADOW_PADDING;
+	
+	A2DRect rect;
 
-	return NULL;
+	rect.aX = A2D_WINDOW_PROPERTIES_DEFAULT_POS_X;
+	rect.aX = A2D_WINDOW_PROPERTIES_DEFAULT_POS_Y;
+	rect.aX = A2D_WINDOW_PROPERTIES_DEFAULT_POS_X;
+	rect.aX = ;
+
+	SetRelativeBounds(&rect);
+
+	return S_OK;
 }
 
 void A2DWindowProperties::Deinitialize(){}

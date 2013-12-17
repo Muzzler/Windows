@@ -58,9 +58,6 @@ class A2DImagePanel;
 #define IDB_BSW_LEFT_SHADOW_PNG                             RES_BSW_DIR L"muzzler windows-sync leftShadow [a] 1.png"
 #define IDB_BSW_RIGHT_SHADOW_PNG                            RES_BSW_DIR L"muzzler windows-sync rightShadow [a] 1.png"
 #define IDB_BSW_BACKGROUND_PNG                              RES_BSW_DIR L"muzzler windows-sync background [c] 1.png"
-#define IDP_BSW_ACTIVE_BORDER_COLOR                         0x00929292
-#define DEF_PAD_VALUE                                       25
-#define DEF_SPAD_VALUE                                      75
 
 ////////////////////////////////////////////////////////////////////////////////
 // DECLARATION
@@ -74,7 +71,7 @@ class A2DWindow : public A2DAbstract
 public:
 
     // Constructor
-	A2DWindow(HINSTANCE * xHInstance, A2DWindowProperties* xWinProps); // <-- WILL ALWAYS CENTER THE WINDOW FOR NOW
+	A2DWindow(HINSTANCE * xHInstance); // <-- WILL ALWAYS CENTER THE WINDOW FOR NOW
 
     // Deconstructor
     ~A2DWindow();
@@ -83,7 +80,7 @@ public:
     // Variables
 	HINSTANCE				  *		aHInstance;
 	A2DFrame                  *     aFrame;
-    A2DWindowProperties       *     aWindowProps;
+    A2DWindowProperties             aWindowProps;
     HWND                            aParentHwnd;
     HWND                            aChildHwnd;
 
@@ -104,6 +101,7 @@ public:
 
     // Accessors
 	HWND					  *		GetChildHwnd();
+	A2DWindowProperties		  *		GetProperties();
 
     // Mutators
 	void                            SetFrame(A2DFrame * xFrame);

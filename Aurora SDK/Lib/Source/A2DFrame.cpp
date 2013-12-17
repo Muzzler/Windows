@@ -27,22 +27,14 @@ HRESULT A2DFrame::CreateResources()
 	
 	HRESULT hr;
 
-	// Adjust camera settings and then create its resources.
-	A2DCameraProperties * cameraProperties = aCamera->GetProperties();
-
-	cameraProperties->aPositionX = 0.0f;
-	cameraProperties->aPositionY = 0.0f;
-	cameraProperties->aPositionZ = -10.0f;
-
-	// Create properties once the properties have been set
+	// Create resource for a particular view
 	aCamera->CreateResources();
 
 	// Set the RenderData and pass it into RootPane to inialize the render process.
 	aRenderData->aBackBuffer = aBackBuffer;
 	aRenderData->aTextureBuffer = aTextureBuffer;
 	aRenderData->aBlurBuffer = aBlurBuffer;
-	aRenderData->aWindowProps = aWindowProps;
-	aRenderData->aCameraProps = aCamera->GetProperties();
+	aRenderData->aWindow = aWindow;
 	aRenderData->aViewMatrix = aCamera->GetViewMatrix();
 	aRenderData->aWorldMatrix = A2DMatrixFactory::createDefaultWorldMatrix();
 	aRenderData->aProjectionMatrix = A2DMatrixFactory::createDefaultProjectionMatrix(aWindowProps);
@@ -97,21 +89,23 @@ HRESULT A2DFrame::Initialize()
 
 	// -----------------------------------------------------
 
-	aWindow = new A2DWindow(aHInstance, aWindowProps);
+	aWindow = new A2DWindow(aHInstance);
 
 	hr = aWindow->Initialize();
 	if (FAILED(hr))	return hr;
 
+	aWindowProps = aWindow->GetProperties();
+
 	// -----------------------------------------------------
 
-	aRootPane = new A2DRootPane(aWindowProps);
+	aRootPane = new A2DRootPane();
 
 	hr = aRootPane->Initialize();
 	if (FAILED(hr))	return hr;
 
 	// -----------------------------------------------------
 
-	aBackBuffer = new A2DBackBuffer(aWindow, aWindowProps);
+	aBackBuffer = new A2DBackBuffer(aWindow);
 
 	hr = aBackBuffer->Initialize();
 	if (FAILED(hr))	return hr;

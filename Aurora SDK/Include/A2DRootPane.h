@@ -57,7 +57,7 @@ class A2DRootPane : public A2DPanel
 public:
 
 	// Constructor
-	A2DRootPane(A2DWindowProperties * xWindowProps);
+	// { NONE }
 
 	// Deconstructor
 	// { NONE }

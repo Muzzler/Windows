@@ -20,7 +20,7 @@
 // INCLUDE
 ////////////////////////////////////////////////////////////////////////////////
 
-#include "A2DCameraProperties.h"
+#include "A2DExtLibs.h"
 #include "A2DAbstract.h"
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -32,7 +32,6 @@ class A2DAbstract;
 class A2DRenderable;
 class A2DAbstractComponent;
 class A2DCamera;
-struct A2DCameraProperties;
 struct A2DRenderData;
 class A2DBackBuffer;
 class A2DMatrixFactory;
@@ -40,7 +39,6 @@ class A2DModelFactory;
 class A2DRootPane;
 struct A2DWindowProperties;
 class A2DWindow;
-class A2DImagePanel;
 
 ////////////////////////////////////////////////////////////////////////////////
 // DEFINE
@@ -59,7 +57,6 @@ public:
 
     // Constructor
     A2DCamera();
-    A2DCamera(A2DCameraProperties * xCameraProps);
 
     // Deconstructor
     ~A2DCamera();
@@ -67,14 +64,25 @@ public:
 private:
 
     // Variables
-    A2DCameraProperties       *     aCameraProps;
-    D3DXMATRIX                *     aViewMatrix;
+	D3DXMATRIX                *     aViewMatrix;
+
+	float                           aPositionX = 0.0f;
+	float							aPositionY = 0.0f;
+	float							aPositionZ = -10.0f;
+	float							aRotationX = 0.0f;
+	float							aRotationY = 0.0f;
+	float							aRotationZ = 0.0f;
+	float							aLookAtX = 0.0f;
+	float							aLookAtY = 0.0f;
+	float							aLookAtZ = 0.0f;
+	float                           aLookAtXDef = 0.0f;
+	float                           aLookAtYDef = 0.0f;
+	float                           aLookAtZDef = 1.0f;
 
 public:
 
     // Accesors
     D3DXMATRIX                *     GetViewMatrix();
-    A2DCameraProperties       *     GetProperties();          // returns the camera properties by pointer
 
 private:
 

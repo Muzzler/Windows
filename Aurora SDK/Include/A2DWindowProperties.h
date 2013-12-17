@@ -59,7 +59,7 @@ struct A2DWindowProperties : public A2DAbstract
 public:
     
     // Constructor
-	A2DWindowProperties(int xPadding, int xShadowPadding);
+	A2DWindowProperties();
     
     // Deconstructor
     ~A2DWindowProperties();

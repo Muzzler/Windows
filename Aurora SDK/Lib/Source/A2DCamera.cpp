@@ -2,18 +2,9 @@
 #include "../../include/A2DExtLibs.h"
 #include "../../include/A2DCamera.h"
 
-A2DCamera::A2DCamera() :
-aCameraProps(NULL){}
-
-A2DCamera::A2DCamera(A2DCameraProperties * xCameraProps) :
-aCameraProps(xCameraProps){}
+A2DCamera::A2DCamera(){}
 
 A2DCamera::~A2DCamera(){}
-
-A2DCameraProperties * A2DCamera::GetProperties()
-{
-	return aCameraProps;
-}
 
 D3DXMATRIX* A2DCamera::GetViewMatrix()
 {
@@ -43,7 +34,6 @@ HRESULT A2DCamera::Initialize()
 {
 	// -----------------------------------------------------
 
-	aCameraProps = aCameraProps == NULL ? new A2DCameraProperties() : aCameraProps;
 	aViewMatrix = new D3DXMATRIX();
 
 	// -----------------------------------------------------
@@ -53,7 +43,6 @@ HRESULT A2DCamera::Initialize()
 
 void A2DCamera::CreateResources()
 {
-
 	D3DXVECTOR3 up, position, lookAt;
 	float yaw, pitch, roll;
 	D3DXMATRIX rotationMatrix;
@@ -64,19 +53,19 @@ void A2DCamera::CreateResources()
 	up.z = 0.0f;
 
 	// Setup the position of the camera in the world.
-	position.x = aCameraProps->aPositionX;
-	position.y = aCameraProps->aPositionY;
-	position.z = aCameraProps->aPositionZ;
+	position.x = aPositionX;
+	position.y = aPositionY;
+	position.z = aPositionZ;
 
 	// Setup where the camera is looking by default.
-	lookAt.x = aCameraProps->aLookAtXDef;
-	lookAt.y = aCameraProps->aLookAtYDef;
-	lookAt.z = aCameraProps->aLookAtZDef;
+	lookAt.x = 0.0f;
+	lookAt.y = 0.0f;
+	lookAt.z = 1.0f;
 
 	// Set the yaw (Y axis), pitch (X axis), and roll (Z axis) rotations in radians.
-	pitch = aCameraProps->aRotationX * 0.0174532925f;
-	yaw = aCameraProps->aRotationY * 0.0174532925f;
-	roll = aCameraProps->aRotationZ * 0.0174532925f;
+	pitch = aRotationX * 0.0174532925f;
+	yaw = aRotationY * 0.0174532925f;
+	roll = aRotationZ * 0.0174532925f;
 
 	// Create the rotation matrix from the yaw, pitch, and roll values.
 	D3DXMatrixRotationYawPitchRoll(&rotationMatrix, yaw, pitch, roll);
@@ -94,14 +83,6 @@ void A2DCamera::CreateResources()
 
 void A2DCamera::Deinitialize()
 {
-	// Release the CameraProperties object.
-	if (aCameraProps)
-	{
-		// aCameraProps->Shutdown();
-		delete aCameraProps;
-		aCameraProps = 0;
-	}
-
 	// Release the ViewMatrix object.
 	if (aViewMatrix)
 	{

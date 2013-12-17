@@ -2,10 +2,7 @@
 #include "../../include/A2DExtLibs.h"
 #include "../../include/A2DWindow.h"
 
-A2DWindow::A2DWindow(HINSTANCE * xHInstance, A2DWindowProperties* xWinProps) :
-aHInstance(xHInstance),
-aWindowProps(xWinProps)
-{}
+A2DWindow::A2DWindow(HINSTANCE * xHInstance) : aHInstance(xHInstance) {}
 
 A2DWindow::~A2DWindow(){}
 
@@ -136,7 +133,7 @@ ATOM A2DWindow::RegisterClass(HWND xHwnd)
 	wcex.hCursor = LoadCursor(NULL, IDC_ARROW);
 	wcex.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
 	wcex.lpszMenuName = NULL;
-	wcex.lpszClassName = *aWindowProps->GetName();
+	wcex.lpszClassName = *aWindowProps.GetName();
 	wcex.hIconSm = LoadIcon(*aHInstance, IDI_APPLICATION);
 
 	return RegisterClassEx(&wcex);
@@ -175,8 +172,8 @@ HRESULT A2DWindow::CreateHandle(HWND& xHandler)
 	lStyle = xHandler == aParentHwnd ? WS_POPUP | WS_OVERLAPPED : WS_POPUP;
 	lExStyle = xHandler == aParentHwnd ? WS_EX_LAYERED | WS_EX_APPWINDOW : 0;
 	hwndParent = xHandler == aParentHwnd ? HWND_DESKTOP : aParentHwnd;
-	className = *aWindowProps->GetName();
-	titleName = *aWindowProps->GetName();
+	className = *aWindowProps.GetName();
+	titleName = *aWindowProps.GetName();
 
 	hWnd = CreateWindowEx(lExStyle, className, titleName, lStyle, left, top, 
 						  width, height, hwndParent, NULL, *aHInstance, this);
@@ -402,11 +399,11 @@ bool A2DWindow::operator==(A2DAbstract * xAbstract)
 
 void A2DWindow::CacheVariables()
 {
-	A2DRect * relativeRect = aWindowProps->GetRelativeBounds();
-	A2DRect * realRect = aWindowProps->GetRealBounds();
+	A2DRect * relativeRect = aWindowProps.GetRelativeBounds();
+	A2DRect * realRect = aWindowProps.GetRealBounds();
 
-	aCacheShadowPadding = aWindowProps->GetShadowPadding();
-	aCachePadding = aWindowProps->GetPadding();
+	aCacheShadowPadding = aWindowProps.GetShadowPadding();
+	aCachePadding = aWindowProps.GetPadding();
 
 	aCacheRelativeX = relativeRect->aX;
 	aCacheRelativeY = relativeRect->aY;
@@ -417,7 +414,6 @@ void A2DWindow::CacheVariables()
 	aCacheRealY = realRect->aY;
 	aCacheRealHeight = realRect->aHeight;
 	aCacheRealWidth = realRect->aWidth;
-
 }
 
 HRESULT A2DWindow::Initialize()
@@ -432,7 +428,7 @@ HRESULT A2DWindow::Initialize()
 
 	CacheVariables();
 
-	aWindowProps->SetWindow(this);
+	aWindowProps.SetWindow(this);
 
 	RegisterClass(aParentHwnd);
 	RegisterClass(aChildHwnd);
@@ -456,12 +452,6 @@ HRESULT A2DWindow::Initialize()
 
 void A2DWindow::Deinitialize()
 {
-	if (aWindowProps)
-	{
-		delete aWindowProps;  // <-- delete the pointer NOT the struct since this was passed in to you.
-		aWindowProps = nullptr;
-	}
-
 	aParentHwnd = NULL;
 	aChildHwnd = NULL;
 }
