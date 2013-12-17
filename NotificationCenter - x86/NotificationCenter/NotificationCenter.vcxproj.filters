@@ -8,22 +8,6 @@
     <Filter Include="Include\AuroraSDK">
       <UniqueIdentifier>{4e9d842b-c21a-4109-87e0-ebe22c83a58a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Include\NotificationDrawer">
-      <UniqueIdentifier>{75ad42df-244c-412e-874a-b9d007dcb0cd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Resources\AuroraSDK">
-      <UniqueIdentifier>{0edb71b6-d754-4d21-9f34-874bd14dd04b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\AuroraSDK\Images">
-      <UniqueIdentifier>{e0d4b011-d01f-4724-acc3-3bded9703f8c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\AuroraSDK\Shaders">
-      <UniqueIdentifier>{bec7cc6e-0bd9-4837-b0af-5807873b3d8a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
@@ -31,20 +15,30 @@
     <Filter Include="Source\AuroraSDK">
       <UniqueIdentifier>{02ae4ec5-35d3-438c-8d2c-785ff224e6c2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\NotificationDrawer">
+    <Filter Include="Source\NotificationCenter">
       <UniqueIdentifier>{9f878f53-360b-47e2-8aa7-b843b7126096}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resources\NotificationDrawer">
+    <Filter Include="Include\NotificationCenter">
+      <UniqueIdentifier>{75ad42df-244c-412e-874a-b9d007dcb0cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Assets\AuroraSDK">
+      <UniqueIdentifier>{0edb71b6-d754-4d21-9f34-874bd14dd04b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\AuroraSDK\Images">
+      <UniqueIdentifier>{e0d4b011-d01f-4724-acc3-3bded9703f8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\AuroraSDK\Shaders">
+      <UniqueIdentifier>{bec7cc6e-0bd9-4837-b0af-5807873b3d8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\NotificationCenter">
       <UniqueIdentifier>{915695ea-ce31-41e7-8903-f311ce790c86}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Source\NotificationDrawer</Filter>
-    </ClCompile>
-    <ClCompile Include="NotificationDrawer.cpp">
-      <Filter>Source\NotificationDrawer</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora SDK\Lib\Source\A2DAbstract.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
@@ -135,88 +129,82 @@
     <ClCompile Include="..\..\..\Aurora SDK\Lib\Source\A2DWindowProperties.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
+    <ClCompile Include="NotificationDrawer.cpp">
+      <Filter>Source\NotificationCenter</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="resources\images\MuzzlerSync.ico">
-      <Filter>Resources\NotificationDrawer</Filter>
-    </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync background [a] 1.jpg">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync background [a] 1.png">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync background [a] 2.jpg">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync background [a] 3.jpg">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync background [b] 1.jpg">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync background [c] 1.png">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync bottomLeftShadow [a] 1.png">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync bottomRightShadow [a] 1.png">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync bottomShadow [a] 1.png">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync leftShadow [a] 1.png">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync rightShadow [a] 1.png">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync textureAlbumsWall [a] 1.jpg">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync textureBackground [a] 1.jpg">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync textureBackground [a] 2.jpg">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync textureBackground [a] 3.jpg">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync textureBackground [a] 4.jpg">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync textureBackground [a] 5.jpg">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync textureBackground [b] 1.png">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync textureLogo [a] 1.png">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync topLeftShadow [a] 1.png">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync topRightShadow [a] 1.png">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
     </Image>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync topShadow [a] 1.png">
-      <Filter>Resources\AuroraSDK\Images</Filter>
+      <Filter>Assets\AuroraSDK\Images</Filter>
+    </Image>
+    <Image Include="Assets\images\small.ico">
+      <Filter>Assets\NotificationCenter</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="targetver.h">
-      <Filter>Include\NotificationDrawer</Filter>
-    </ClInclude>
-    <ClInclude Include="stdafx.h">
-      <Filter>Include\NotificationDrawer</Filter>
-    </ClInclude>
-    <ClInclude Include="NotificationDrawer.h">
-      <Filter>Include\NotificationDrawer</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora SDK\Include\A2DAbstract.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
@@ -322,13 +310,16 @@
     <ClInclude Include="..\..\..\Aurora SDK\Include\A2DWindowProperties.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
+    <ClInclude Include="NotificationDrawer.h">
+      <Filter>Include\NotificationCenter</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\..\..\aurora-sdk\lib\assets\shaders\horizontalblur.fx">
-      <Filter>Resources\AuroraSDK\Shaders</Filter>
+      <Filter>Assets\AuroraSDK\Shaders</Filter>
     </FxCompile>
     <FxCompile Include="..\..\..\aurora-sdk\lib\assets\shaders\texture.fx">
-      <Filter>Resources\AuroraSDK\Shaders</Filter>
+      <Filter>Assets\AuroraSDK\Shaders</Filter>
     </FxCompile>
   </ItemGroup>
 </Project>

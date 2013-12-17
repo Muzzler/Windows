@@ -13,8 +13,8 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{BF71BA65-B8F8-49F9-AD36-ECE0180BAEBF}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>MuzzlerSync</RootNamespace>
-    <ProjectName>NotificationWidget</ProjectName>
+    <RootNamespace>NotificationCenter</RootNamespace>
+    <ProjectName>NotificationCenter</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -120,7 +120,6 @@
     <ClCompile Include="..\..\..\Aurora SDK\Lib\Source\A2DWindow.cpp" />
     <ClCompile Include="..\..\..\Aurora SDK\Lib\Source\A2DWindowProperties.cpp" />
     <ClCompile Include="NotificationDrawer.cpp" />
-    <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync background [a] 1.jpg" />
@@ -145,7 +144,7 @@
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync topLeftShadow [a] 1.png" />
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync topRightShadow [a] 1.png" />
     <Image Include="..\..\..\aurora-sdk\lib\assets\images\muzzler windows-sync topShadow [a] 1.png" />
-    <Image Include="resources\images\MuzzlerSync.ico" />
+    <Image Include="Assets\images\small.ico" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Aurora SDK\Include\A2DAbstract.h" />
@@ -184,8 +183,6 @@
     <ClInclude Include="..\..\..\Aurora SDK\Include\A2DWindow.h" />
     <ClInclude Include="..\..\..\Aurora SDK\Include\A2DWindowProperties.h" />
     <ClInclude Include="NotificationDrawer.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\..\..\aurora-sdk\lib\assets\shaders\horizontalblur.fx">
