@@ -1,9 +1,17 @@
 
 #include "../../include/A2DPipeline.h"
 
-A2DPipeline::A2DPipeline(){}
+A2DPipeline::A2DPipeline() : aLifeCycle(A2DPipeline::aGlobalLifeCycle - 1) {} // Offset by 1
 
 A2DPipeline::A2DPipeline(A2DPipeline * xPipeline){}
+
+// Initialize to value
+int A2DPipeline::aGlobalLifeCycle = 0;
+
+void A2DPipeline::nextLifeCycle()
+{
+	aGlobalLifeCycle++;
+}
 
 /////////////////////////////////////////////////////////////////////////////
 // REQUIRED BY A2D_ABSTRACT

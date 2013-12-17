@@ -71,7 +71,7 @@ protected:
 	int                             aChildrenCompsLength = 0;
 	int                             aChildrenCompsIndex = 0;
 
-	A2DRect							aOptRect;
+	A2DRect							aOptRegion;
 
 public:
 	// Accessors

@@ -13,6 +13,7 @@ void A2DGraphics::DrawImage(A2DPipeline * xPipeline, LPCWSTR * xSrc, A2DRect * a
 	A2DAbstractPipelineComponent * quad;
 	A2DAbstractPipelineComponent * textureShader;
 
+	// Pipeline not initalized
 	if (xPipeline = NULL)
 	{
 		xPipeline = new A2DPipeline();
@@ -25,14 +26,6 @@ void A2DGraphics::DrawImage(A2DPipeline * xPipeline, LPCWSTR * xSrc, A2DRect * a
 		texture->Initialize();
 		textureShader->Initialize();
 
-		void * textureArgs[] = { xSrc };
-		void * quadArgs[] = { texture };
-		void * textureShaderArgs[] = { aWorldMatrix, aViewMatrix, aProjectionMatrix, texture };
-
-		texture->CreateResources(textureArgs);
-		quad->CreateResources(quadArgs);
-		textureShader->CreateResources(textureShaderArgs);
-		
 		xPipeline->aPipelineComps[0] = texture;
 		xPipeline->aPipelineComps[1] = quad;
 		xPipeline->aPipelineComps[2] = textureShader;
@@ -46,6 +39,25 @@ void A2DGraphics::DrawImage(A2DPipeline * xPipeline, LPCWSTR * xSrc, A2DRect * a
 	quad = xPipeline->aPipelineComps[1];
 	textureShader = xPipeline->aPipelineComps[2];
 
+	// Pipeline requires a hard reset
+	// A2DPipeline::nextLifeCycle();
+	//   - Use during window resize
+	if (xPipeline->aGlobalLifeCycle > xPipeline->aLifeCycle)
+	{
+		void * textureArgs[] = { xSrc };
+		void * quadArgs[] = { texture };
+		void * textureShaderArgs[] = { aWorldMatrix, aViewMatrix, aProjectionMatrix, texture };
+
+		texture->CreateResources(textureArgs);
+		quad->CreateResources(quadArgs);
+		textureShader->CreateResources(textureShaderArgs);
+
+		xPipeline->aLifeCycle++;
+
+		return;
+	}
+
+	// Pipeline needs to be updated and rendered
 	void * textureArgs[] = { xSrc };
 	void * quadArgs[] = { texture, aRect, aWindowProps };
 	void * textureShaderArgs[] = { texture };
@@ -82,18 +94,19 @@ bool A2DGraphics::operator==(A2DAbstract * xAbstract)
 
 void A2DGraphics::CalculateBounds()
 {
-	A2DRect * compRect, * parentRect;
+	A2DRect * compRect, * parentRect, * parentGraphicsClip;
 	A2DAbstractComponent * parentComp;
 	bool hasParent;
 
 	parentComp  = aComponent->GetParent();
 	hasParent = parentComp != NULL;
 	parentRect = hasParent ? parentComp->GetBounds() : NULL;
+	parentGraphicsClip = hasParent ? &parentComp->GetGraphics()->aClip : NULL;
 
-	aBoundsLeft = (hasParent ? parentComp->GetGraphics()->aBoundsLeft : 0) + compRect->aX;
-	aBoundsTop = (hasParent ? parentComp->GetGraphics()->aBoundsTop : 0) + compRect->aY;
-	aBoundsWidth = min(compRect->aWidth, (hasParent ? parentRect->aWidth : INT_MAX));
-	aBoundsHeight = min(compRect->aHeight, (hasParent ? parentRect->aHeight : INT_MAX));
+	aClip.aX = (hasParent ? parentGraphicsClip->aX: 0) + compRect->aX;
+	aClip.aY = (hasParent ? parentGraphicsClip->aY : 0) + compRect->aY;
+	aClip.aWidth = min(compRect->aWidth, (hasParent ? parentRect->aWidth : INT_MAX));
+	aClip.aHeight = min(compRect->aHeight, (hasParent ? parentRect->aHeight : INT_MAX));
 }
 
 void A2DGraphics::Recalculate()

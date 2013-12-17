@@ -24,7 +24,6 @@
 #include "A2DWindowProperties.h"
 #include "A2DVertexData.h"
 #include "A2DBackBuffer.h"
-#include "A2DPipelineComponent.h"
 #include "A2DTextureShader.h"
 #include "A2DTextureBuffer.h"
 #include "A2DTexture.h"
@@ -75,14 +74,11 @@ public:
 
 	// Variables
 	A2DImageProperties				aSecondaryBufferProps;					// background-size/background-repeat
-	int								aMode;
-	float							aBoundsLeft;
-	float							aBoundsTop;
-	float							aBoundsWidth;
-	float							aBoundsHeight;
-	int								aRenderIndex = 0;
+	A2DRect							aClip;
 
 private:
+
+	// Variables
 	bool							aDoubleBuffer = false;
 	A2DAbstractComponent	  *		aComponent;
 	A2DAbstractPipelineComponent *	aPipelineComponents[10];
@@ -92,7 +88,7 @@ private:
 
 public:
 	// Mutators
-	void							SetMode(int xMode);
+	// { NONE }
 
 	// Additional
 	HRESULT							CreateResources();

@@ -120,9 +120,6 @@
     <ClCompile Include="..\..\Aurora SDK\Lib\Source\A2DTween.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Aurora SDK\Lib\Source\A2DVertexData.cpp">
-      <Filter>Source\AuroraSDK</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Aurora SDK\Lib\Source\A2DWindow.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
@@ -263,9 +260,6 @@
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Aurora SDK\Include\A2DPipeline.h">
-      <Filter>Include\AuroraSDK</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Aurora SDK\Include\A2DPipelineComponent.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Aurora SDK\Include\A2DQuad.h">

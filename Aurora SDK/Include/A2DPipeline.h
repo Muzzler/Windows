@@ -55,8 +55,13 @@ public:
 	// Variables
 	A2DAbstractPipelineComponent  * aPipelineComps[8];
 
-	int							    aMode = A2D_PIPELINE_PREPROCESS_START;
 	int							    aLength = 0;
+	int								aLifeCycle = 0;
+
+	static int						aGlobalLifeCycle;
+
+	// Accessor
+	static void						nextLifeCycle();
 
 	// Pure Virtual
 	// { NONE }

@@ -14,7 +14,7 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 			file2 = L"libs/Aurora SDK/Lib/Assets/Images/muzzler windows-sync textureBackground [a] 5.jpg",
 			file3 = L"libs/Aurora SDK/Lib/Assets/Images/muzzler windows-sync textureAlbumsWall [a] 1.jpg",
 			file4 = L"libs/Aurora SDK/Lib/Assets/Images/muzzler windows-sync textureBackground [b] 1.png",
-			title = L"Test Application";
+			title = L"Muzzler - Notification Center";
 
 	HRESULT hr = S_OK;
 
