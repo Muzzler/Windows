@@ -89,9 +89,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstract.cpp" />
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DFrame.cpp" />
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DWindow.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstract.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DFrame.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DWindow.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="NotificationCenter.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -129,12 +135,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DRect.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DWindow.h" />
     <ClInclude Include="NotificationCenter.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\color.fx" />
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\horizontalblur.fx" />
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\texture.fx" />
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\verticalblur.fx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
