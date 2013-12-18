@@ -147,6 +147,7 @@
     <Image Include="Assets\images\small.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2D.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstract.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractComponent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractPipelineComponent.h" />

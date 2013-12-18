@@ -17,7 +17,7 @@
 Muzzler.Windows
 =======
 
-Muzzler.Windows provides graphical interface for Windows x86 by using Aurora, a hardware accelerated graphical interface library. The Aurora documentation can be found [here](http://muzzler.github.io/Muzzler.Windows/).
+Muzzler.Windows provides graphical interface for Windows x86 by using Aurora, a hardware accelerated graphical interface library. The Aurora documentation can be found [here](http://muzzler.github.io/Aurora-SDK/).
 
 Conventions
 =======

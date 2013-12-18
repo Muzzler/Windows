@@ -307,6 +307,9 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DWindowProperties.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2D.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\color.fx">
