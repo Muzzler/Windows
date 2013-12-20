@@ -9,6 +9,22 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 	UNREFERENCED_PARAMETER(xPrevInstance);
 	UNREFERENCED_PARAMETER(xHInstance);
 
+	/*********************************************************************/
+	/* USER CONTRACT:: MUST NOT CALL ANYTHING BEFORE INITIALIZE          */
+	/*********************************************************************/
+	/*********************************************************************/
+	/* USER CONTRACT:: MUST NOT CALL ANYTHING BEFORE INITIALIZE          */
+	/*********************************************************************/
+	/*********************************************************************/
+	/* USER CONTRACT:: MUST NOT CALL ANYTHING BEFORE INITIALIZE          */
+	/*********************************************************************/
+	/*********************************************************************/
+	/* USER CONTRACT:: MUST NOT CALL ANYTHING BEFORE INITIALIZE          */
+	/*********************************************************************/
+	/*********************************************************************/
+	/* USER CONTRACT:: MUST NOT CALL ANYTHING BEFORE INITIALIZE          */
+	/*********************************************************************/
+
 	LPCTSTR title = L"Muzzler - Notification Center";
 
 	HRESULT hr = S_OK;
