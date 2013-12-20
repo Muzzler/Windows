@@ -48,9 +48,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractComponent.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractPipelineComponent.cpp">
-      <Filter>Source\AuroraSDK</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractShader.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
@@ -129,7 +126,7 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DWindow.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DWindowProperties.cpp">
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DPipelineComponent.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
   </ItemGroup>
@@ -212,9 +209,6 @@
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractComponent.h">
-      <Filter>Include\AuroraSDK</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractPipelineComponent.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractShader.h">
@@ -304,10 +298,13 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DWindow.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DWindowProperties.h">
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2D.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2D.h">
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPipelineComponent.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DGXSettings.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
   </ItemGroup>
