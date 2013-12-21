@@ -183,10 +183,18 @@
     <ClInclude Include="NotificationCenter.h" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\color.fx" />
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\horizontalblur.fx" />
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\texture.fx" />
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\verticalblur.fx" />
+    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\color.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\horizontalblur.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\texture.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\verticalblur.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
