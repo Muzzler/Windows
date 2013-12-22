@@ -18,7 +18,7 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 
 	HRESULT hr = S_OK;
 	
-	A2DFrame frame(&xHInstance);
+	A2DFrame frame(xHInstance);
 
 	hr = frame.Initialize();
 	if (FAILED(hr))	return hr;
