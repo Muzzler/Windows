@@ -91,6 +91,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstract.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractComponent.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DMSWindow.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DPipelineComponent.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractShader.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractShape.cpp" />
@@ -117,7 +118,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DTextureX.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DTween.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DVertexData.cpp" />
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DWindow.cpp" />
     <ClCompile Include="NotificationCenter.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +150,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstract.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractComponent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DGXSettings.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DMSWindow.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPipelineComponent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractShape.h" />
@@ -195,6 +196,9 @@
     <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\verticalblur.fx">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Aurora-SDK\Lib\Source\Templates\A2DWindow.tpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
