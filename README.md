@@ -31,4 +31,4 @@ Conventions
 Screenshot
 =======
 
-![Screenshot](/MainApplication - x86/Assets/renders/muzzler windows quickWireframe [d] 2.png)
+![Screenshot](http://img14.imageshack.us/img14/2311/n9zq.png)
