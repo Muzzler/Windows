@@ -17,7 +17,7 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 	if (FAILED(hr))	return hr;
 	
 	frame.SetName(L"Muzzler - Notification Center");				// Set the title
-	frame.SetBounds(0,0, 500, 500);		// Start at left corner
+	//frame.SetBounds(0,0, 600, 500);		// Start at left corner
 	frame.SetLocationRelativeTo(NULL);	// Center on screen
 	
 	frame.SetVisible(true);
