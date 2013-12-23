@@ -3,6 +3,11 @@
 
 #include "stdafx.h"
 #include "NotificationCenter.h"
+#include <thread>
+
+A2DFrame * frame;
+
+void startThread();
 
 int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdLine, int xCmdShow )
 {
@@ -11,17 +16,37 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 
 	HRESULT hr = S_OK;
 	
-	A2DFrame frame(xHInstance);
+	frame = new A2DFrame(xHInstance);
 
-	hr = frame.Initialize();
+	hr = frame->Initialize();
 	if (FAILED(hr))	return hr;
 	
-	frame.SetName(L"Muzzler - Notification Center");				// Set the title
+	frame->SetName(L"Muzzler - Notification Center");				// Set the title
 	
-	frame.SetBounds(0,0, 600, 500);		// Start at left corner
-	frame.SetLocationRelativeTo(NULL);	// Center on screen
+	frame->SetSize(200, 200);		// Start at left corner
+	frame->SetLocationRelativeTo(NULL);	// Center on screen
 	
-	frame.SetVisible(true);
+	std::thread dispatchThread(&startThread);
+
+	A2DFrame frame2(xHInstance);
+
+	hr = frame2.Initialize();
+	if (FAILED(hr))	return hr;
+
+	frame2.SetName(L"Muzzler - Notification Center");				// Set the title
+
+	frame2.SetBounds(0, 0, 600, 500);		// Start at left corner	
+
+	frame2.SetVisible(true);
 
 	return hr;
+}
+
+void startThread()
+{
+	frame->SetVisible(true);
+}
+void startThread()
+{
+	frame->SetVisible(true);
 }

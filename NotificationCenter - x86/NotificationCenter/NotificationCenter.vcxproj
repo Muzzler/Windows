@@ -109,31 +109,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync background [a] 1.jpg" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync background [a] 1.png" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync background [a] 2.jpg" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync background [a] 3.jpg" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync background [b] 1.jpg" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync background [c] 1.png" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync bottomLeftShadow [a] 1.png" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync bottomRightShadow [a] 1.png" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync bottomShadow [a] 1.png" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync leftShadow [a] 1.png" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync rightShadow [a] 1.png" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync textureAlbumsWall [a] 1.jpg" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync textureBackground [a] 1.jpg" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync textureBackground [a] 2.jpg" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync textureBackground [a] 3.jpg" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync textureBackground [a] 4.jpg" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync textureBackground [a] 5.jpg" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync textureBackground [b] 1.png" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync textureLogo [a] 1.png" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync topLeftShadow [a] 1.png" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync topRightShadow [a] 1.png" />
-    <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync topShadow [a] 1.png" />
-    <Image Include="Assets\images\small.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2D.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstract.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractFrame.h" />
@@ -146,20 +121,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DFrame.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DWindow.h" />
     <ClInclude Include="NotificationCenter.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\color.fx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </FxCompile>
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\horizontalblur.fx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </FxCompile>
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\texture.fx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </FxCompile>
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\verticalblur.fx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
