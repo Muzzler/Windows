@@ -170,9 +170,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DTextureX.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DTween.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DVertexData.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -233,7 +230,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DGXSettings.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DImageProperties.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DMatrixFactory.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DMSWindow.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPanel.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPipeline.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPipelineComponent.h" />
@@ -266,9 +262,6 @@
     <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\verticalblur.fx">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </FxCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\Aurora-SDK\Lib\Source\Templates\A2DWindow.tpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

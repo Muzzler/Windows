@@ -23,7 +23,7 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 	hr = frame.Initialize();
 	if (FAILED(hr))	return hr;
 	
-	frame.SetName(&title);				// Set the title
+	frame.SetName(title);				// Set the title
 	frame.SetBounds(0,0, 500, 500);		// Start at left corner
 	frame.SetLocationRelativeTo(NULL);	// Center on screen
 
