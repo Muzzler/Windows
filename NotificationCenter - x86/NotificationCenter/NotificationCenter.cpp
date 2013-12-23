@@ -9,11 +9,11 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 	UNREFERENCED_PARAMETER(xPrevInstance);
 	UNREFERENCED_PARAMETER(xHInstance);
 
-	LPCTSTR file0 = L"libs/Aurora SDK/Lib/Assets/Images/muzzler windows-sync textureBackground [a] 3.jpg",
-			file1 = L"libs/Aurora SDK/Lib/Assets/Images/muzzler windows-sync textureBackground [a] 4.jpg",
-			file2 = L"libs/Aurora SDK/Lib/Assets/Images/muzzler windows-sync textureBackground [a] 5.jpg",
-			file3 = L"libs/Aurora SDK/Lib/Assets/Images/muzzler windows-sync textureAlbumsWall [a] 1.jpg",
-			file4 = L"libs/Aurora SDK/Lib/Assets/Images/muzzler windows-sync textureBackground [b] 1.png",
+	LPCTSTR file0 = L"Assets/images/muzzler windows-sync background [a] 1.jpg",
+			file1 = L"Assets/images/muzzler windows-sync textureBackground [a] 4.jpg",
+			file2 = L"Assets/images/muzzler windows-sync textureBackground [a] 5.jpg",
+			file3 = L"Assets/images/muzzler windows-sync textureAlbumsWall [a] 1.jpg",
+			file4 = L"Assets/images/muzzler windows-sync textureBackground [b] 1.png",
 			title = L"Muzzler - Notification Center";
 
 	HRESULT hr = S_OK;
@@ -29,28 +29,7 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 
 	A2DPanel& root = *frame.GetRootPane(); // Reference to make syntax easier
 
-	A2DPanel mainPanel;
-	A2DPanel subPanel;
-
-	hr = mainPanel.Initialize();
-	if (FAILED(hr))	return hr;
-
-	hr = subPanel.Initialize();
-	if (FAILED(hr))	return hr;
-	
-	mainPanel.SetBounds(0, 0, 300, 300);
-	subPanel.SetBounds(0, 0, 200, 700);
-
-	root.SetOptBackgroundImage(&file3);
-	mainPanel.SetOptBackgroundImage(&file4);
-	subPanel.SetOptBackgroundImage(&file4);
-	
-	root.Add(&mainPanel);
-	root.Add(&subPanel);
-
-	root.SetDoubleBuffered(true);
-	subPanel.blurred = true;
-	mainPanel.blurred = true;
+	root.SetOptBackgroundImage(&file0);
 	
 	frame.SetVisible(true);
 
