@@ -98,9 +98,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractFrame.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractPipelineComponent.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractShader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -141,9 +138,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DPipeline.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DPipelineComponent.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DQuad.cpp">
@@ -213,7 +207,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstract.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractComponent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractFrame.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractPipelineComponent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractShape.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractTexture.h" />
@@ -232,7 +225,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DMatrixFactory.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPanel.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPipeline.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPipelineComponent.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPipelineable.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DQuad.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DQuadX.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DRect.h" />

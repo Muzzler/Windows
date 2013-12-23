@@ -63,9 +63,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractFrame.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractPipelineComponent.cpp">
-      <Filter>Source\AuroraSDK</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractShader.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
@@ -106,9 +103,6 @@
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DPipeline.cpp">
-      <Filter>Source\AuroraSDK</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DPipelineComponent.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DQuad.cpp">
@@ -238,9 +232,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractFrame.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractPipelineComponent.h">
-      <Filter>Include\AuroraSDK</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractShader.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
@@ -295,9 +286,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPipeline.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPipelineComponent.h">
-      <Filter>Include\AuroraSDK</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DQuad.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
@@ -333,6 +321,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DExtLibs.h">
       <Filter>Include\AuroraSDK\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPipelineable.h">
+      <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
