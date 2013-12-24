@@ -23,8 +23,8 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 	
 	frame->SetName(L"Muzzler - Notification Center");				// Set the title
 	frame->setBackground(0xF2, 0x34, 0x11);
-	frame->setBorder(0xFF, 0xFF, 0xFF, 0xFF, 1.0f);
-	frame->setShadow(0xFF, 0x00, 0xFF, 0x00, 50.0f);
+	frame->setBorder(0xFF, 0xFF, 0xFF, 0xFF, 10.0f);
+	frame->setShadow(0xFF, 0x00, 0xFF, 0x00, 100.0f);
 
 	frame->SetSize(200, 200);		// Start at left corner
 	frame->SetLocationRelativeTo(NULL);	// Center on screen
