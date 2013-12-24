@@ -91,5 +91,8 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DExtLibs.h">
       <Filter>Include\AuroraSDK\Windows</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DColor.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

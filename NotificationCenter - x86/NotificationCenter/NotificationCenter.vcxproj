@@ -113,6 +113,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstract.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractFrame.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractWindow.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DColor.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DCommon.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DDims.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DExtLibs.h" />
