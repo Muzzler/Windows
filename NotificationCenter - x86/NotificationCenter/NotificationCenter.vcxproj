@@ -170,6 +170,9 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DTextureX.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DToolkit.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DVertexData.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -252,6 +255,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DTextureBuffer.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DTextureShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DTextureX.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DToolkit.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DVertexData.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DEventQueue.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DExtLibs.h" />

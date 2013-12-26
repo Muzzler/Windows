@@ -29,12 +29,12 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 	hr = frame->Initialize();
 	if (FAILED(hr))        return hr;
 
-	frame->SetName(L"Muzzler - Notification Center");                                // Set the title
-	frame->setBackground(0xF2, 0x34, 0x11);
-	frame->setBorder(0xFF, 0xFF, 0xFF, 0xFF, 10.0f);
-	frame->setShadow(0xFF, 0x00, 0xFF, 0x00, 100.0f);
+//	frame->SetName(L"Muzzler - Notification Center");                                // Set the title
+//	frame->setBackground(0xF2, 0x34, 0x11);
+//	frame->setBorder(0xFF, 0xFF, 0xFF, 0xFF, 10.0f);
+//	frame->setShadow(0xFF, 0x00, 0xFF, 0x00, 100.0f);
 
-	frame->SetLocationRelativeTo(NULL);        // Center on screen
+//	frame->SetLocationRelativeTo(NULL);        // Center on screen
 
 	A2DPanel& root = *frame->GetRootPane(); // Reference to make syntax easier
 
@@ -61,11 +61,9 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 	subPanel.blurred = true;
 	mainPanel.blurred = true;
 
-	frame->SetVisible(true);
+	// frame->SetVisible(true);	
 
-	// A2DAbstractEventQueue::waitForAllDispatchingThreads();
-
-	return 0;
+	return A2DToolkit::waitForUI();
 }
 void startThread()
 {

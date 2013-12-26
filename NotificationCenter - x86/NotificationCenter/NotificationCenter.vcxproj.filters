@@ -150,6 +150,9 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractThread.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DToolkit.cpp">
+      <Filter>Source\AuroraSDK</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\images\small.ico">
@@ -353,6 +356,9 @@
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractThread.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DToolkit.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
   </ItemGroup>
