@@ -138,6 +138,15 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\A2DWindow.cpp">
       <Filter>Source\AuroraSDK\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\A2DEventQueue.cpp">
+      <Filter>Source\AuroraSDK\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\A2DThread.cpp">
+      <Filter>Source\AuroraSDK\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractEventQueue.cpp">
+      <Filter>Source\AuroraSDK</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\images\small.ico">
@@ -323,6 +332,21 @@
       <Filter>Include\AuroraSDK\Windows</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPipelineable.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DColor.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractEventQueue.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DEventQueue.h">
+      <Filter>Include\AuroraSDK\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DThread.h">
+      <Filter>Include\AuroraSDK\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DRunnable.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
   </ItemGroup>

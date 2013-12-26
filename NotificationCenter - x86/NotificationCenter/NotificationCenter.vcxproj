@@ -95,6 +95,9 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractComponent.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractEventQueue.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractFrame.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -167,7 +170,13 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DVertexData.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\A2DEventQueue.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\A2DFrame.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\A2DThread.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\A2DWindow.cpp">
@@ -206,6 +215,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2D.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstract.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractComponent.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractEventQueue.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractFrame.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractShape.h" />
@@ -214,6 +224,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DBackBuffer.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DCamera.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DCameraProperties.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DColor.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DCommon.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DComponent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DDims.h" />
@@ -232,13 +243,16 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DRenderable.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DRenderData.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DRootPane.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DRunnable.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DTexture.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DTextureBuffer.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DTextureShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DTextureX.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DVertexData.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DEventQueue.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DExtLibs.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DFrame.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DThread.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DWindow.h" />
     <ClInclude Include="NotificationCenter.h" />
   </ItemGroup>
