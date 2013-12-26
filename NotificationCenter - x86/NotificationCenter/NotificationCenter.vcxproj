@@ -110,6 +110,9 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractTexture.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractThread.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractWindow.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -220,6 +223,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractShape.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractTexture.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractThread.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractWindow.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DBackBuffer.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DCamera.h" />

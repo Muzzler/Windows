@@ -63,7 +63,9 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 
 	frame->SetVisible(true);
 
-	return hr;
+	// A2DAbstractEventQueue::waitForAllDispatchingThreads();
+
+	return 0;
 }
 void startThread()
 {
