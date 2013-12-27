@@ -21,12 +21,16 @@ Launcher::Launcher(HINSTANCE xHInstance)
 	// aFrame->dispose();
 }
 
-void Launcher::runOnMainThread()
-{
-	aFrame->initialize_();
-
-	run(0);
-}
+// Note: This feature is not allowed due to convoluted
+// code that needs happen to make this work. In fact,
+// this feature is quite useless.
+//
+//void launcher::runonmainthread()
+//{
+//	aframe->initialize_();
+//
+//	run(0);
+//}
 
 void Launcher::runOnEventDispatchingThread()
 {
