@@ -13,5 +13,5 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 	
 	Launcher launcher(xHInstance);
 
-	return A2DToolkit::waitForUI();
+	return A2DToolkit::waitForBackgroundThreads();
 }
