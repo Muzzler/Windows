@@ -4,24 +4,35 @@
 Launcher::Launcher(HINSTANCE xHInstance)
 {
 	aFrame = new A2DFrame(xHInstance);
-	aFrame->Initialize();
 
 	mainPanel.Initialize();
 	subPanel.Initialize();
+	
+	// Sleep(5000);
 
-	A2DToolkit::getSystemEventQueue(aFrame->id()).invokeLater(this); // To create the window!
+	//  aFrame->SetVisible(false);
 
-	Sleep(5000);
+	//  Sleep(5000);
 
-	aFrame->SetVisible(false);
+	// aFrame->SetVisible(true);
 
-	Sleep(5000);
+	// Sleep(5000);
 
-	aFrame->SetVisible(true);
+	// aFrame->dispose();
+}
 
-	Sleep(5000);
+void Launcher::runOnMainThread()
+{
+	aFrame->initialize_();
 
-	aFrame->dispose();
+	run(0);
+}
+
+void Launcher::runOnEventDispatchingThread()
+{
+	aFrame->Initialize();
+
+	A2DToolkit::getSystemEventQueue(aFrame->id())->invokeLater(this); // To create the window!
 }
 
 void Launcher::run(int xThreadId)
@@ -35,9 +46,8 @@ void Launcher::run(int xThreadId)
 	aFrame->setBorder(0xFF, 0, 122, 204, 1.0f);
 	aFrame->setShadow(0xFF, 0, 122, 204, 10.0f);
 	aFrame->SetBounds(rand() % 800, rand() % 600, 800, 600);
-	aFrame->SetVisible(true);
 
-	SYSOUT_F("Event Dispatching Thread - x%X\n", xThreadId);
+	SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
 
 	A2DPanel& root = *aFrame->GetRootPane(); // Reference to make syntax easier
 		
@@ -54,4 +64,6 @@ void Launcher::run(int xThreadId)
 	root.SetDoubleBuffered(true);
 	subPanel.blurred = true;
 	mainPanel.blurred = true;
+
+	aFrame->SetVisible(true);
 }
