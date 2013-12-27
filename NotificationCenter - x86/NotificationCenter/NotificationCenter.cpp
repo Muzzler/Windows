@@ -3,12 +3,8 @@
 
 #include "stdafx.h"
 #include "NotificationCenter.h"
-#include <thread>
-
 
 A2DFrame * frame;
-
-void startThread();
 
 int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdLine, int xCmdShow )
 {
@@ -28,6 +24,7 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 
 	hr = frame->Initialize();
 	if (FAILED(hr))        return hr;
+
 
 //	frame->SetName(L"Muzzler - Notification Center");                                // Set the title
 //	frame->setBackground(0xF2, 0x34, 0x11);
@@ -64,8 +61,4 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 	// frame->SetVisible(true);	
 
 	return A2DToolkit::waitForUI();
-}
-void startThread()
-{
-	frame->SetVisible(true);
 }
