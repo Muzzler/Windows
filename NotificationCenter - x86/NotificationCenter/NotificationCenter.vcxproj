@@ -188,6 +188,9 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\A2DWindow.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Launcher.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="NotificationCenter.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -262,6 +265,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DFrame.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DThread.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DWindow.h" />
+    <ClInclude Include="Launcher.h" />
     <ClInclude Include="NotificationCenter.h" />
   </ItemGroup>
   <ItemGroup>
