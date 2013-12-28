@@ -156,6 +156,15 @@
     <ClCompile Include="Launcher.cpp">
       <Filter>Source\NotificationCenter</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractEvent.cpp">
+      <Filter>Source\AuroraSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractListener.cpp">
+      <Filter>Source\AuroraSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractNotifier.cpp">
+      <Filter>Source\AuroraSDK</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\images\small.ico">
@@ -366,6 +375,15 @@
     </ClInclude>
     <ClInclude Include="Launcher.h">
       <Filter>Include\NotificationCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractEvent.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractListener.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractNotifier.h">
+      <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

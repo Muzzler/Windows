@@ -52,7 +52,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -95,12 +95,15 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractComponent.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractEvent.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractEventQueue.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractFrame.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractListener.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractNotifier.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractShader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -224,8 +227,11 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2D.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstract.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractComponent.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractEvent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractEventQueue.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractFrame.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractListener.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractNotifier.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractShape.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractTexture.h" />
