@@ -101,10 +101,10 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractFrame.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractShader.cpp">
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DDXShaderUtils.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractShape.cpp">
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DDXShapeUtils.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractTexture.cpp">
@@ -146,13 +146,7 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DPipeline.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DQuad.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DQuadX.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DRenderData.cpp">
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DQuadFactory.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DRootPane.cpp">
@@ -165,9 +159,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DTextureShader.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DTextureX.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DToolkit.cpp">
@@ -226,8 +217,8 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractComponent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractEventQueue.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractFrame.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractShader.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractShape.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DDXShaderUtils.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DDXShapeUtils.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractTexture.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractThread.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractWindow.h" />
@@ -247,8 +238,8 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPanel.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPipeline.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPipelineable.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DQuad.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DQuadX.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DQuadFactory.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DQuadData.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DRect.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DRenderable.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DRenderData.h" />
@@ -257,7 +248,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DTexture.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DTextureBuffer.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DTextureShader.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DTextureX.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DToolkit.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DVertexData.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DEventQueue.h" />

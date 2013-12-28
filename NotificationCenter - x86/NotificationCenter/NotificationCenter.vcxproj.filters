@@ -63,12 +63,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractFrame.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractShader.cpp">
-      <Filter>Source\AuroraSDK</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractShape.cpp">
-      <Filter>Source\AuroraSDK</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractTexture.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
@@ -105,15 +99,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DPipeline.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DQuad.cpp">
-      <Filter>Source\AuroraSDK</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DQuadX.cpp">
-      <Filter>Source\AuroraSDK</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DRenderData.cpp">
-      <Filter>Source\AuroraSDK</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DRootPane.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
@@ -124,9 +109,6 @@
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DTextureShader.cpp">
-      <Filter>Source\AuroraSDK</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DTextureX.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DVertexData.cpp">
@@ -155,6 +137,15 @@
     </ClCompile>
     <ClCompile Include="Launcher.cpp">
       <Filter>Source\NotificationCenter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DDXShaderUtils.cpp">
+      <Filter>Source\AuroraSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DDXShapeUtils.cpp">
+      <Filter>Source\AuroraSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DQuadFactory.cpp">
+      <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -250,12 +241,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractFrame.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractShader.h">
-      <Filter>Include\AuroraSDK</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractShape.h">
-      <Filter>Include\AuroraSDK</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractTexture.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
@@ -304,12 +289,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DPipeline.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DQuad.h">
-      <Filter>Include\AuroraSDK</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DQuadX.h">
-      <Filter>Include\AuroraSDK</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DRect.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
@@ -329,9 +308,6 @@
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DTextureShader.h">
-      <Filter>Include\AuroraSDK</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DTextureX.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DVertexData.h">
@@ -366,6 +342,18 @@
     </ClInclude>
     <ClInclude Include="Launcher.h">
       <Filter>Include\NotificationCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DQuadData.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DDXShaderUtils.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DDXShapeUtils.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DQuadFactory.h">
+      <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
