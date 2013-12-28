@@ -162,7 +162,10 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractListener.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DAbstractNotifier.cpp">
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DMouseEvent.cpp">
+      <Filter>Source\AuroraSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DMouseListener.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
   </ItemGroup>
@@ -382,7 +385,10 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractListener.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DAbstractNotifier.h">
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DMouseEvent.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DMouseListener.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
   </ItemGroup>
