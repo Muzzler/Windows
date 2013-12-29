@@ -1,6 +1,8 @@
 
 #include "NotificationCenter.h"
 
+using namespace A2D;
+
 class Launcher : public Runnable
 {
 public:
