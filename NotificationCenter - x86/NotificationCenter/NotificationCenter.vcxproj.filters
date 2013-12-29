@@ -147,6 +147,12 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Rect.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\VertexData.cpp">
+      <Filter>Source\AuroraSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Dims.cpp">
+      <Filter>Source\AuroraSDK</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\images\small.ico">
