@@ -4,14 +4,14 @@
 
 Launcher::Launcher(HINSTANCE xHInstance)
 {
-	aFrame = new A2DFrame(xHInstance);
+	aFrame = new Frame(xHInstance);
 }
 
 void Launcher::runOnEventDispatchingThread()
 {
 	aFrame->Initialize();
 
-	A2DToolkit::getSystemEventQueue(aFrame->id())->invokeLater(this); // To create the window!
+	Toolkit::getSystemEventQueue(aFrame->id())->invokeLater(this); // To create the window!
 }
 
 void Launcher::run(int xThreadId)
@@ -29,7 +29,7 @@ void Launcher::run(int xThreadId)
 
 	SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
 
-	A2DPanel& root = *aFrame->GetRootPane(); // Reference to make syntax easier
+	Panel& root = *aFrame->GetRootPane(); // Reference to make syntax easier
 		
 	int cX = 10;
 	int cY = 10;
@@ -38,7 +38,7 @@ void Launcher::run(int xThreadId)
 	{
 		for (cX = 10; cX < 1000; cX += 247)
 		{
-			A2DPanel * ap = new A2DPanel();
+			Panel * ap = new Panel();
 			ap->Initialize();
 			ap->SetBounds(cX, cY, 237, 237);
 			ap->SetOptBackgroundImage(&file4);

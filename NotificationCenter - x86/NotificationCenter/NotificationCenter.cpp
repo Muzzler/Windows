@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "Launcher.h"
 
-A2DFrame * frame;
+Frame * frame;
 
 int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdLine, int xCmdShow )
 {
@@ -15,5 +15,5 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 
 	launcher.runOnEventDispatchingThread();
 
-	return A2DToolkit::waitForBackgroundThreads();
+	return Toolkit::waitForBackgroundThreads();
 }

@@ -1,7 +1,7 @@
 
 #include "NotificationCenter.h"
 
-class Launcher : public A2DRunnable
+class Launcher : public Runnable
 {
 public:
 	Launcher(HINSTANCE xHINSTANCE);
@@ -10,11 +10,11 @@ public:
 	void runOnMainThread();
 
 private:
-	A2DFrame * aFrame;
+	Frame * aFrame;
 	void run(int xThreadId);
 
-	A2DPanel mainPanel;
-	A2DPanel subPanel;
+	Panel mainPanel;
+	Panel subPanel;
 
 
 	LPCTSTR file0 = L"Assets/images/free [a] 1.jpg",
