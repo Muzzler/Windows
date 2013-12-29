@@ -133,6 +133,8 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DFileInfo.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DFocusEvent.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DFocusListener.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DGraphics.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -246,6 +248,8 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DDims.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DExtLibs.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DFileInfo.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DFocusEvent.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DFocusListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DGraphics.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DGXSettings.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DImageProperties.h" />
