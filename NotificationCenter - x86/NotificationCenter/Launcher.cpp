@@ -47,7 +47,7 @@ void Launcher::run(int xThreadId)
 
 	aFrame->SetName(L"Muzzler - Notification Center");                                // Set the title
 	aFrame->setBackground(45, 45, 48);
-	aFrame->setBorder(0xFF, 0, 122, 204, 1.0f);
+	aFrame->setBorder(0xFF, 0, 122, 204, 10.0f);
 	aFrame->setShadow(0xFF, 0, 122, 204, 75.0f);
 	aFrame->SetBounds(rand() % 800, rand() % 600, 800, 600);
 
