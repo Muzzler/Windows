@@ -170,9 +170,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Toolkit.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\VertexData.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\EventQueue.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -223,6 +220,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractComponent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractEventQueue.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractFrame.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\ColoredTextureVertex.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\DXShaderUtils.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\DXShapeUtils.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractTexture.h" />
@@ -255,7 +253,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\TextureBuffer.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\TextureShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Toolkit.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\VertexData.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\TextureVertex.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\EventQueue.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\ExtLibs.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Frame.h" />

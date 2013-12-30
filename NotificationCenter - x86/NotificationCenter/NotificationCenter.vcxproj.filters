@@ -147,9 +147,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Rect.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\VertexData.cpp">
-      <Filter>Source\AuroraSDK</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Dims.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
@@ -313,9 +310,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\TextureShader.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\VertexData.h">
-      <Filter>Include\AuroraSDK</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\ExtLibs.h">
       <Filter>Include\AuroraSDK\Windows</Filter>
     </ClInclude>
@@ -359,6 +353,12 @@
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2D.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\TextureVertex.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\ColoredTextureVertex.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
   </ItemGroup>

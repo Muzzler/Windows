@@ -31,16 +31,13 @@ void Launcher::run(int xThreadId)
 
 	Panel& root = *aFrame->GetRootPane(); // Reference to make syntax easier
 		
-	int cX = 10;
-	int cY = 10;
-
-	for (int cY = 10; cY < 1000; cY += 247)
+	for (int cY = 0; cY < 1000; cY += 500)
 	{
-		for (cX = 10; cX < 1000; cX += 247)
+		for (int cX = 0; cX < 1000; cX += 400)
 		{
 			Panel * ap = new Panel();
 			ap->Initialize();
-			ap->SetBounds(cX, cY, 237, 237);
+			ap->SetBounds(cX, cY, 400, 400);
 			ap->SetOptBackgroundImage(&file4);
 			root.Add(ap);
 		}
