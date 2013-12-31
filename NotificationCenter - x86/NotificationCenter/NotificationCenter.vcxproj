@@ -133,6 +133,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DComponentEvent.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DEventSource.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\A2DFileInfo.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -253,6 +254,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DComponent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DComponentEvent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DDims.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DEventSource.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DExtLibs.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DFileInfo.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DFocusEvent.h" />
