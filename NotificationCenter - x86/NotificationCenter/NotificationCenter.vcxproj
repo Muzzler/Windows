@@ -244,9 +244,8 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Pipelineable.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\QuadFactory.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\QuadData.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\QuickList.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Rect.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Renderable.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\RenderData.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\RootPane.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Runnable.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Texture.h" />
