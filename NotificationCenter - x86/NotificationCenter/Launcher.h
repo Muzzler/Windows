@@ -15,10 +15,8 @@ private:
 	Frame * aFrame;
 	void run(int xThreadId);
 
-	Panel mainPanel;
-	Panel subPanel;
-
-
+	RepaintManager * aRepaintManager;
+	
 	LPCTSTR file0 = L"Assets/images/free [a] 1.jpg",
 		file1 = L"Assets/images/muzzler windows-sync textureBackground [a] 1.jpg",
 		file2 = L"Assets/images/muzzler windows-sync background [a] 1.jpg",

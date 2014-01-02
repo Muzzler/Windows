@@ -57,9 +57,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Abstract.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\AbstractComponent.cpp">
-      <Filter>Source\AuroraSDK</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\AbstractFrame.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
@@ -70,12 +67,6 @@
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\BackBuffer.cpp">
-      <Filter>Source\AuroraSDK</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Camera.cpp">
-      <Filter>Source\AuroraSDK</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\CameraProperties.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Component.cpp">
@@ -148,6 +139,9 @@
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Dims.cpp">
+      <Filter>Source\AuroraSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\RepaintManager.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
   </ItemGroup>
@@ -235,9 +229,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Abstract.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractComponent.h">
-      <Filter>Include\AuroraSDK</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractFrame.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
@@ -248,9 +239,6 @@
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\BackBuffer.h">
-      <Filter>Include\AuroraSDK</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Camera.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\CameraProperties.h">
@@ -355,7 +343,13 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\ColoredTextureVertex.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\QuickList.h">
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\OrderedList.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\UnorderedList.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\RepaintManager.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
   </ItemGroup>

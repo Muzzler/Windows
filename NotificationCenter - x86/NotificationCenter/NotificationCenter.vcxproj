@@ -92,9 +92,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Abstract.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\AbstractComponent.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\AbstractEventQueue.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -122,12 +119,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\BackBuffer.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Camera.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\CameraProperties.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Component.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -153,6 +144,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Rect.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\RepaintManager.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\RootPane.cpp">
@@ -217,7 +211,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2D.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Abstract.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractComponent.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\RepaintManager.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractEventQueue.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractFrame.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\ColoredTextureVertex.h" />
@@ -227,7 +221,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractThread.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractWindow.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\BackBuffer.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Camera.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\CameraProperties.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Color.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Common.h" />
@@ -238,13 +231,13 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Graphics.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\GXSettings.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\ImageProperties.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\OrderedList.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\MatrixFactory.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Panel.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Pipeline.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Pipelineable.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\QuadFactory.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\QuadData.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\QuickList.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Rect.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\RootPane.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Runnable.h" />
@@ -253,6 +246,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\TextureShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Toolkit.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\TextureVertex.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\UnorderedList.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\EventQueue.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\ExtLibs.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Frame.h" />

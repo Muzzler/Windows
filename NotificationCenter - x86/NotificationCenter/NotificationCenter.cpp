@@ -10,6 +10,8 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 {
 	UNREFERENCED_PARAMETER(xPrevInstance);
 	UNREFERENCED_PARAMETER(xHInstance);
+
+	OrderedList<Component*>			aChildren;
 	
 	Launcher launcher(xHInstance);
 
