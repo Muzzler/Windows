@@ -352,6 +352,12 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\RepaintManager.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\GradientPaint.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Color3D.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\color.fx">

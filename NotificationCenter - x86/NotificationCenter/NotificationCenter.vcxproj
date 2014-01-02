@@ -211,6 +211,8 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2D.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Abstract.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Color3D.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\GradientPaint.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\RepaintManager.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractEventQueue.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractFrame.h" />
