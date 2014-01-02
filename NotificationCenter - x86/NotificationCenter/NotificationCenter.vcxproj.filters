@@ -295,9 +295,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\ExtLibs.h">
       <Filter>Include\AuroraSDK\Windows</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Pipelineable.h">
-      <Filter>Include\AuroraSDK</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Color.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>

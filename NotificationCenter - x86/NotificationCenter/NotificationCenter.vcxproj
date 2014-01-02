@@ -237,7 +237,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\MatrixFactory.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Panel.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Pipeline.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Pipelineable.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\QuadFactory.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\QuadData.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Rect.h" />
