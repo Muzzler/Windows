@@ -10,15 +10,13 @@ Launcher::Launcher(HINSTANCE xHInstance)
 void Launcher::runOnEventDispatchingThread()
 {
 	G_SAFELY(aFrame->initialize());
-
-	aRepaintManager = aFrame->getRepaintManager();
-
+	
 	Toolkit::getSystemEventQueue(aFrame->id())->invokeLater(this); // To create the window!
 }
 
 void Launcher::run(int xThreadId)
 {
-	RepaintManager& repaintManager = *aRepaintManager;
+	RepaintManager& repaintManager = *aFrame->getRepaintManager();
 
 	clock_t tStart = clock();
 
