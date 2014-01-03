@@ -165,6 +165,9 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\ColorShader.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
+    <ClCompile Include="CustomPanel.cpp">
+      <Filter>Source\NotificationCenter</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\images\small.ico">
@@ -390,6 +393,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\ColorShader.h">
       <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomPanel.h">
+      <Filter>Include\NotificationCenter</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

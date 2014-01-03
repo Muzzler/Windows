@@ -197,6 +197,9 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\Window.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="CustomPanel.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Launcher.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -279,6 +282,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Frame.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Thread.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Window.h" />
+    <ClInclude Include="CustomPanel.h" />
     <ClInclude Include="Launcher.h" />
     <ClInclude Include="NotificationCenter.h" />
   </ItemGroup>

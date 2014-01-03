@@ -1,5 +1,7 @@
 
 #include "Launcher.h"
+#include "CustomPanel.h"
+
 #include <time.h>
 
 Launcher::Launcher(HINSTANCE xHInstance)
@@ -37,11 +39,11 @@ void Launcher::run(int xThreadId)
 	{
 		for (int cX = 0; cX < 1000; cX += 400)
 		{
-			Panel * ap = new Panel();
-			G_SAFELY(ap->initialize());
-			ap->setBounds(cX, cY, 400, 400);
-			ap->setBackgroundImage(file4);
-			repaintManager.add(root, *ap);
+			CustomPanel * customPanel = new CustomPanel;
+			G_SAFELY(customPanel->initialize());
+			customPanel->setBounds(cX, cY, 400, 400);
+			customPanel->setBackgroundImage(file4);
+			repaintManager.add(root, *customPanel);
 		}
 	}
 
