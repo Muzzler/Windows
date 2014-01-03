@@ -159,6 +159,12 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Color3D.cpp">
       <Filter>Source\AuroraSDK</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\AbstractShader.cpp">
+      <Filter>Source\AuroraSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\ColorShader.cpp">
+      <Filter>Source\AuroraSDK</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\images\small.ico">
@@ -377,6 +383,12 @@
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Paint.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractShader.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\ColorShader.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
   </ItemGroup>

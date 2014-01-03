@@ -98,10 +98,16 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\AbstractFrame.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\AbstractShader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Color.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Color3D.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\ColorShader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Dims.cpp">
@@ -226,7 +232,9 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2D.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Abstract.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Color3D.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\ColorShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\ColorVertex.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Paint.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\RepaintManager.h" />
