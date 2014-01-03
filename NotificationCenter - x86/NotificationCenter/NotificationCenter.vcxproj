@@ -164,6 +164,9 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\ColoredTextureShader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\TextureShader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Toolkit.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -250,6 +253,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\TextureBuffer.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractTextureShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\ColoredTextureShader.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\TextureShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Toolkit.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\TextureVertex.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\UnorderedList.h" />
