@@ -11,6 +11,6 @@ void CustomPanel::paintComponent()
 
 	if (aOptBackgroundSrc != NULL)
 	{
-		graphics.fillRect(&aPipeline, aOptBackgroundRegion, Paint::TURQUOISE);
+		graphics.fillRect(&aPipeline, aOptBackgroundRegion, Paint::ASBESTOS);
 	}
 }
