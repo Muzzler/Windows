@@ -34,18 +34,19 @@ void Launcher::run(int xThreadId)
 	SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
 
 	Panel& root = aFrame->getRootPane(); // Reference to make syntax easier
-		
-	for (int cY = 0; cY < 1000; cY += 500)
-	{
-		for (int cX = 0; cX < 1000; cX += 400)
-		{
-			CustomPanel * customPanel = new CustomPanel;
-			G_SAFELY(customPanel->initialize());
-			customPanel->setBounds(cX, cY, 400, 400);
-			customPanel->setBackgroundImage(file4);
-			repaintManager.add(root, *customPanel);
-		}
-	}
+
+	Panel * customPanel = new Panel;
+	G_SAFELY(customPanel->initialize());
+	customPanel->setBounds(0, 0, 400, 400);
+	customPanel->setBackgroundImage(file4);
+
+	CustomPanel * customPanel2 = new CustomPanel;
+	G_SAFELY(customPanel2->initialize());
+	customPanel2->setBounds(20, 20, 200, 200);
+	customPanel2->setBackgroundImage(file4);
+
+	repaintManager.add(root, *customPanel);
+	repaintManager.add(*customPanel, *customPanel2);
 
 	aFrame->setVisible(true);
 
