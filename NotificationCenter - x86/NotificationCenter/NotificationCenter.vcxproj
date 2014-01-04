@@ -282,6 +282,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DTextureX.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DToolkit.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DVertexData.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\WindowListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DEventQueue.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DExtLibs.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\A2DFrame.h" />
