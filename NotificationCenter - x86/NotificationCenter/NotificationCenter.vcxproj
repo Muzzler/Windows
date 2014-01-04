@@ -52,7 +52,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -92,15 +92,19 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Abstract.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\AbstractEvent.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\AbstractEventQueue.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\AbstractFrame.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\AbstractListener.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\AbstractShader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\ActionEvent.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\ActionListener.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Color.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -110,6 +114,7 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\ColorShader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\ComponentEvent.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Dims.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -134,9 +139,12 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Component.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\EventSource.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\FileInfo.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\FocusEvent.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\FocusListener.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Graphics.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -146,6 +154,9 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\MatrixFactory.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\MouseEvent.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\MouseListener.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\MouseMotionListener.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Paint.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -235,10 +246,20 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2D.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Abstract.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractEvent.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractShader.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\ActionEvent.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\ActionListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Color3D.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\ColorShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\ColorVertex.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\ComponentEvent.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\EventSource.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\FocusEvent.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\MouseEvent.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\MouseListener.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\MouseMotionListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Paint.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\RepaintManager.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractEventQueue.h" />
