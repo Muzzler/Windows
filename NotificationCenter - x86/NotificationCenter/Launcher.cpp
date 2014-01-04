@@ -35,18 +35,30 @@ void Launcher::run(int xThreadId)
 
 	Panel& root = aFrame->getRootPane(); // Reference to make syntax easier
 
-	Panel * customPanel = new Panel;
-	G_SAFELY(customPanel->initialize());
-	customPanel->setBounds(0, 0, 400, 400);
-	customPanel->setBackgroundImage(file4);
+	Panel& panel = *new Panel;
+	G_SAFELY(panel.initialize());
+	panel.setBounds(20, 20, 400, 400);
+	panel.setBackgroundImage(file4);
+	panel.setBackgroundPaint(Paint::GREEN_SEA_TO_POMEGRANATE_VERTICAL);
 
-	CustomPanel * customPanel2 = new CustomPanel;
-	G_SAFELY(customPanel2->initialize());
-	customPanel2->setBounds(20, 20, 200, 200);
-	customPanel2->setBackgroundImage(file4);
+	CustomPanel& customPanel = *new CustomPanel;
+	G_SAFELY(customPanel.initialize());
+	customPanel.setBounds(20, 20, 200, 200);
+	customPanel.setBackgroundImage(file4);
 
-	repaintManager.add(root, *customPanel);
-	repaintManager.add(*customPanel, *customPanel2);
+	Panel& panel2 = *new Panel;
+	G_SAFELY(panel2.initialize());
+	panel2.setBounds(20, 20, 100, 400);
+	panel2.setBackgroundImage(file4);
+
+	ImageProperties& props = panel2.getBackgroundProperties();
+	props.aOptRepeat = _OPT_BACKGROUND_REPEAT_NO_REPEAT;
+	panel2.setBackgroundProperties(props);
+	panel2.setBackgroundPaint(Paint::EMERALD);
+
+	repaintManager.add(root, panel);
+	repaintManager.add(panel, customPanel);
+	repaintManager.add(customPanel, panel2);
 
 	aFrame->setVisible(true);
 
