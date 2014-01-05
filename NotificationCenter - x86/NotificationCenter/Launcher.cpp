@@ -40,11 +40,13 @@ void Launcher::run(int xThreadId)
 	panel.setBounds(20, 20, 400, 400);
 	panel.setBackgroundImage(file4);
 	panel.setBackgroundPaint(Paint::GREEN_SEA_TO_POMEGRANATE_VERTICAL);
+	panel.addMouseListener(new MouseListener());
 
 	CustomPanel& customPanel = *new CustomPanel;
 	G_SAFELY(customPanel.initialize());
 	customPanel.setBounds(20, 20, 200, 200);
 	customPanel.setBackgroundImage(file4);
+	customPanel.addMouseListener(new MouseListener());
 
 	Panel& panel2 = *new Panel;
 	G_SAFELY(panel2.initialize());
