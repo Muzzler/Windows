@@ -460,6 +460,9 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\MouseMotionListener.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\FocusListener.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\color.fx">
