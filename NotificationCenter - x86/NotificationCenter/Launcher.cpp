@@ -37,27 +37,34 @@ void Launcher::run(int xThreadId)
 		
 	Panel& panel = *new Panel;
 	G_SAFELY(panel.initialize());
-	panel.setBounds(10, 10, 400, 400);
-	panel.setBackgroundImage(file4);
-	panel.setBackgroundPaint(Paint::GREEN_SEA_TO_POMEGRANATE_VERTICAL);
-
-	CustomPanel& customPanel = *new CustomPanel;
-	G_SAFELY(customPanel.initialize());
-	customPanel.setBounds(10, 10, 900, 900);
-
-	Panel& panel2 = *new Panel;
-	G_SAFELY(panel2.initialize());
-	panel2.setBounds(10, 10, 900, 900);
-	panel2.setBackgroundImage(file4);
-
-	ImageProperties& props = panel2.getBackgroundProperties();
-	props.aOptRepeat = _OPT_BACKGROUND_REPEAT_NO_REPEAT;
-	panel2.setBackgroundProperties(props);
-	panel2.setBackgroundPaint(Paint::RED);
+	panel.setSize(Styles::PERCENTAGE, 100, Styles::PERCENTAGE, 100);
+	panel.setBackgroundPaint(Paint::MIDNIGHT_BLUE);
 
 	repaintManager.add(root, panel);
-	repaintManager.add(panel, customPanel);
-	repaintManager.add(customPanel, panel2);
+
+	Panel& header = *new Panel;
+	G_SAFELY(header.initialize());
+	header.setSize(Styles::PERCENTAGE, 100, Styles::PIXEL, 100);
+	header.setDisplay(Styles::BLOCK);
+	header.setBackgroundPaint(Paint::WET_ASPHALT);
+
+	repaintManager.add(panel, header);
+
+	Panel& half1 = *new Panel;
+	G_SAFELY(half1.initialize());
+	half1.setSize(Styles::PERCENTAGE, 50, Styles::PIXEL, 50);
+	half1.setDisplay(Styles::INLINE_BLOCK);
+	half1.setBackgroundPaint(Paint::ALIZARIN);
+
+	repaintManager.add(header, half1);
+	
+	Panel& half2 = *new Panel;
+	G_SAFELY(half2.initialize());
+	half2.setSize(Styles::PERCENTAGE, 50, Styles::PIXEL, 50);
+	half2.setDisplay(Styles::INLINE_BLOCK);
+	half2.setBackgroundPaint(Paint::NEPHRITIS);
+
+	repaintManager.add(header, half2);
 
 	aFrame->setVisible(true);
 

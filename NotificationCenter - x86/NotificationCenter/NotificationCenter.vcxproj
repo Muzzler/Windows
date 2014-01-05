@@ -239,6 +239,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Color3D.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\ColorShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\ColorVertex.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Styles.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Paint.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\RepaintManager.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\AbstractEventQueue.h" />

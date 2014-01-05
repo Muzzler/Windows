@@ -397,6 +397,9 @@
     <ClInclude Include="CustomPanel.h">
       <Filter>Include\NotificationCenter</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Styles.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\color.fx">

@@ -9,5 +9,5 @@ void CustomPanel::paintComponent()
 {
 	Graphics& graphics = *aGraphics;
 
-		graphics.fillRect(&aPipeline, aOptBackgroundRegion, Paint::GREEN);
+	graphics.fillRect(&aPipeline, aOptBackgroundRegion, Paint::GREEN);
 }
