@@ -37,24 +37,23 @@ void Launcher::run(int xThreadId)
 		
 	Panel& panel = *new Panel;
 	G_SAFELY(panel.initialize());
-	panel.setBounds(20, 20, 400, 400);
+	panel.setBounds(10, 10, 400, 400);
 	panel.setBackgroundImage(file4);
 	panel.setBackgroundPaint(Paint::GREEN_SEA_TO_POMEGRANATE_VERTICAL);
 
 	CustomPanel& customPanel = *new CustomPanel;
 	G_SAFELY(customPanel.initialize());
-	customPanel.setBounds(20, 20, 200, 200);
-	customPanel.setBackgroundImage(file4);
+	customPanel.setBounds(10, 10, 900, 900);
 
 	Panel& panel2 = *new Panel;
 	G_SAFELY(panel2.initialize());
-	panel2.setBounds(20, 20, 100, 400);
+	panel2.setBounds(10, 10, 900, 900);
 	panel2.setBackgroundImage(file4);
 
 	ImageProperties& props = panel2.getBackgroundProperties();
 	props.aOptRepeat = _OPT_BACKGROUND_REPEAT_NO_REPEAT;
 	panel2.setBackgroundProperties(props);
-	panel2.setBackgroundPaint(Paint::EMERALD);
+	panel2.setBackgroundPaint(Paint::RED);
 
 	repaintManager.add(root, panel);
 	repaintManager.add(panel, customPanel);

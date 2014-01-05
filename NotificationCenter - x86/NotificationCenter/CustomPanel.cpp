@@ -9,8 +9,5 @@ void CustomPanel::paintComponent()
 {
 	Graphics& graphics = *aGraphics;
 
-	if (aOptBackgroundSrc != NULL)
-	{
-		graphics.fillRect(&aPipeline, aOptBackgroundRegion, Paint::ASBESTOS);
-	}
+		graphics.fillRect(&aPipeline, aOptBackgroundRegion, Paint::GREEN);
 }
