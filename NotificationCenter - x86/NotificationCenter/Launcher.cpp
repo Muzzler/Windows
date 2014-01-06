@@ -40,13 +40,16 @@ void Launcher::run(int xThreadId)
 	panel.setBounds(20, 20, 400, 400);
 	panel.setBackgroundImage(file4);
 	panel.setBackgroundPaint(Paint::GREEN_SEA_TO_POMEGRANATE_VERTICAL);
-	panel.addListenerThroughChildren(new MouseListener()); // doesnt work as intended.
-	
+	// panel.addListenerThroughChildren(new MouseListener()); // doesnt work as intended.
+
+
 	CustomPanel& customPanel = *new CustomPanel;
 	G_SAFELY(customPanel.initialize());
 	customPanel.setBounds(20, 20, 200, 200);
 	customPanel.setBackgroundImage(file4);
-	//customPanel.addMouseListener(new MouseListener());
+	customPanel.addMouseListener(new MouseListener());
+	customPanel.addMouseMotionListener(new MouseMotionListener());
+	//customPanel.addFocusListener(new FocusListener());
 
 	Panel& panel2 = *new Panel;
 	G_SAFELY(panel2.initialize());
@@ -58,11 +61,11 @@ void Launcher::run(int xThreadId)
 	panel2.setBackgroundProperties(props);
 	panel2.setBackgroundPaint(Paint::EMERALD);
 
+	//panel2.addFocusListener(new FocusListener());
+
 	repaintManager.add(root, panel);
 	repaintManager.add(panel, customPanel);
-	repaintManager.add(customPanel, panel2);
-
-	
+	repaintManager.add(root, panel2);
 
 	aFrame->setVisible(true);
 
