@@ -168,6 +168,12 @@
     <ClCompile Include="CustomPanel.cpp">
       <Filter>Source\NotificationCenter</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\ComponentLayout.cpp">
+      <Filter>Source\AuroraSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Styles.cpp">
+      <Filter>Source\AuroraSDK</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\images\small.ico">
