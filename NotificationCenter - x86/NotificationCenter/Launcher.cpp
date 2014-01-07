@@ -26,10 +26,11 @@ void Launcher::run(int xThreadId)
 
 	aFrame->setName(L"Muzzler - Notification Center");                                // Set the title
 	aFrame->setBackground(45, 45, 48);
-	aFrame->setBorder(0xFF, 0, 122, 204, 1.0f);
+	aFrame->setBorder(0xFF, 0, 122, 204, 10.0f);
 	aFrame->setShadow(0xFF, 0, 122, 204, 10.0f);
 	aFrame->setBounds(0, 0, 800, 600);
 	aFrame->setLocationRelativeTo(NULL);
+	aFrame->getWindow()->addWindowListener(new WindowListener());
 
 	SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
 
@@ -41,6 +42,7 @@ void Launcher::run(int xThreadId)
 	panel.setBackgroundImage(file4);
 	panel.setBackgroundPaint(Paint::GREEN_SEA_TO_POMEGRANATE_VERTICAL);
 	// panel.addListenerThroughChildren(new MouseListener()); // doesnt work as intended.
+	panel.addMouseMotionListener(new MouseMotionListener());
 
 
 	CustomPanel& customPanel = *new CustomPanel;
