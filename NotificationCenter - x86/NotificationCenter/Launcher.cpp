@@ -31,7 +31,7 @@ void Launcher::run(int xThreadId)
 
 	aFrame->setName(L"Muzzler - Notification Center");                                // Set the title
 	aFrame->setBackground(45, 45, 48);
-	aFrame->setBorder(0xFF, 200, 200, 200, 1.0f);
+	aFrame->setBorder(0xFF, 200, 200, 200, 10.0f);
 	aFrame->setShadow(0xFF, 0, 0, 0, 10.0f);
 	aFrame->setBounds(0, 0, 800, 600);
 	aFrame->setLocationRelativeTo(NULL);
@@ -77,9 +77,7 @@ void Launcher::run(int xThreadId)
 	sidebar_right.setBackgroundPaint(darkRed);
 
 	repaintManager.add(panel, sidebar_right);
-
-	sidebar_right.setDepth(-8.0f);
-
+	
 	Panel& main = *new Panel;
 	G_SAFELY(main.initialize());
 	main.setPosition(Styles::ABSOLUTE_);
