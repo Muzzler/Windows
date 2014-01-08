@@ -340,9 +340,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2D.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2D.h">
-      <Filter>Include\AuroraSDK</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\AbstractBackBuffer.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
@@ -417,6 +414,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\UnorderedList.h">
       <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DDebug.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DLinkers.h">
+      <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -20,6 +20,7 @@
 // INCLUDE
 ////////////////////////////////////////////////////////////////////////////////
 
+#include "NotificationCenter.h"
 #include "../../../Aurora-SDK/Include/Core/Component.h"
 #include GRAPHICS
 
