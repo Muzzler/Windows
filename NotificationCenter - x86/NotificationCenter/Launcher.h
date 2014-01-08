@@ -1,5 +1,4 @@
 
-#include "NotificationCenter.h"
 #include "CustomPanel.h"
 
 using namespace A2D;

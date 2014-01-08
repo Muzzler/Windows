@@ -266,7 +266,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Toolkit.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\UnorderedList.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Structure\Graphics.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2D.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DLinkers.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\AbstractShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\AbstractTexture.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\AbstractTextureShader.h" />
@@ -290,6 +290,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\TextureVertex.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Thread.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Window.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DDebug.h" />
     <ClInclude Include="CustomPanel.h" />
     <ClInclude Include="Launcher.h" />
     <ClInclude Include="NotificationCenter.h" />
