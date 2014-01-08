@@ -164,10 +164,7 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\ColorShader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\DXShaderUtils.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\DXShapeUtils.cpp">
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\DXUtils.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\EventQueue.cpp">
@@ -177,9 +174,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\Graphics.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\MatrixFactory.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\QuadFactory.cpp">
@@ -275,13 +269,11 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\ColoredTextureVertex.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\ColorShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\ColorVertex.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\DXShaderUtils.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\DXShapeUtils.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\DXUtils.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\EventQueue.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\ExtLibs.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Frame.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Graphics.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\MatrixFactory.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\QuadData.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\QuadFactory.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Texture.h" />
