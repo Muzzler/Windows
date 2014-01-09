@@ -115,6 +115,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\ComponentEvent.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\ComponentEventSource.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Dims.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -257,6 +258,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\ColorShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\ColorVertex.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\ComponentEvent.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\ComponentEventSource.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\EventSource.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\FocusEvent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\FocusListener.h" />

@@ -31,6 +31,8 @@ void Launcher::run(int xThreadId)
 	aFrame->setBounds(0, 0, 800, 600);
 	aFrame->setLocationRelativeTo(NULL);
 	aFrame->getWindow()->addWindowListener(new WindowListener());
+	aFrame->addMouseMotionListener(new MouseMotionListener());
+	aFrame->addMouseListener(new MouseListener());
 
 	SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
 
