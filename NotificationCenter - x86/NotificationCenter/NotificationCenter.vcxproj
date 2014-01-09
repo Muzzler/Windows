@@ -173,7 +173,9 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\Graphics.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\QuadExpansionShader.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\QuadExpansionShader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\QuadFactory.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -189,7 +191,9 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\Thread.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\VertexTypes.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\VertexTypes.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\Window.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
