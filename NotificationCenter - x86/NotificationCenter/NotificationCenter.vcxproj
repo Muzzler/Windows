@@ -158,9 +158,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\ColoredTextureShader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\ColoredTextureVertex.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\ColorShader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -176,6 +173,7 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\Graphics.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\QuadExpansionShader.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\QuadFactory.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -188,12 +186,10 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\TextureShader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\TextureVertex.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\Thread.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\VertexTypes.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\Window.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -260,15 +256,15 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Toolkit.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\UnorderedList.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Structure\Graphics.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\QuadExpansionShader.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\VertexTypes.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DLinkers.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\AbstractShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\AbstractTexture.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\AbstractTextureShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\BackBuffer.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\ColoredTextureShader.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\ColoredTextureVertex.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\ColorShader.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\ColorVertex.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\DXUtils.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\EventQueue.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\ExtLibs.h" />
@@ -279,7 +275,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Texture.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\TextureBuffer.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\TextureShader.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\TextureVertex.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Thread.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Window.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DDebug.h" />
@@ -288,18 +283,37 @@
     <ClInclude Include="NotificationCenter.h" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\color.fx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </FxCompile>
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\horizontalblur.fx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </FxCompile>
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\texture.fx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </FxCompile>
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\verticalblur.fx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </FxCompile>
+    <CustomBuild Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\color.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(DXSDK_DIR)Utilities\bin\x86\"fxc.exe  /T fx_4_0 /Fo "bin/%(Filename).fxo" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">bin/%(Filename).fxo</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\horizontalblur.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(DXSDK_DIR)Utilities\bin\x86\"fxc.exe  /T fx_4_0 /Fo "bin/%(Filename).fxo" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">bin/%(Filename).fxo</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\texture.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(DXSDK_DIR)Utilities\bin\x86\"fxc.exe  /T fx_4_0 /Fo "bin/%(Filename).fxo" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">bin/%(Filename).fxo</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\verticalblur.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(DXSDK_DIR)Utilities\bin\x86\"fxc.exe  /T fx_4_0 /Fo "bin/%(Filename).fxo" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">bin/%(Filename).fxo</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\quad.fx">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(DXSDK_DIR)Utilities\bin\x86\"fxc.exe  /T fx_4_0 /Fo "bin/%(Filename).fxo" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">bin/%(Filename).fxo</Outputs>
+    </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
