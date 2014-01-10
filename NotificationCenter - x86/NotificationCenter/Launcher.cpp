@@ -68,9 +68,22 @@ void Launcher::run(int xThreadId)
 
 	//panel2.addFocusListener(new FocusListener());
 
-	repaintManager.add(root, panel);
-	repaintManager.add(panel, customPanel);
-	repaintManager.add(customPanel, panel2);
+	OrderedList<Panel*> panelList;
+	Panel * panelX;
+	Panel * panelY = &root;
+	for (int i = 0; i < 100000; i += 1)
+	{
+		panelX = new Panel;
+		G_SAFELY(panelX->initialize());
+		panelX->setBounds(20, 20, 400, 400);
+		panelX->setBackgroundImage(file4);
+		repaintManager.add(*panelY, *panelX);
+		panelY = panelX;
+	}
+
+	//repaintManager.add(root, panel);
+	//repaintManager.add(panel, customPanel);
+	//repaintManager.add(customPanel, panel2);
 
 	aFrame->setVisible(true);
 
