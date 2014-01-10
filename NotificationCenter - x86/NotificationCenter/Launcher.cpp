@@ -21,7 +21,8 @@ void Launcher::run(int xThreadId)
 	LPCTSTR dvd1 = L"Assets/images/dvd1.jpg",
 		dvd2 = L"Assets/images/dvd2.jpg",
 		netflix = L"Assets/images/netflix.jpg",
-		dvd3 = L"Assets/images/dvd3.jpg";
+		dvd3 = L"Assets/images/dvd3.jpg",
+	sample = L"Assets/images/texture_sample.png";
 
 	RepaintManager& repaintManager = *aFrame->getRepaintManager();
 
@@ -115,12 +116,12 @@ void Launcher::run(int xThreadId)
 
 	repaintManager.add(main, item3);
 
-	Panel& item4 = *new Panel;
+	CustomPanel& item4 = *new CustomPanel;
 	G_SAFELY(item4.initialize());
-	item4.setSize(Styles::PIXEL, 165, Styles::PIXEL, 225);
+	item4.setSize(Styles::PIXEL, 600, Styles::PIXEL, 600);
 	item4.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
 	item4.setDisplay(Styles::INLINE_BLOCK);
-	item4.setBackgroundImage(dvd1);
+	item4.setBackgroundImage(sample);
 
 	repaintManager.add(main, item4);
 	

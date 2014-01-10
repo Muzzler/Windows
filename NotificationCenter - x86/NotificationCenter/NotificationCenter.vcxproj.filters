@@ -340,9 +340,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Color3D.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Common.h">
-      <Filter>Include\AuroraSDK\Core</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Component.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
@@ -405,6 +402,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\VertexTypes.h">
       <Filter>Include\AuroraSDK\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DCommon.h">
+      <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
