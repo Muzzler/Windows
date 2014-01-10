@@ -30,9 +30,9 @@ void Launcher::run(int xThreadId)
 	aFrame->setShadow(0xFF, 0, 122, 204, 10.0f);
 	aFrame->setBounds(0, 0, 800, 600);
 	aFrame->setLocationRelativeTo(NULL);
-	aFrame->getWindow()->addWindowListener(new WindowListener());
-	aFrame->addMouseMotionListener(new MouseMotionListener());
-	aFrame->addMouseListener(new MouseListener());
+	//aFrame->getWindow()->addWindowListener(new WindowListener());
+	//aFrame->addMouseMotionListener(new MouseMotionListener());
+	//aFrame->addMouseListener(new MouseListener());
 
 	SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
 
@@ -43,16 +43,17 @@ void Launcher::run(int xThreadId)
 	panel.setBounds(20, 20, 400, 400);
 	panel.setBackgroundImage(file4);
 	panel.setBackgroundPaint(Paint::GREEN_SEA_TO_POMEGRANATE_VERTICAL);
+	panel.addMouseListener(new MouseListener());
 	// panel.addListenerThroughChildren(new MouseListener()); // doesnt work as intended.
-	panel.addMouseMotionListener(new MouseMotionListener());
+	//panel.addMouseMotionListener(new MouseMotionListener());
 
 
 	CustomPanel& customPanel = *new CustomPanel;
 	G_SAFELY(customPanel.initialize());
 	customPanel.setBounds(20, 20, 200, 200);
 	customPanel.setBackgroundImage(file4);
-	customPanel.addMouseListener(new MouseListener());
-	customPanel.addMouseMotionListener(new MouseMotionListener());
+	//customPanel.addMouseListener(new MouseListener());
+	//customPanel.addMouseMotionListener(new MouseMotionListener());
 	//customPanel.addFocusListener(new FocusListener());
 
 	Panel& panel2 = *new Panel;
@@ -69,7 +70,7 @@ void Launcher::run(int xThreadId)
 
 	repaintManager.add(root, panel);
 	repaintManager.add(panel, customPanel);
-	repaintManager.add(root, panel2);
+	repaintManager.add(customPanel, panel2);
 
 	aFrame->setVisible(true);
 
