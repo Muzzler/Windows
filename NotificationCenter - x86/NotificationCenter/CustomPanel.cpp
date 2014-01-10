@@ -16,7 +16,7 @@ void CustomPanel::paintComponent()
 		aOptBackgroundRegion.aY = -256;
 		aOptBackgroundRegion.aWidth = 600 + 256;
 		aOptBackgroundRegion.aHeight = 600 + 256;
-		graphics.drawImage(&aPipeline, aOptBackgroundRegion, aOptBackgroundSrc, aOptBackgroundPaint, false);
+		graphics.drawImage(&aPipeline, aOptBackgroundRegion, aOptBackgroundSrc, aOptBackgroundPaint, true);
 	}
 	else
 	{
