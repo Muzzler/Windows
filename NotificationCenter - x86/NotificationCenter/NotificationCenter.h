@@ -26,37 +26,8 @@
 // Windows Header Files:
 #include <windows.h>
 
-// C RunTime Header Files:
-#include <stdlib.h>
-#include <malloc.h>
-#include <memory.h>
-#include <wchar.h>
-#include <math.h>
-#include <process.h>
-
 ///////////////////////////////////////////////////////////////////
 // ADDITIONAL LIBS
 ///////////////////////////////////////////////////////////////////
 
 #include "../../../Aurora-SDK/Include/A2D.h"
-
-/******************************************************************
-*                                                                 *
-*  Macros                                                         *
-*                                                                 *
-******************************************************************/
-
-#ifndef Assert
-#if defined( DEBUG ) || defined( _DEBUG )
-#define Assert(b) do {if (!(b)) {OutputDebugStringA("Assert: " #b "\n");}} while(0)
-#else
-#define Assert(b)
-#endif //DEBUG || _DEBUG
-#endif
-
-
-
-#ifndef HINST_THISCOMPONENT
-EXTERN_C IMAGE_DOS_HEADER __ImageBase;
-#define HINST_THISCOMPONENT ((HINSTANCE)&__ImageBase)
-#endif
