@@ -9,5 +9,17 @@ void CustomPanel::paintComponent()
 {
 	Graphics& graphics = *aGraphics;
 
-	graphics.fillRect(&aPipeline, aOptBackgroundRegion, Paint::GREEN);
+	if (aOptBackgroundSrc != NULL)
+	{
+		bool repeat = aOptBackgroundProps.aOptRepeat == (_OPT_BACKGROUND_REPEAT_REPEAT_X | _OPT_BACKGROUND_REPEAT_REPEAT_Y);
+		aOptBackgroundRegion.aX = -256;
+		aOptBackgroundRegion.aY = -256;
+		aOptBackgroundRegion.aWidth = 600 + 256;
+		aOptBackgroundRegion.aHeight = 600 + 256;
+		graphics.drawImage(&aPipeline, aOptBackgroundRegion, aOptBackgroundSrc, aOptBackgroundPaint, false);
+	}
+	else
+	{
+		graphics.fillRect(&aPipeline, aOptBackgroundRegion, aOptBackgroundPaint);
+	}
 }
