@@ -31,7 +31,7 @@ void Launcher::run(int xThreadId)
 	aFrame->setBounds(0, 0, 800, 600);
 	aFrame->setLocationRelativeTo(NULL);
 	//aFrame->getWindow()->addWindowListener(new WindowListener());
-	//aFrame->addMouseMotionListener(new MouseMotionListener());
+	aFrame->addMouseMotionListener(new MouseMotionListener());
 	//aFrame->addMouseListener(new MouseListener());
 
 	SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
@@ -43,10 +43,11 @@ void Launcher::run(int xThreadId)
 	panel.setBounds(20, 20, 400, 400);
 	panel.setBackgroundImage(file4);
 	panel.setBackgroundPaint(Paint::GREEN_SEA_TO_POMEGRANATE_VERTICAL);
-	panel.addMouseListener(new MouseListener());
+	//panel.addMouseListener(new MouseListener());
 	// panel.addListenerThroughChildren(new MouseListener()); // doesnt work as intended.
 	//panel.addMouseMotionListener(new MouseMotionListener());
 
+	//aFrame->getRootPane().addMouseListener(new MouseListener());
 
 	CustomPanel& customPanel = *new CustomPanel;
 	G_SAFELY(customPanel.initialize());
@@ -55,6 +56,11 @@ void Launcher::run(int xThreadId)
 	//customPanel.addMouseListener(new MouseListener());
 	//customPanel.addMouseMotionListener(new MouseMotionListener());
 	//customPanel.addFocusListener(new FocusListener());
+
+	CustomPanel& customPanel2 = *new CustomPanel;
+	G_SAFELY(customPanel.initialize());
+	customPanel.setBounds(20, 20, 200, 200);
+	customPanel.setBackgroundImage(file2);
 
 	Panel& panel2 = *new Panel;
 	G_SAFELY(panel2.initialize());
@@ -65,12 +71,18 @@ void Launcher::run(int xThreadId)
 	props.aOptRepeat = _OPT_BACKGROUND_REPEAT_NO_REPEAT;
 	panel2.setBackgroundProperties(props);
 	panel2.setBackgroundPaint(Paint::EMERALD);
+	//panel2.addMouseListener(new MouseListener());
+	//panel2.addMouseListener(NULL);
 
 	//panel2.addFocusListener(new FocusListener());
+
+
 
 	OrderedList<Panel*> panelList;
 	Panel * panelX;
 	Panel * panelY = &root;
+
+	int locX = 0;
 	for (int i = 0; i < 100000; i += 1)
 	{
 		panelX = new Panel;
@@ -80,11 +92,17 @@ void Launcher::run(int xThreadId)
 		repaintManager.add(*panelY, *panelX);
 		panelY = panelX;
 	}
-
+	//customPanel.addMouseListener(new MouseListener());
+	//panel2.addMouseListener(new MouseListener());
+	//panel.addMouseListener(new MouseListener());
+	////panel.addMouseListener(NULL);
 	//repaintManager.add(root, panel);
 	//repaintManager.add(panel, customPanel);
 	//repaintManager.add(customPanel, panel2);
 
+
+
+	//panel.addMouseListener(new MouseListener());
 	aFrame->setVisible(true);
 
 	SYSOUT_F("Time taken: %.9fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
