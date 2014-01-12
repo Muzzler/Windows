@@ -95,7 +95,7 @@ void Launcher::run(int xThreadId)
 	item.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
 	item.setDisplay(Styles::INLINE_BLOCK);
 	item.setBackgroundImage(dvd1);
-	item.addMouseListener(new MouseListener());
+
 
 	componentManager.add(main, item);
 
@@ -143,7 +143,8 @@ void Launcher::run(int xThreadId)
 	item6.setBackgroundImage(dvd3);
 
 	componentManager.add(main, item6);
-	
+	item.addMouseListener(new MouseListener());
+	item.addMouseListener(NULL);
 	aFrame->setVisible(true);
 
 	SYSOUT_F("Time taken: %.9fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
