@@ -159,9 +159,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Rect.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\RepaintManager.cpp">
-      <Filter>Source\AuroraSDK\Core</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Styles.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
@@ -176,6 +173,51 @@
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\VertexTypes.cpp">
       <Filter>Source\AuroraSDK\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\AbstractEvent.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\AbstractListener.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ActionEvent.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ActionListener.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentEvent.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentEventSource.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\EventSource.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\FocusEvent.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\FocusListener.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\MouseEvent.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\MouseListener.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\MouseMotionListener.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\WindowEvent.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\WindowListener.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentManager.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -355,9 +397,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ImageProperties.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\OrderedList.h">
-      <Filter>Include\AuroraSDK\Core</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Paint.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
@@ -385,9 +424,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Toolkit.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\UnorderedList.h">
-      <Filter>Include\AuroraSDK\Core</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DDebug.h">
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
@@ -405,6 +441,57 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DCommon.h">
       <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\AbstractEvent.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\AbstractListener.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ActionEvent.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ActionListener.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ComponentEvent.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ComponentEventSource.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\EventSource.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\FocusEvent.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\FocusListener.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\MouseEvent.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\MouseListener.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\MouseMotionListener.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\WindowEvent.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\WindowListener.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\OrderedList.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\UnorderedList.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ComponentManager.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
