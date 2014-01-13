@@ -24,7 +24,7 @@ void Launcher::run(int xThreadId)
 		dvd3 = L"Assets/images/dvd3.jpg",
 	sample = L"Assets/images/texture_sample.png";
 
-	RepaintManager& repaintManager = *aFrame->getRepaintManager();
+	ComponentManager& componentManager = *aFrame->getComponentManager();
 
 	clock_t tStart = clock();
 
@@ -51,7 +51,7 @@ void Launcher::run(int xThreadId)
 	panel.setSize(Styles::PERCENTAGE, 100, Styles::PERCENTAGE, 100);
 	panel.setBackgroundPaint(Paint::BLACK);
 
-	repaintManager.add(root, panel);
+	componentManager.add(root, panel);
 
 	Panel& sidebar = *new Panel;
 	G_SAFELY(sidebar.initialize());
@@ -59,7 +59,7 @@ void Launcher::run(int xThreadId)
 	sidebar.setDisplay(Styles::INLINE_BLOCK);
 	sidebar.setBackgroundPaint(dark_black);
 
-	repaintManager.add(panel, sidebar);
+	componentManager.add(panel, sidebar);
 	
 	Panel& sidebar_top = *new Panel;
 	G_SAFELY(sidebar_top.initialize());
@@ -67,7 +67,7 @@ void Launcher::run(int xThreadId)
 	sidebar_top.setDisplay(Styles::INLINE_BLOCK);
 	sidebar_top.setBackgroundImage(netflix);
 
-	repaintManager.add(sidebar, sidebar_top);
+	componentManager.add(sidebar, sidebar_top);
 
 	Panel& sidebar_right = *new Panel;
 	G_SAFELY(sidebar_right.initialize());
@@ -77,7 +77,7 @@ void Launcher::run(int xThreadId)
 	sidebar_right.setDisplay(Styles::INLINE_BLOCK);
 	sidebar_right.setBackgroundPaint(darkRed);
 
-	repaintManager.add(panel, sidebar_right);
+	componentManager.add(panel, sidebar_right);
 	
 	Panel& main = *new Panel;
 	G_SAFELY(main.initialize());
@@ -87,7 +87,7 @@ void Launcher::run(int xThreadId)
 	main.setDisplay(Styles::INLINE_BLOCK);
 	main.setBackgroundPaint(dark_black2);
 
-	repaintManager.add(panel, main);
+	componentManager.add(panel, main);
 	
 	Panel& item = *new Panel;
 	G_SAFELY(item.initialize());
@@ -96,7 +96,8 @@ void Launcher::run(int xThreadId)
 	item.setDisplay(Styles::INLINE_BLOCK);
 	item.setBackgroundImage(dvd1);
 
-	repaintManager.add(main, item);
+
+	componentManager.add(main, item);
 
 	Panel& item2 = *new Panel;
 	G_SAFELY(item2.initialize());
@@ -105,7 +106,7 @@ void Launcher::run(int xThreadId)
 	item2.setDisplay(Styles::INLINE_BLOCK);
 	item2.setBackgroundImage(dvd2);
 
-	repaintManager.add(main, item2);
+	componentManager.add(main, item2);
 
 	Panel& item3 = *new Panel;
 	G_SAFELY(item3.initialize());
@@ -114,7 +115,7 @@ void Launcher::run(int xThreadId)
 	item3.setDisplay(Styles::INLINE_BLOCK);
 	item3.setBackgroundImage(dvd3);
 
-	repaintManager.add(main, item3);
+	componentManager.add(main, item3);
 
 	CustomPanel& item4 = *new CustomPanel;
 	G_SAFELY(item4.initialize());
@@ -123,7 +124,7 @@ void Launcher::run(int xThreadId)
 	item4.setDisplay(Styles::INLINE_BLOCK);
 	item4.setBackgroundImage(sample);
 
-	repaintManager.add(main, item4);
+	componentManager.add(main, item4);
 	
 	Panel& item5 = *new Panel;
 	G_SAFELY(item5.initialize());
@@ -132,7 +133,7 @@ void Launcher::run(int xThreadId)
 	item5.setDisplay(Styles::INLINE_BLOCK);
 	item5.setBackgroundImage(dvd2);
 
-	repaintManager.add(main, item5);
+	componentManager.add(main, item5);
 	
 	Panel& item6 = *new Panel;
 	G_SAFELY(item6.initialize());
@@ -141,8 +142,9 @@ void Launcher::run(int xThreadId)
 	item6.setDisplay(Styles::INLINE_BLOCK);
 	item6.setBackgroundImage(dvd3);
 
-	repaintManager.add(main, item6);
-	
+	componentManager.add(main, item6);
+	item.addMouseListener(new MouseListener());
+	item.addMouseListener(NULL);
 	aFrame->setVisible(true);
 
 	SYSOUT_F("Time taken: %.9fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
