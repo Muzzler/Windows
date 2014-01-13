@@ -138,9 +138,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Component.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentLayout.cpp">
-      <Filter>Source\AuroraSDK\Core</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Dims.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
@@ -176,6 +173,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\VertexTypes.cpp">
       <Filter>Source\AuroraSDK\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\CascadingLayout.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -405,6 +405,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DCommon.h">
       <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\CascadingLayout.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\BorderSet.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
