@@ -138,9 +138,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Component.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentLayout.cpp">
-      <Filter>Source\AuroraSDK\Core</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Dims.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
@@ -217,6 +214,9 @@
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentManager.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\CascadingLayout.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
   </ItemGroup>
@@ -491,6 +491,12 @@
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ComponentManager.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\CascadingLayout.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\BorderSet.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
   </ItemGroup>

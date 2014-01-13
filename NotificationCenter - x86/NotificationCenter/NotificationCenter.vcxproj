@@ -108,6 +108,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ActionEvent.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ActionListener.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\CascadingLayout.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Color.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -255,7 +258,9 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\AbstractWindow.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ActionEvent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ActionListener.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\BorderSet.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\CameraProperties.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\CascadingLayout.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Color.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Color3D.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Component.h" />

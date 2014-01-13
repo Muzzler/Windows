@@ -41,10 +41,10 @@ void Launcher::run(int xThreadId)
 
 	Panel& root = aFrame->getRootPane(); // Reference to make syntax easier
 		
-	Paint salmon(0xFFB9090B);
-	Paint dark_black(0xFF11171c);
-	Paint dark_black2(0xFF000000);
-	Paint darkRed(0xFF8A0809);
+	Paint salmon(0xB9090BFF);
+	Paint dark_black(0x11171cFF);
+	Paint dark_black2(0x000000FF);
+	Paint darkRed(0x8A0809FF);
 
 	Panel& panel = *new Panel;
 	G_SAFELY(panel.initialize());
