@@ -43,7 +43,7 @@ void Launcher::run(int xThreadId)
 		
 	Paint salmon(0xB9090BFF);
 	Paint dark_black(0x11171cFF);
-	Paint dark_black2(0x000000FF);
+	Paint dark_black2(0xFFFFFFFF);
 	Paint darkRed(0x8A0809FF);
 
 	Panel& panel = *new Panel;
