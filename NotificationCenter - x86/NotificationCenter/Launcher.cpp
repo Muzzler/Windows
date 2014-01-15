@@ -88,35 +88,7 @@ void Launcher::run(int xThreadId)
 	main.setBackgroundPaint(dark_black2);
 
 	componentManager.add(panel, main);
-	
-	Panel& item = *new Panel;
-	G_SAFELY(item.initialize());
-	item.setSize(Styles::PIXEL, 165, Styles::PIXEL, 225);
-	item.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	item.setDisplay(Styles::INLINE_BLOCK);
-	item.setBackgroundImage(dvd1);
-
-
-	componentManager.add(main, item);
-
-	Panel& item2 = *new Panel;
-	G_SAFELY(item2.initialize());
-	item2.setSize(Styles::PIXEL, 165, Styles::PIXEL, 225);
-	item2.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	item2.setDisplay(Styles::INLINE_BLOCK);
-	item2.setBackgroundImage(dvd2);
-
-	componentManager.add(main, item2);
-
-	Panel& item3 = *new Panel;
-	G_SAFELY(item3.initialize());
-	item3.setSize(Styles::PIXEL, 165, Styles::PIXEL, 225);
-	item3.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	item3.setDisplay(Styles::INLINE_BLOCK);
-	item3.setBackgroundImage(dvd3);
-
-	componentManager.add(main, item3);
-
+		
 	CustomPanel& item4 = *new CustomPanel;
 	G_SAFELY(item4.initialize());
 	item4.setSize(Styles::PIXEL, 600, Styles::PIXEL, 600);
@@ -141,10 +113,10 @@ void Launcher::run(int xThreadId)
 	item6.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
 	item6.setDisplay(Styles::INLINE_BLOCK);
 	item6.setBackgroundImage(dvd3);
+	item6.addMouseListener(new MouseListener());
 
 	componentManager.add(main, item6);
-	item.addMouseListener(new MouseListener());
-	item.addMouseListener(NULL);
+
 	aFrame->setVisible(true);
 
 	SYSOUT_F("Time taken: %.9fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);

@@ -278,6 +278,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Paint.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Panel.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Pipeline.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Pipelineable.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Rect.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\RepaintManager.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\RootPane.h" />
