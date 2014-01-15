@@ -22,7 +22,8 @@ void Launcher::run(int xThreadId)
 		dvd2 = L"Assets/images/dvd2.jpg",
 		netflix = L"Assets/images/netflix.jpg",
 		dvd3 = L"Assets/images/dvd3.jpg",
-	sample = L"Assets/images/texture_sample.png";
+		sample = L"Assets/images/texture_sample.png",
+	hero = L"Assets/images/hero-introV5.jpg"; 
 
 	ComponentManager& componentManager = *aFrame->getComponentManager();
 
@@ -43,51 +44,25 @@ void Launcher::run(int xThreadId)
 		
 	Paint salmon(0xB9090BFF);
 	Paint dark_black(0x11171cFF);
-	Paint dark_black2(0x000000FF);
+	Paint dark_black2(0x00000000);
 	Paint darkRed(0x8A0809FF);
 
 	Panel& panel = *new Panel;
 	G_SAFELY(panel.initialize());
 	panel.setSize(Styles::PERCENTAGE, 100, Styles::PERCENTAGE, 100);
-	panel.setBackgroundPaint(Paint::BLACK);
+	panel.setBackgroundImage(hero);
 
 	componentManager.add(root, panel);
 
-	Panel& sidebar = *new Panel;
-	G_SAFELY(sidebar.initialize());
-	sidebar.setSize(Styles::PIXEL, 250, Styles::PERCENTAGE, 100);
-	sidebar.setDisplay(Styles::INLINE_BLOCK);
-	sidebar.setBackgroundPaint(dark_black);
+	//Panel& main = *new Panel;
+	//G_SAFELY(main.initialize());
+	//main.setPosition(Styles::ABSOLUTE_);
+	//main.setPositioning(Styles::PIXEL, 250, Styles::PIXEL, 0, Styles::PIXEL, 250, Styles::PIXEL, 0);
+	//main.setSize(Styles::PIXEL, Styles::AUTO, Styles::PERCENTAGE, Styles::AUTO);
+	//main.setDisplay(Styles::INLINE_BLOCK);
+	//main.setBackgroundPaint(dark_black2);
 
-	componentManager.add(panel, sidebar);
-	
-	Panel& sidebar_top = *new Panel;
-	G_SAFELY(sidebar_top.initialize());
-	sidebar_top.setSize(Styles::PERCENTAGE, 100, Styles::PIXEL, 90);
-	sidebar_top.setDisplay(Styles::INLINE_BLOCK);
-	sidebar_top.setBackgroundImage(netflix);
-
-	componentManager.add(sidebar, sidebar_top);
-
-	Panel& sidebar_right = *new Panel;
-	G_SAFELY(sidebar_right.initialize());
-	sidebar_right.setPosition(Styles::ABSOLUTE_);
-	sidebar_right.setSize(Styles::PIXEL, 250, Styles::PERCENTAGE, 100);
-	sidebar_right.setPositioning(Styles::PIXEL, Styles::AUTO, Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	sidebar_right.setDisplay(Styles::INLINE_BLOCK);
-	sidebar_right.setBackgroundPaint(darkRed);
-
-	componentManager.add(panel, sidebar_right);
-	
-	Panel& main = *new Panel;
-	G_SAFELY(main.initialize());
-	main.setPosition(Styles::ABSOLUTE_);
-	main.setPositioning(Styles::PIXEL, 250, Styles::PIXEL, 0, Styles::PIXEL, 250, Styles::PIXEL, 0);
-	main.setSize(Styles::PIXEL, Styles::AUTO, Styles::PERCENTAGE, Styles::AUTO);
-	main.setDisplay(Styles::INLINE_BLOCK);
-	main.setBackgroundPaint(dark_black2);
-
-	componentManager.add(panel, main);
+	//componentManager.add(panel, main);
 		
 	//CustomPanel& item4 = *new CustomPanel;
 	//G_SAFELY(item4.initialize());
@@ -105,7 +80,7 @@ void Launcher::run(int xThreadId)
 	item5.setDisplay(Styles::INLINE_BLOCK);
 	item5.setBackgroundImage(dvd2);
 
-	componentManager.add(main, item5);
+	componentManager.add(panel, item5);
 	
 	Panel& item6 = *new Panel;
 	G_SAFELY(item6.initialize());
@@ -115,7 +90,7 @@ void Launcher::run(int xThreadId)
 	item6.setBackgroundImage(dvd3);
 	item6.addMouseListener(new MouseListener());
 
-	componentManager.add(main, item6);
+	componentManager.add(panel, item6);
 
 	aFrame->setVisible(true);
 
