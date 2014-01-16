@@ -45,7 +45,7 @@ void Launcher::run(int xThreadId)
 	Paint salmon(0xB9090BFF);
 	Paint dark_black(0x11171cFF);
 	Paint dark_black2(0x00000000);
-	Paint darkRed(0x8A0809FF);
+	Paint dark_black3(0x222222FF);
 
 	Panel& panel = *new Panel;
 	G_SAFELY(panel.initialize());
@@ -64,14 +64,14 @@ void Launcher::run(int xThreadId)
 
 	//componentManager.add(panel, main);
 		
-	//CustomPanel& item4 = *new CustomPanel;
-	//G_SAFELY(item4.initialize());
-	//item4.setSize(Styles::PIXEL, 600, Styles::PIXEL, 600);
-	//item4.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	//item4.setDisplay(Styles::INLINE_BLOCK);
-	//item4.setBackgroundImage(sample);
+	Panel& item4 = *new Panel;
+	G_SAFELY(item4.initialize());
+	item4.setSize(Styles::PERCENTAGE, 100, Styles::PIXEL, 80);
+	item4.setDisplay(Styles::BLOCK);
+	item4.setMargins(Styles::PERCENTAGE, 0, Styles::PERCENTAGE, 0, Styles::PIXEL, 0, Styles::PIXEL, 20);
+	item4.setBackgroundPaint(dark_black3);
 
-	//componentManager.add(main, item4);
+	componentManager.add(panel, item4);
 	
 	Panel& item5 = *new Panel;
 	G_SAFELY(item5.initialize());
