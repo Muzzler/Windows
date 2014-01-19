@@ -54,13 +54,17 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
+      <Optimization>MaxSpeed</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>
       </SDLCheck>
       <BrowseInformation>true</BrowseInformation>
       <ShowIncludes>false</ShowIncludes>
       <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -279,11 +283,12 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Panel.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Pipeline.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Pipelineable.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Point.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Rect.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\RepaintManager.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\RootPane.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Runnable.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Styles.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Style.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Toolkit.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\UnorderedList.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\WindowEvent.h" />

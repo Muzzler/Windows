@@ -418,9 +418,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Runnable.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Styles.h">
-      <Filter>Include\AuroraSDK\Core</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Toolkit.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
@@ -500,6 +497,12 @@
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Pipelineable.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Point.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Style.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
   </ItemGroup>
