@@ -26,7 +26,7 @@ void Launcher::run(int xThreadId)
 		*sample = L"Assets/images/texture_sample.png",
 		*hero = L"Assets/images/hero-introV5.jpg";
 
-	ComponentManager& componentManager = *aFrame->getComponentManager();
+	const ComponentManager& componentManager = *aFrame->getComponentManager();
 
 	clock_t tStart = clock();
 

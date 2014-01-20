@@ -529,6 +529,9 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DUINT4.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Easing.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\color.fx">

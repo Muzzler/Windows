@@ -298,6 +298,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Runnable.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Style.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Toolkit.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Easing.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\UnorderedList.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\WindowEvent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\WindowListener.h" />
