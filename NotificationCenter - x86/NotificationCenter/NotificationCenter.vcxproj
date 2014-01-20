@@ -250,6 +250,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2D.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DBORDERSET4.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DDISTANCESET2.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DDISTANCESET4.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DPIXELDISTANCESETINT4.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DPIXELDISTANCESETUINT2.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DPIXELDISTANCESETUINT4.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DUINT4.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\AbstractBackBuffer.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\AbstractEvent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\AbstractEventQueue.h" />
@@ -268,7 +275,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ComponentEvent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ComponentEventSource.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ComponentManager.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\COMPONENTRENDERSTYLESET.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCOMPONENTRENDERSTYLESET.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Dims.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\EventSource.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ExtLibs.h" />

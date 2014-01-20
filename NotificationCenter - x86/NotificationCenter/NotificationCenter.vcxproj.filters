@@ -505,7 +505,28 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Style.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\COMPONENTRENDERSTYLESET.h">
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCOMPONENTRENDERSTYLESET.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DDISTANCESET2.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DPIXELDISTANCESETUINT2.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DPIXELDISTANCESETUINT4.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DPIXELDISTANCESETINT4.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DBORDERSET4.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DDISTANCESET4.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DUINT4.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
   </ItemGroup>
