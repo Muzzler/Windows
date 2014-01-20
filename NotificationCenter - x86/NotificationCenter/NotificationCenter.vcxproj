@@ -54,15 +54,15 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
+      <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>
       </SDLCheck>
       <BrowseInformation>true</BrowseInformation>
       <ShowIncludes>false</ShowIncludes>
       <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
-      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
@@ -268,6 +268,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ComponentEvent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ComponentEventSource.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ComponentManager.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\COMPONENTRENDERSTYLESET.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Dims.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\EventSource.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ExtLibs.h" />

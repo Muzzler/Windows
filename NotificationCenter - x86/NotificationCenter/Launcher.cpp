@@ -18,12 +18,13 @@ void Launcher::runOnEventDispatchingThread()
 
 void Launcher::run(int xThreadId)
 {
-	LPCTSTR dvd1 = L"Assets/images/dvd1.jpg",
-		dvd2 = L"Assets/images/dvd2.jpg",
-		netflix = L"Assets/images/netflix.jpg",
-		dvd3 = L"Assets/images/dvd3.jpg",
-		sample = L"Assets/images/texture_sample.png",
-	hero = L"Assets/images/hero-introV5.jpg"; 
+	wchar_t 
+		*dvd1 = L"Assets/images/dvd1.jpg",
+		*dvd2 = L"Assets/images/dvd2.jpg",
+		*netflix = L"Assets/images/netflix.jpg",
+		*dvd3 = L"Assets/images/dvd3.jpg",
+		*sample = L"Assets/images/texture_sample.png",
+		*hero = L"Assets/images/hero-introV5.jpg";
 
 	ComponentManager& componentManager = *aFrame->getComponentManager();
 
@@ -87,6 +88,7 @@ void Launcher::run(int xThreadId)
 	item6.setSize(Style::PIXEL, 165, Style::PIXEL, 225);
 	item6.setMargins(Style::PERCENTAGE, 5, Style::PERCENTAGE, 5, Style::PIXEL, 0, Style::PIXEL, 0);
 	item6.setDisplay(Style::INLINE_BLOCK);
+	item6.setBorderWidths(Style::PIXEL, 5, Style::PIXEL, 5, Style::PIXEL, 5, Style::PIXEL, 5);
 	item6.setBackgroundImage(dvd3);
 	item6.addMouseListener(new MouseListener());
 

@@ -7,7 +7,7 @@ CustomPanel::CustomPanel() : Component() {}
 
 void CustomPanel::paintComponent()
 {
-	if (!m_visible)
+	if (!m_styleSet.m_visible)
 	{
 		return;
 	}
