@@ -7,15 +7,15 @@ CustomPanel::CustomPanel() : Component() {}
 
 void CustomPanel::paintComponent()
 {
-	if (!aVisible)
+	if (!m_visible)
 	{
 		return;
 	}
 
-	Graphics& graphics = *aGraphics;
+	Graphics& graphics = *m_graphics;
 
-	aOptBackgroundRegion.aWidth = 330;
-	aOptBackgroundRegion.aHeight = 420;
+	m_backgroundRegion.aWidth = 330;
+	m_backgroundRegion.aHeight = 420;
 
-	graphics.drawString(&aPipeline, aOptBackgroundRegion);
+	graphics.drawString(&m_pipeline, m_backgroundRegion);
 }
