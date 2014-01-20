@@ -130,6 +130,7 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\FocusEvent.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\FocusListener.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Font.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Fonts.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ImageProperties.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -192,6 +193,8 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\QuadFactory.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\Text.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\TextFactory.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\Texture.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -272,6 +275,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\FocusListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Font.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\FontData.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Fonts.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\GXSettings.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ImageProperties.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\MouseEvent.h" />
@@ -292,6 +296,8 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\WindowListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Structure\Graphics.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\QuadExpansionShader.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Text.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\TextFactory.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\VertexTypes.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DCommon.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DLinkers.h" />
