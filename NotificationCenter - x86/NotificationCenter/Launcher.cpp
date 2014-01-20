@@ -54,26 +54,7 @@ void Launcher::run(int xThreadId)
 	panel.setBackgroundImage(hero);
 
 	componentManager.add(root, panel);
-
-	//Panel& main = *new Panel;
-	//G_SAFELY(main.initialize());
-	//main.setPosition(Style::ABSOLUTE_);
-	//main.setPositioning(Style::PIXEL, 250, Style::PIXEL, 0, Style::PIXEL, 250, Style::PIXEL, 0);
-	//main.setSize(Style::PIXEL, Style::AUTO, Style::PERCENTAGE, Style::AUTO);
-	//main.setDisplay(Style::INLINE_BLOCK);
-	//main.setBackgroundPaint(dark_black2);
-
-	//componentManager.add(panel, main);
 		
-	//CustomPanel& item4 = *new CustomPanel;
-	//G_SAFELY(item4.initialize());
-	//item4.setSize(Style::PIXEL, 600, Style::PIXEL, 600);
-	//item4.setMargins(Style::PERCENTAGE, 5, Style::PERCENTAGE, 5, Style::PIXEL, 0, Style::PIXEL, 0);
-	//item4.setDisplay(Style::INLINE_BLOCK);
-	//item4.setBackgroundImage(sample);
-
-	//componentManager.add(main, item4);
-	
 	Panel& item5 = *new Panel;
 	G_SAFELY(item5.initialize());
 	item5.setSize(Style::PIXEL, 165, Style::PIXEL, 225);
