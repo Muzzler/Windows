@@ -61,7 +61,7 @@
       <BrowseInformation>true</BrowseInformation>
       <ShowIncludes>false</ShowIncludes>
       <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
-      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -127,9 +127,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentEvent.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentEventSource.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentManager.cpp" />
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Dims.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\EventSource.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\FocusEvent.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\FocusListener.cpp" />

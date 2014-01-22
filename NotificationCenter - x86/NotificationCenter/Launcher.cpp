@@ -50,6 +50,7 @@ void Launcher::run(int xThreadId)
 
 	Panel& panel = *new Panel;
 	G_SAFELY(panel.initialize());
+	panel.setId(0x4500);
 	panel.setSize(Style::PERCENTAGE, 100, Style::PERCENTAGE, 100);
 	panel.setBackgroundImage(hero);
 
@@ -57,6 +58,7 @@ void Launcher::run(int xThreadId)
 		
 	Panel& item5 = *new Panel;
 	G_SAFELY(item5.initialize());
+	item5.setId(0x4501);
 	item5.setSize(Style::PIXEL, 165, Style::PIXEL, 225);
 	item5.setMargins(Style::PERCENTAGE, 5, Style::PERCENTAGE, 5, Style::PIXEL, 0, Style::PIXEL, 0);
 	item5.setDisplay(Style::INLINE_BLOCK);
@@ -66,6 +68,7 @@ void Launcher::run(int xThreadId)
 	
 	Panel& item6 = *new Panel;
 	G_SAFELY(item6.initialize());
+	item6.setId(0x4502);
 	item6.setSize(Style::PIXEL, 165, Style::PIXEL, 225);
 	item6.setMargins(Style::PERCENTAGE, 5, Style::PERCENTAGE, 5, Style::PIXEL, 0, Style::PIXEL, 0);
 	item6.setDisplay(Style::INLINE_BLOCK);

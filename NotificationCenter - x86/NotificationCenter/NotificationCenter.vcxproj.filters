@@ -138,9 +138,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Component.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Dims.cpp">
-      <Filter>Source\AuroraSDK\Core</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ImageProperties.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
