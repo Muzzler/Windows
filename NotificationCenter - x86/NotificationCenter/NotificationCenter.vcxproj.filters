@@ -564,4 +564,9 @@
       <Filter>Assets\AuroraSDK\Shaders\VanillaDX\QuadExpansion</Filter>
     </FxCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\QuadExpansionShader\hd.hlsli">
+      <Filter>Assets\AuroraSDK\Shaders\VanillaDX\QuadExpansion</Filter>
+    </None>
+  </ItemGroup>
 </Project>
