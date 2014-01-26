@@ -554,18 +554,18 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\QuadExpansionShader\vs.hlsl">
+    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\QuadExpansionShader\qe_gs.hlsl">
       <Filter>Assets\AuroraSDK\Shaders\VanillaDX\QuadExpansion</Filter>
     </FxCompile>
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\QuadExpansionShader\ps.hlsl">
+    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\QuadExpansionShader\qe_ps.hlsl">
       <Filter>Assets\AuroraSDK\Shaders\VanillaDX\QuadExpansion</Filter>
     </FxCompile>
-    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\QuadExpansionShader\gs.hlsl">
+    <FxCompile Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\QuadExpansionShader\qe_vs.hlsl">
       <Filter>Assets\AuroraSDK\Shaders\VanillaDX\QuadExpansion</Filter>
     </FxCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\QuadExpansionShader\hd.hlsli">
+    <None Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\QuadExpansionShader\qe_hd.hlsli">
       <Filter>Assets\AuroraSDK\Shaders\VanillaDX\QuadExpansion</Filter>
     </None>
   </ItemGroup>
