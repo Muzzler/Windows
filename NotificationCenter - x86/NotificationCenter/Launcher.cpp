@@ -72,7 +72,7 @@ void Launcher::run(int xThreadId)
 	item6.setSize(Style::PIXEL, 165, Style::PIXEL, 225);
 	item6.setMargins(Style::PERCENTAGE, 5, Style::PERCENTAGE, 5, Style::PIXEL, 0, Style::PIXEL, 0);
 	item6.setDisplay(Style::INLINE_BLOCK);
-	item6.setBorderWidths(Style::PIXEL, 5, Style::PIXEL, 5, Style::PIXEL, 5, Style::PIXEL, 5);
+	item6.setBorderWidths(Style::PIXEL, 10, Style::PIXEL,10, Style::PIXEL, 10, Style::PIXEL, 10);
 	item6.setBackgroundImage(dvd3);
 	item6.addMouseListener(new MouseListener());
 
