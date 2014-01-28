@@ -22,7 +22,7 @@ void Launcher::run(int xThreadId)
 		*dvd1 = L"Assets/images/dvd1.jpg",
 		*dvd2 = L"Assets/images/dvd2.jpg",
 		*netflix = L"Assets/images/netflix.jpg",
-		*dvd3 = L"Assets/images/dvd3.jpg",
+		*dvd3 = L"Assets/images/circleTest.png",
 		*sample = L"Assets/images/texture_sample.png",
 		*hero = L"Assets/images/hero-introV5.jpg";
 
@@ -56,23 +56,25 @@ void Launcher::run(int xThreadId)
 
 	componentManager.add(root, panel);
 		
-	Panel& item5 = *new Panel;
-	G_SAFELY(item5.initialize());
-	item5.setId(0x4501);
-	item5.setSize(Style::PIXEL, 165, Style::PIXEL, 225);
-	item5.setMargins(Style::PERCENTAGE, 5, Style::PERCENTAGE, 5, Style::PIXEL, 0, Style::PIXEL, 0);
-	item5.setDisplay(Style::INLINE_BLOCK);
-	item5.setBackgroundImage(dvd2);
+	//Panel& item5 = *new Panel;
+	//G_SAFELY(item5.initialize());
+	//item5.setId(0x4501);
+	//item5.setSize(Style::PIXEL, 165, Style::PIXEL, 225);
+	//item5.setMargins(Style::PERCENTAGE, 5, Style::PERCENTAGE, 5, Style::PIXEL, 0, Style::PIXEL, 0);
+	//item5.setDisplay(Style::INLINE_BLOCK);
+	//item5.setBackgroundImage(dvd2);
 
-	componentManager.add(panel, item5);
+	//componentManager.add(panel, item5);
 	
 	Panel& item6 = *new Panel;
 	G_SAFELY(item6.initialize());
 	item6.setId(0x4502);
-	item6.setSize(Style::PIXEL, 165, Style::PIXEL, 225);
-	item6.setMargins(Style::PERCENTAGE, 5, Style::PERCENTAGE, 5, Style::PIXEL, 0, Style::PIXEL, 0);
+	item6.setSize(Style::PIXEL, 200, Style::PIXEL, 200);
+	item6.setMargins(Style::PERCENTAGE, 10, Style::PERCENTAGE, 10, Style::PIXEL, 0, Style::PIXEL, 0);
 	item6.setDisplay(Style::INLINE_BLOCK);
-	item6.setBorderWidths(Style::PIXEL, 10, Style::PIXEL,10, Style::PIXEL, 10, Style::PIXEL, 10);
+	item6.setBorderColor(0xf10da2FF, 0xf10da2FF, 0xf10da2FF, 0xf10da2FF);
+	item6.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
+	item6.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
 	item6.setBackgroundImage(dvd3);
 	item6.addMouseListener(new MouseListener());
 
