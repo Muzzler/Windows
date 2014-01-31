@@ -83,11 +83,8 @@ void Launcher::run(int xThreadId)
 		unsigned int startTime = kerneltimelp__;
 
 		SYSOUT_F("Current time %d", sizeof(long));
-
-		unsigned int endTime = kerneltimelp__;
-
-		SYSOUT_F("Current time %d", (endTime - startTime));
-
+		
+		SYSOUT_F("Current time %d", (kerneltimelp__ - startTime));
 
 		aFrame->setVisible(true);
 	}
