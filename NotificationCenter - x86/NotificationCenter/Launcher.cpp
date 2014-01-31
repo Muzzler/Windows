@@ -80,11 +80,14 @@ void Launcher::run(int xThreadId)
 
 		componentManager.add(panel, item6);
 
-		unsigned long time = kerneltimelp__;
-
-		SYSOUT_F("Current time %d", time);
+		unsigned int startTime = kerneltimelp__;
 
 		SYSOUT_F("Current time %d", sizeof(long));
+
+		unsigned int endTime = kerneltimelp__;
+
+		SYSOUT_F("Current time %d", (endTime - startTime));
+
 
 		aFrame->setVisible(true);
 	}
