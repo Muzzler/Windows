@@ -28,59 +28,64 @@ void Launcher::run(int xThreadId)
 
 	const ComponentManager& componentManager = *aFrame->getComponentManager();
 
-	clock_t tStart = clock();
+	timeblock__("Launcher started in - "){
 
-	srand(xThreadId);
+		srand(xThreadId);
 
-	aFrame->setName(L"Muzzler - Notification Center");                                // Set the title
-	aFrame->setBackground(45, 45, 48);
-	aFrame->setBorder(0xFF, 200, 200, 200, 1.0f);
-	aFrame->setShadow(0xFF, 0, 0, 0, 10.0f);
-	aFrame->setBounds(0, 0, 800, 600);
-	aFrame->setLocationRelativeTo(NULL);
+		aFrame->setName(L"Muzzler - Notification Center");                                // Set the title
+		aFrame->setBackground(45, 45, 48);
+		aFrame->setBorder(0xFF, 200, 200, 200, 1.0f);
+		aFrame->setShadow(0xFF, 0, 0, 0, 10.0f);
+		aFrame->setBounds(0, 0, 800, 600);
+		aFrame->setLocationRelativeTo(NULL);
 
-	SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
+		SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
 
-	Panel& root = aFrame->getRootPane(); // Reference to make syntax easier
-		
-	Paint salmon(0xB9090BFF);
-	Paint dark_black(0x11171cFF);
-	Paint dark_black2(0x00000000);
-	Paint darkRed(0x8A0809FF);
+		Panel& root = aFrame->getRootPane(); // Reference to make syntax easier
 
-	Panel& panel = *new Panel;
-	G_SAFELY(panel.initialize());
-	panel.setId(0x4500);
-	panel.setSize(Style::PERCENTAGE, 100, Style::PERCENTAGE, 100);
-	panel.setBackgroundImage(hero);
+		Paint salmon(0xB9090BFF);
+		Paint dark_black(0x11171cFF);
+		Paint dark_black2(0x00000000);
+		Paint darkRed(0x8A0809FF);
 
-	componentManager.add(root, panel);
-		
-	//Panel& item5 = *new Panel;
-	//G_SAFELY(item5.initialize());
-	//item5.setId(0x4501);
-	//item5.setSize(Style::PIXEL, 165, Style::PIXEL, 225);
-	//item5.setMargins(Style::PERCENTAGE, 5, Style::PERCENTAGE, 5, Style::PIXEL, 0, Style::PIXEL, 0);
-	//item5.setDisplay(Style::INLINE_BLOCK);
-	//item5.setBackgroundImage(dvd2);
+		Panel& panel = *new Panel;
+		G_SAFELY(panel.initialize());
+		panel.setId(0x4500);
+		panel.setSize(Style::PERCENTAGE, 100, Style::PERCENTAGE, 100);
+		panel.setBackgroundImage(hero);
 
-	//componentManager.add(panel, item5);
-	
-	Panel& item6 = *new Panel;
-	G_SAFELY(item6.initialize());
-	item6.setId(0x4502);
-	item6.setSize(Style::PIXEL, 200, Style::PIXEL, 200);
-	item6.setMargins(Style::PERCENTAGE, 10, Style::PERCENTAGE, 10, Style::PIXEL, 0, Style::PIXEL, 0);
-	item6.setDisplay(Style::INLINE_BLOCK);
-	item6.setBorderColor(0xf10da2FF, 0xf10da2FF, 0xf10da2FF, 0xf10da2FF);
-	item6.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
-	item6.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
-	item6.setBackgroundImage(dvd3);
-	item6.addMouseListener(new MouseListener());
+		componentManager.add(root, panel);
 
-	componentManager.add(panel, item6);
+		//Panel& item5 = *new Panel;
+		//G_SAFELY(item5.initialize());
+		//item5.setId(0x4501);
+		//item5.setSize(Style::PIXEL, 165, Style::PIXEL, 225);
+		//item5.setMargins(Style::PERCENTAGE, 5, Style::PERCENTAGE, 5, Style::PIXEL, 0, Style::PIXEL, 0);
+		//item5.setDisplay(Style::INLINE_BLOCK);
+		//item5.setBackgroundImage(dvd2);
 
-	aFrame->setVisible(true);
+		//componentManager.add(panel, item5);
 
-	SYSOUT_F("Time taken: %.9fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
+		Panel& item6 = *new Panel;
+		G_SAFELY(item6.initialize());
+		item6.setId(0x4502);
+		item6.setSize(Style::PIXEL, 200, Style::PIXEL, 200);
+		item6.setMargins(Style::PERCENTAGE, 10, Style::PERCENTAGE, 10, Style::PIXEL, 0, Style::PIXEL, 0);
+		item6.setDisplay(Style::INLINE_BLOCK);
+		item6.setBorderColor(0xf10da2FF, 0xf10da2FF, 0xf10da2FF, 0xf10da2FF);
+		item6.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
+		item6.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
+		item6.setBackgroundImage(dvd3);
+		item6.addMouseListener(new MouseListener());
+
+		componentManager.add(panel, item6);
+
+		unsigned long time = kerneltimelp__;
+
+		SYSOUT_F("Current time %d", time);
+
+		SYSOUT_F("Current time %d", sizeof(long));
+
+		aFrame->setVisible(true);
+	}
 }
