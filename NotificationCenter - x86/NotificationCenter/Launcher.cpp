@@ -15,10 +15,6 @@ void Launcher::runOnEventDispatchingThread()
 	G_SAFELY(aFrame->initialize());
 	
 	Toolkit::getSystemEventQueue(aFrame->id())->invokeLater(this); // To create the window!
-
-	Sleep(5000);
-
-	item6.animate(Component::INTERPOLATE_OPACITY, Easing::IN_OUT_QUAD, 0, 1.0f, 1000);
 }
 
 void Launcher::run(int xThreadId)

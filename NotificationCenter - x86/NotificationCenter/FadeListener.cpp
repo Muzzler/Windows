@@ -6,18 +6,29 @@ FadeListener::FadeListener(){}
 
 FadeListener::~FadeListener(){}
 
-
 void FadeListener::mouseExited(MouseEvent * xEvent)
 {
 	Component * source = (Component*)xEvent->getSource();
-	source->animate(Component::INTERPOLATE_OPACITY, Easing::OUT_QUAD, 1.0f, -1.0f, 1000);
+
+	if (m_animation)
+	{
+		source->stop(m_animation, true);
+	}
+	m_animation = source->animate(Component::ANIMATE_OPACITY, Easing::OUT_QUAD, 0.0f, 1000, NULL, NULL);
+
 	xEvent->setConsumed(true);
 }
 
 void FadeListener::mouseEntered(MouseEvent * xEvent)
 {
-
 	Component * source = (Component*)xEvent->getSource();
-	source->animate(Component::INTERPOLATE_OPACITY, Easing::IN_QUAD, 0.0f, 1.0f, 1000);
+
+	if (m_animation)
+	{
+		source->stop(m_animation, true);
+	}
+
+	m_animation = source->animate(Component::ANIMATE_OPACITY, Easing::IN_QUAD, 1.0f, 200, NULL, NULL);
+
 	xEvent->setConsumed(true);
 }

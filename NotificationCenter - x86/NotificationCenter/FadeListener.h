@@ -33,6 +33,8 @@ namespace A2D {
 
 	class FadeListener : public MouseListener
 	{
+		Animation				m_animation = NULL;
+
 	public:
 		FadeListener();
 		~FadeListener();
