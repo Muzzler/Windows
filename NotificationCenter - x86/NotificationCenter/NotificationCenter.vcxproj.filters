@@ -526,6 +526,9 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Fonts.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\FontVertex.h">
+      <Filter>Include\AuroraSDK\Windows</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\color.fx">

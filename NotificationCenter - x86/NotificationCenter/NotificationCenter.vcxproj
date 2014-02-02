@@ -295,6 +295,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\WindowEvent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\WindowListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Structure\Graphics.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\FontVertex.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\QuadExpansionShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Text.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\TextFactory.h" />

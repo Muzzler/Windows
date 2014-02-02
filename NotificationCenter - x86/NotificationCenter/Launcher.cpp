@@ -45,106 +45,35 @@ void Launcher::run(int xThreadId)
 	Paint dark_black(0x11171cFF);
 	Paint dark_black2(0xFFFFFFFF);
 	Paint darkRed(0x8A0809FF);
+	Paint silver(0xbdc3c7FF);
 
-	Panel& panel = *new Panel;
-	G_SAFELY(panel.initialize());
-	panel.setSize(Styles::PERCENTAGE, 100, Styles::PERCENTAGE, 100);
-	panel.setBackgroundPaint(Paint::BLACK);
-
-	componentManager.add(root, panel);
-
-	Panel& sidebar = *new Panel;
-	G_SAFELY(sidebar.initialize());
-	sidebar.setSize(Styles::PIXEL, 250, Styles::PERCENTAGE, 100);
-	sidebar.setDisplay(Styles::INLINE_BLOCK);
-	sidebar.setBackgroundPaint(dark_black);
-
-	componentManager.add(panel, sidebar);
-	
-	Panel& sidebar_top = *new Panel;
-	G_SAFELY(sidebar_top.initialize());
-	sidebar_top.setSize(Styles::PERCENTAGE, 100, Styles::PIXEL, 90);
-	sidebar_top.setDisplay(Styles::INLINE_BLOCK);
-	sidebar_top.setBackgroundImage(netflix);
-
-	componentManager.add(sidebar, sidebar_top);
-
-	Panel& sidebar_right = *new Panel;
-	G_SAFELY(sidebar_right.initialize());
-	sidebar_right.setPosition(Styles::ABSOLUTE_);
-	sidebar_right.setSize(Styles::PIXEL, 250, Styles::PERCENTAGE, 100);
-	sidebar_right.setPositioning(Styles::PIXEL, Styles::AUTO, Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	sidebar_right.setDisplay(Styles::INLINE_BLOCK);
-	sidebar_right.setBackgroundPaint(darkRed);
-
-	componentManager.add(panel, sidebar_right);
-	
-	Panel& main = *new Panel;
+	/*Panel& main = *new Panel;
 	G_SAFELY(main.initialize());
 	main.setPosition(Styles::ABSOLUTE_);
 	main.setPositioning(Styles::PIXEL, 250, Styles::PIXEL, 0, Styles::PIXEL, 250, Styles::PIXEL, 0);
 	main.setSize(Styles::PIXEL, Styles::AUTO, Styles::PERCENTAGE, Styles::AUTO);
 	main.setDisplay(Styles::INLINE_BLOCK);
-	main.setBackgroundPaint(dark_black2);
+	main.setBackgroundPaint(silver);*/
 
-	componentManager.add(panel, main);
-	
-	Panel& item = *new Panel;
-	G_SAFELY(item.initialize());
-	item.setSize(Styles::PIXEL, 165, Styles::PIXEL, 225);
-	item.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	item.setDisplay(Styles::INLINE_BLOCK);
-	item.setBackgroundImage(dvd1);
+	Panel &main2 = *new Panel;
+	G_SAFELY(main2.initialize());
+	main2.setSize(Styles::PERCENTAGE, 100, Styles::PERCENTAGE, 100);
+	main2.setBackgroundPaint(Paint::WHITE);
 
+	componentManager.add(root, main2);
 
-	componentManager.add(main, item);
-
-	Panel& item2 = *new Panel;
-	G_SAFELY(item2.initialize());
-	item2.setSize(Styles::PIXEL, 165, Styles::PIXEL, 225);
-	item2.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	item2.setDisplay(Styles::INLINE_BLOCK);
-	item2.setBackgroundImage(dvd2);
-
-	componentManager.add(main, item2);
-
-	Panel& item3 = *new Panel;
-	G_SAFELY(item3.initialize());
-	item3.setSize(Styles::PIXEL, 165, Styles::PIXEL, 225);
-	item3.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	item3.setDisplay(Styles::INLINE_BLOCK);
-	item3.setBackgroundImage(dvd3);
-
-	componentManager.add(main, item3);
+	//componentManager.add(root, main);
 
 	CustomPanel& item4 = *new CustomPanel;
 	G_SAFELY(item4.initialize());
-	item4.setSize(Styles::PIXEL, 600, Styles::PIXEL, 600);
-	item4.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
+	item4.setPosition(Styles::RELATIVE_);
+	item4.setSize(Styles::PIXEL, 300, Styles::PIXEL, 300);
+	item4.setMargins(Styles::PIXEL, 200, Styles::PIXEL, 200, Styles::PIXEL, 0, Styles::PIXEL, 0);
 	item4.setDisplay(Styles::INLINE_BLOCK);
 	item4.setBackgroundImage(sample);
 
-	componentManager.add(main, item4);
-	
-	Panel& item5 = *new Panel;
-	G_SAFELY(item5.initialize());
-	item5.setSize(Styles::PIXEL, 165, Styles::PIXEL, 225);
-	item5.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	item5.setDisplay(Styles::INLINE_BLOCK);
-	item5.setBackgroundImage(dvd2);
+	componentManager.add(main2, item4);
 
-	componentManager.add(main, item5);
-	
-	Panel& item6 = *new Panel;
-	G_SAFELY(item6.initialize());
-	item6.setSize(Styles::PIXEL, 165, Styles::PIXEL, 225);
-	item6.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	item6.setDisplay(Styles::INLINE_BLOCK);
-	item6.setBackgroundImage(dvd3);
-
-	componentManager.add(main, item6);
-	item.addMouseListener(new MouseListener());
-	item.addMouseListener(NULL);
 	aFrame->setVisible(true);
 
 	SYSOUT_F("Time taken: %.9fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
