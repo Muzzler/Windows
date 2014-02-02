@@ -37,9 +37,6 @@
     <Filter Include="Assets\NotificationCenter">
       <UniqueIdentifier>{915695ea-ce31-41e7-8903-f311ce790c86}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Include\AuroraSDK\Windows">
-      <UniqueIdentifier>{a1a2397a-486a-4c56-a06f-a2e71c1bd1af}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Include\AuroraSDK\Linux">
       <UniqueIdentifier>{3533dbb1-1d3c-4f45-b63b-94a682c2c72c}</UniqueIdentifier>
     </Filter>
@@ -57,6 +54,9 @@
     </Filter>
     <Filter Include="Include\AuroraSDK\Structure">
       <UniqueIdentifier>{cd904880-9c45-465b-81d9-f6e19d89d628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\AuroraSDK\Windows">
+      <UniqueIdentifier>{a1a2397a-486a-4c56-a06f-a2e71c1bd1af}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

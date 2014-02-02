@@ -14,6 +14,10 @@ void Launcher::runOnEventDispatchingThread()
 	G_SAFELY(aFrame->initialize());
 	
 	Toolkit::getSystemEventQueue(aFrame->id())->invokeLater(this); // To create the window!
+
+	Sleep(3000);
+
+	item6.animate(Component::INTERPOLATE_OPACITY, Component::TWEEN_IN_OUT_QUAD, 0, 1.0f, 1000);
 }
 
 void Launcher::run(int xThreadId)
@@ -66,7 +70,6 @@ void Launcher::run(int xThreadId)
 
 		//componentManager.add(panel, item5);
 
-		Panel& item6 = *new Panel;
 		G_SAFELY(item6.initialize());
 		item6.setId(0x4502);
 		item6.setSize(Style::PIXEL, 200, Style::PIXEL, 200);
@@ -76,16 +79,31 @@ void Launcher::run(int xThreadId)
 		item6.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
 		item6.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
 		item6.setBackgroundImage(dvd3);
+		item6.setOpacity(0.0f);
 		item6.addMouseListener(new MouseListener());
 
 		componentManager.add(panel, item6);
 
+		G_SAFELY(item7.initialize());
+		item7.setId(0x4502);
+		item7.setSize(Style::PIXEL, 200, Style::PIXEL, 200);
+		item7.setMargins(Style::PERCENTAGE, 10, Style::PERCENTAGE, 10, Style::PIXEL, 0, Style::PIXEL, 0);
+		item7.setDisplay(Style::INLINE_BLOCK);
+		item7.setBorderColor(0xf10da2FF, 0xf10da2FF, 0xf10da2FF, 0xf10da2FF);
+		item7.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
+		item7.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
+		item7.setBackgroundImage(dvd3);
+		item7.setOpacity(0.5f);
+		item7.addMouseListener(new MouseListener());
+
+		componentManager.add(panel, item7);
+		
 		unsigned int startTime = kerneltimelp__;
 
 		SYSOUT_F("Current time %d", sizeof(long));
 		
 		SYSOUT_F("Current time %d", (kerneltimelp__ - startTime));
-
+		
 		aFrame->setVisible(true);
 	}
 }

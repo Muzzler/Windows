@@ -17,6 +17,9 @@ private:
 
 	ComponentManager * aComponentManager;
 	
+	Panel& item6 = *new Panel;
+	Panel& item7 = *new Panel;
+
 	LPCTSTR file0 = L"Assets/images/free [a] 1.jpg",
 		file1 = L"Assets/images/muzzler windows-sync textureBackground [a] 1.jpg",
 		file2 = L"Assets/images/muzzler windows-sync background [a] 1.jpg",
