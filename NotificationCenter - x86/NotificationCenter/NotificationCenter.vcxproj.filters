@@ -216,6 +216,9 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\CascadingLayout.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Easing.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\images\small.ico">

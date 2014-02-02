@@ -127,6 +127,7 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentEvent.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentEventSource.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentManager.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Easing.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\EventSource.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\FocusEvent.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\FocusListener.cpp" />
