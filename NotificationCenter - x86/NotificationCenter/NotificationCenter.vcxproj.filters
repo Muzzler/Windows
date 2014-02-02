@@ -219,6 +219,9 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Easing.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\FadeListener.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\images\small.ico">
@@ -530,6 +533,9 @@
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Easing.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\FadeListener.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
   </ItemGroup>
