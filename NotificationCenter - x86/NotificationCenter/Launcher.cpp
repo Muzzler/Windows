@@ -1,6 +1,7 @@
 
 #include "Launcher.h"
 #include "CustomPanel.h"
+#include "FadeListener.h"
 
 #include <time.h>
 
@@ -80,8 +81,7 @@ void Launcher::run(int xThreadId)
 		item6.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
 		item6.setBackgroundImage(dvd3);
 		item6.setOpacity(0.0f);
-		item6.addMouseListener(new MouseListener());
-
+		item6.addMouseListener(new FadeListener());
 		componentManager.add(panel, item6);
 
 		G_SAFELY(item7.initialize());
@@ -94,7 +94,7 @@ void Launcher::run(int xThreadId)
 		item7.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
 		item7.setBackgroundImage(dvd3);
 		item7.setOpacity(0.5f);
-		item7.addMouseListener(new MouseListener());
+		item7.addMouseListener(new FadeListener());
 
 		componentManager.add(panel, item7);
 		

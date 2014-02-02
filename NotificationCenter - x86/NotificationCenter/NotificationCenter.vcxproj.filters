@@ -219,8 +219,8 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Easing.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\FadeListener.cpp">
-      <Filter>Source\AuroraSDK\Core</Filter>
+    <ClCompile Include="FadeListener.cpp">
+      <Filter>Source\NotificationCenter</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -535,8 +535,8 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Easing.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\FadeListener.h">
-      <Filter>Include\AuroraSDK\Core</Filter>
+    <ClInclude Include="FadeListener.h">
+      <Filter>Include\NotificationCenter</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

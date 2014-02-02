@@ -129,7 +129,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentManager.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Easing.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\EventSource.cpp" />
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\FadeListener.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\FocusEvent.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\FocusListener.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ImageProperties.cpp">
@@ -215,6 +214,7 @@
     <ClCompile Include="CustomPanel.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="FadeListener.cpp" />
     <ClCompile Include="Launcher.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -278,7 +278,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Dims.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\EventSource.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ExtLibs.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\FadeListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\FocusEvent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\FocusListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\GXSettings.h" />
@@ -327,6 +326,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Window.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DDebug.h" />
     <ClInclude Include="CustomPanel.h" />
+    <ClInclude Include="FadeListener.h" />
     <ClInclude Include="Launcher.h" />
     <ClInclude Include="NotificationCenter.h" />
   </ItemGroup>
