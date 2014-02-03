@@ -32,8 +32,8 @@ void ResizeListener::mouseEntered(MouseEvent * xEvent)
 		source->stop(m_animation_width);
 	}
 
-	m_animation_width = source->animate(Component::ANIMATE_WIDTH, Easing::OUT_QUAD, 200, 200, NULL, NULL);
-	m_animation_height = source->animate(Component::ANIMATE_HEIGHT, Easing::OUT_QUAD, 200, 200, NULL, NULL);
+	m_animation_width = source->animate(Component::ANIMATE_WIDTH, Easing::OUT_ELASTIC, 200, 1000, NULL, NULL);
+	m_animation_height = source->animate(Component::ANIMATE_HEIGHT, Easing::OUT_ELASTIC, 200, 1000, NULL, NULL);
 
 	xEvent->setConsumed(true);
 }

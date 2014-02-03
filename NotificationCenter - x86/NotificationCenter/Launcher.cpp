@@ -3,8 +3,7 @@
 #include "CustomPanel.h"
 #include "FadeListener.h"
 #include "ResizeListener.h"
-
-#include <time.h>
+#include "BorderRadiiListener.h"
 
 Launcher::Launcher(HINSTANCE xHInstance)
 {
@@ -68,7 +67,7 @@ void Launcher::run(int xThreadId)
 		item6.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
 		item6.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
 		item6.setBackgroundImage(dvd3);
-		item6.addMouseListener(new ResizeListener());
+		item6.addMouseListener(new FadeListener());
 
 		componentManager.add(panel, item6);
 
@@ -96,7 +95,7 @@ void Launcher::run(int xThreadId)
 		item8.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
 		item8.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
 		item8.setBackgroundImage(dvd3);
-		item8.addMouseListener(new ResizeListener());
+		item8.addMouseListener(new BorderRadiiListener());
 
 		componentManager.add(panel, item8);
 

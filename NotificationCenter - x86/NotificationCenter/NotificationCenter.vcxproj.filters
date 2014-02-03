@@ -225,6 +225,9 @@
     <ClCompile Include="ResizeListener.cpp">
       <Filter>Source\NotificationCenter</Filter>
     </ClCompile>
+    <ClCompile Include="BorderRadiiListener.cpp">
+      <Filter>Source\NotificationCenter</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\images\small.ico">
@@ -542,6 +545,9 @@
       <Filter>Include\NotificationCenter</Filter>
     </ClInclude>
     <ClInclude Include="ResizeListener.h">
+      <Filter>Include\NotificationCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="BorderRadiiListener.h">
       <Filter>Include\NotificationCenter</Filter>
     </ClInclude>
   </ItemGroup>

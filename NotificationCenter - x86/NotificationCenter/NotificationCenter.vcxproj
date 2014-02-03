@@ -221,6 +221,7 @@
     <ClCompile Include="NotificationCenter.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="BorderRadiiListener.cpp" />
     <ClCompile Include="ResizeListener.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -326,6 +327,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Thread.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Window.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DDebug.h" />
+    <ClInclude Include="BorderRadiiListener.h" />
     <ClInclude Include="CustomPanel.h" />
     <ClInclude Include="FadeListener.h" />
     <ClInclude Include="Launcher.h" />
