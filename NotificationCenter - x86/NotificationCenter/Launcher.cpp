@@ -22,7 +22,8 @@ void Launcher::run(int xThreadId)
 		dvd2 = L"Assets/images/dvd2.jpg",
 		netflix = L"Assets/images/netflix.jpg",
 		dvd3 = L"Assets/images/dvd3.jpg",
-	sample = L"Assets/images/texture_sample.png";
+	sample = L"Assets/images/texture_sample.png",
+	bar = L"Assets/images/dark_bar.jpg";
 
 	ComponentManager& componentManager = *aFrame->getComponentManager();
 
@@ -64,15 +65,24 @@ void Launcher::run(int xThreadId)
 
 	//componentManager.add(root, main);
 
+	Panel& panel = *new Panel;
+	G_SAFELY(panel.initialize());
+	panel.setSize(Styles::PIXEL, 600, Styles::PIXEL, 200);
+	panel.setMargins(Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0);
+	panel.setDisplay(Styles::INLINE_BLOCK);
+	panel.setBackgroundImage(bar);
+
+	componentManager.add(main2, panel);
+
 	CustomPanel& item4 = *new CustomPanel;
 	G_SAFELY(item4.initialize());
 	item4.setPosition(Styles::RELATIVE_);
 	item4.setSize(Styles::PIXEL, 300, Styles::PIXEL, 300);
-	item4.setMargins(Styles::PIXEL, 200, Styles::PIXEL, 200, Styles::PIXEL, 0, Styles::PIXEL, 0);
+	item4.setMargins(Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0);
 	item4.setDisplay(Styles::INLINE_BLOCK);
 	item4.setBackgroundImage(sample);
 
-	componentManager.add(main2, item4);
+	componentManager.add(panel, item4);
 
 	aFrame->setVisible(true);
 
