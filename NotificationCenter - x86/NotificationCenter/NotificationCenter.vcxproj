@@ -54,7 +54,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>Full</Optimization>
+      <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>
       </SDLCheck>
@@ -221,6 +221,7 @@
     <ClCompile Include="NotificationCenter.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ResizeListener.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\Aurora-SDK\Lib\Assets\Images\muzzler windows-sync background [a] 1.jpg" />
@@ -329,6 +330,7 @@
     <ClInclude Include="FadeListener.h" />
     <ClInclude Include="Launcher.h" />
     <ClInclude Include="NotificationCenter.h" />
+    <ClInclude Include="ResizeListener.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\color.fx">

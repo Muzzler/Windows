@@ -2,6 +2,7 @@
 #include "Launcher.h"
 #include "CustomPanel.h"
 #include "FadeListener.h"
+#include "ResizeListener.h"
 
 #include <time.h>
 
@@ -56,30 +57,22 @@ void Launcher::run(int xThreadId)
 		panel.setBackgroundImage(hero);
 
 		componentManager.add(root, panel);
-
-		//Panel& item5 = *new Panel;
-		//G_SAFELY(item5.initialize());
-		//item5.setId(0x4501);
-		//item5.setSize(Style::PIXEL, 165, Style::PIXEL, 225);
-		//item5.setMargins(Style::PERCENTAGE, 5, Style::PERCENTAGE, 5, Style::PIXEL, 0, Style::PIXEL, 0);
-		//item5.setDisplay(Style::INLINE_BLOCK);
-		//item5.setBackgroundImage(dvd2);
-
-		//componentManager.add(panel, item5);
-
+		
+		Panel& item6 = *new Panel;
 		G_SAFELY(item6.initialize());
 		item6.setId(0x4502);
 		item6.setSize(Style::PIXEL, 200, Style::PIXEL, 200);
 		item6.setMargins(Style::PERCENTAGE, 10, Style::PERCENTAGE, 10, Style::PIXEL, 0, Style::PIXEL, 0);
 		item6.setDisplay(Style::INLINE_BLOCK);
-		item6.setBorderColor(0xf10da2FF, 0xf10da2FF, 0xf10da2FF, 0xf10da2FF);
+		item6.setBorderColor(0xB9090BFF, 0xB9090BFF, 0xB9090BFF, 0xB9090BFF);
 		item6.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
 		item6.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
 		item6.setBackgroundImage(dvd3);
-		item6.setOpacity(0.0f);
-		item6.addMouseListener(new FadeListener());
+		item6.addMouseListener(new ResizeListener());
+
 		componentManager.add(panel, item6);
 
+		Panel& item7 = *new Panel;
 		G_SAFELY(item7.initialize());
 		item7.setId(0x4502);
 		item7.setSize(Style::PIXEL, 200, Style::PIXEL, 200);
@@ -89,11 +82,24 @@ void Launcher::run(int xThreadId)
 		item7.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
 		item7.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
 		item7.setBackgroundImage(dvd3);
-		item7.setOpacity(0.5f);
-		item7.addMouseListener(new FadeListener());
+		item7.addMouseListener(new ResizeListener());
 
 		componentManager.add(panel, item7);
-		
+
+		Panel& item8 = *new Panel;
+		G_SAFELY(item8.initialize());
+		item8.setId(0x4502);
+		item8.setSize(Style::PIXEL, 200, Style::PIXEL, 200);
+		item8.setMargins(Style::PERCENTAGE, 10, Style::PERCENTAGE, 10, Style::PIXEL, 0, Style::PIXEL, 0);
+		item8.setDisplay(Style::INLINE_BLOCK);
+		item8.setBorderColor(0x2ecc71FF, 0x2ecc71FF, 0x2ecc71FF, 0x2ecc71FF);
+		item8.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
+		item8.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
+		item8.setBackgroundImage(dvd3);
+		item8.addMouseListener(new ResizeListener());
+
+		componentManager.add(panel, item8);
+
 		unsigned int startTime = kerneltimelp__;
 
 		SYSOUT_F("Current time %d", sizeof(long));

@@ -222,6 +222,9 @@
     <ClCompile Include="FadeListener.cpp">
       <Filter>Source\NotificationCenter</Filter>
     </ClCompile>
+    <ClCompile Include="ResizeListener.cpp">
+      <Filter>Source\NotificationCenter</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\images\small.ico">
@@ -536,6 +539,9 @@
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
     <ClInclude Include="FadeListener.h">
+      <Filter>Include\NotificationCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="ResizeListener.h">
       <Filter>Include\NotificationCenter</Filter>
     </ClInclude>
   </ItemGroup>
