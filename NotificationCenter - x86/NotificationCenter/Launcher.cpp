@@ -98,13 +98,7 @@ void Launcher::run(int xThreadId)
 		item8.addMouseListener(new BorderRadiiListener());
 
 		componentManager.add(panel, item8);
-
-		unsigned int startTime = kerneltimelp__;
-
-		SYSOUT_F("Current time %d", sizeof(long));
-		
-		SYSOUT_F("Current time %d", (kerneltimelp__ - startTime));
-		
+				
 		aFrame->setVisible(true);
 	}
 }
