@@ -3,10 +3,10 @@
 using namespace A2D;
 
 ResizeListener::ResizeListener() : 
-	m_widthShrinkAnimation(A2DCACHEDANIMATION(Animator::COMPONENT_WIDTH, Easing::OUT_QUAD, 50, 1000, NULL, NULL)),
-	m_widthGrowthAnimation(A2DCACHEDANIMATION(Animator::COMPONENT_WIDTH, Easing::OUT_ELASTIC, 200, 1000, NULL, NULL)),
-	m_heightShrinkAnimation(A2DCACHEDANIMATION(Animator::COMPONENT_HEIGHT, Easing::OUT_QUAD, 50, 1000, NULL, NULL)),
-	m_heightGrowthAnimation(A2DCACHEDANIMATION(Animator::COMPONENT_HEIGHT, Easing::OUT_ELASTIC, 200, 1000, NULL, NULL))
+	m_widthShrinkAnimation(Animator::COMPONENT_WIDTH, Easing::OUT_QUAD, 50, 1000, NULL, NULL),
+	m_widthGrowthAnimation(Animator::COMPONENT_WIDTH, Easing::OUT_ELASTIC, 200, 1000, NULL, NULL),
+	m_heightShrinkAnimation(Animator::COMPONENT_HEIGHT, Easing::OUT_QUAD, 50, 1000, NULL, NULL),
+	m_heightGrowthAnimation(Animator::COMPONENT_HEIGHT, Easing::OUT_ELASTIC, 200, 1000, NULL, NULL)
 {
 }
 

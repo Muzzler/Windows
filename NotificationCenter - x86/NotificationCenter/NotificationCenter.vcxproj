@@ -338,6 +338,7 @@
     <ClInclude Include="FadeListener.h" />
     <ClInclude Include="Launcher.h" />
     <ClInclude Include="NotificationCenter.h" />
+    <ClInclude Include="R.h" />
     <ClInclude Include="ResizeListener.h" />
   </ItemGroup>
   <ItemGroup>

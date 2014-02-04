@@ -44,6 +44,12 @@ void Launcher::run(int xThreadId)
 
 		Panel& root = aFrame->getRootPane(); // Reference to make syntax easier
 
+		/*
+		
+		
+		
+		*/
+
 		Paint salmon(0xB9090BFF);
 		Paint dark_black(0x11171cFF);
 		Paint dark_black2(0x00000000);
