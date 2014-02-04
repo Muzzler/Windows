@@ -288,6 +288,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\FocusEvent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\FocusListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\GXSettings.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCACHEDANIMATION.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ImageProperties.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\MouseEvent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\MouseListener.h" />

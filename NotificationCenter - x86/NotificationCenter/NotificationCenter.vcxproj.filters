@@ -565,6 +565,9 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Animator.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCACHEDANIMATION.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\color.fx">
