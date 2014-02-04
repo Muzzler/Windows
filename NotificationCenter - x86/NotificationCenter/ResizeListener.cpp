@@ -2,38 +2,44 @@
 
 using namespace A2D;
 
-ResizeListener::ResizeListener(){}
+ResizeListener::ResizeListener() : 
+	m_widthShrinkAnimation(A2DCACHEDANIMATION(Animator::COMPONENT_WIDTH, Easing::OUT_QUAD, 50, 1000, NULL, NULL)),
+	m_widthGrowthAnimation(A2DCACHEDANIMATION(Animator::COMPONENT_WIDTH, Easing::OUT_ELASTIC, 200, 1000, NULL, NULL)),
+	m_heightShrinkAnimation(A2DCACHEDANIMATION(Animator::COMPONENT_HEIGHT, Easing::OUT_QUAD, 50, 1000, NULL, NULL)),
+	m_heightGrowthAnimation(A2DCACHEDANIMATION(Animator::COMPONENT_HEIGHT, Easing::OUT_ELASTIC, 200, 1000, NULL, NULL))
+{
+}
 
 ResizeListener::~ResizeListener(){}
 
 void ResizeListener::mouseExited(MouseEvent * xEvent)
 {
-	Component * source = (Component*)xEvent->getSource();
+	Component& source = *(Component*)xEvent->getSource();
 	
 	if (m_animation_height)
 	{
-		source->stop(m_animation_height);
-		source->stop(m_animation_width);
+		Animator::stop(source, m_animation_width);
+		Animator::stop(source, m_animation_height);
 	}
 
-	m_animation_width = source->animate(Component::ANIMATE_WIDTH, Easing::OUT_QUAD, 50, 1000, NULL, NULL);
-	m_animation_height = source->animate(Component::ANIMATE_HEIGHT, Easing::OUT_QUAD, 50, 1000, NULL, NULL);
+	m_animation_width = Animator::animate(source, m_widthShrinkAnimation);
+	m_animation_height = Animator::animate(source, m_heightShrinkAnimation);
 
 	xEvent->setConsumed(true);
 }
 
 void ResizeListener::mouseEntered(MouseEvent * xEvent)
 {
-	Component * source = (Component*)xEvent->getSource();
+	Component& source = *(Component*)xEvent->getSource();
 
 	if (m_animation_height)
 	{
-		source->stop(m_animation_height);
-		source->stop(m_animation_width);
+		Animator::stop(source, m_animation_width);
+		Animator::stop(source, m_animation_height);
 	}
 
-	m_animation_width = source->animate(Component::ANIMATE_WIDTH, Easing::OUT_ELASTIC, 200, 1000, NULL, NULL);
-	m_animation_height = source->animate(Component::ANIMATE_HEIGHT, Easing::OUT_ELASTIC, 200, 1000, NULL, NULL);
+	m_animation_width = Animator::animate(source, m_widthGrowthAnimation);
+	m_animation_height = Animator::animate(source, m_heightGrowthAnimation);
 
 	xEvent->setConsumed(true);
 }

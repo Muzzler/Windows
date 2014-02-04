@@ -35,6 +35,12 @@ namespace A2D {
 	{
 		Animation				m_animation_width = NULL;
 		Animation				m_animation_height = NULL;
+		
+		A2DCACHEDANIMATION		m_widthShrinkAnimation;
+		A2DCACHEDANIMATION		m_widthGrowthAnimation;
+		
+		A2DCACHEDANIMATION		m_heightShrinkAnimation;
+		A2DCACHEDANIMATION		m_heightGrowthAnimation;
 
 	public:
 		ResizeListener();
