@@ -33,8 +33,8 @@ namespace A2D {
 
 	class ResizeListener : public MouseListener
 	{
-		Animation				m_animation_width = NULL;
-		Animation				m_animation_height = NULL;
+		HANIMATION				m_animation_width = NULL;
+		HANIMATION				m_animation_height = NULL;
 		
 		A2DCACHEDANIMATION		m_widthShrinkAnimation;
 		A2DCACHEDANIMATION		m_widthGrowthAnimation;
