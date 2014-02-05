@@ -424,9 +424,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\RepaintManager.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\RootPane.h">
-      <Filter>Include\AuroraSDK\Core</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Runnable.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
@@ -568,8 +565,11 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCACHEDANIMATION.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
-    <ClInclude Include="R.h">
+    <ClInclude Include="Resources.h">
       <Filter>Include\NotificationCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DResources.h">
+      <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
