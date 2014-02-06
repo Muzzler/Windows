@@ -263,7 +263,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCOMPONENTFUNCTIONPTR.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DDISTANCESET2.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DDISTANCESET4.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DINTERPOLATORFLOAT1.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DINTERPOLATORFLOAT.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DPIXELDISTANCESETINT4.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DPIXELDISTANCESETUINT2.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DPIXELDISTANCESETUINT4.h" />

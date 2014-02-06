@@ -556,9 +556,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCOMPONENTFUNCTIONPTR.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DINTERPOLATORFLOAT1.h">
-      <Filter>Include\AuroraSDK\Core</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Animator.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
@@ -570,6 +567,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DResources.h">
       <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DINTERPOLATORFLOAT.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

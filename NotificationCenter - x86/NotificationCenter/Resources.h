@@ -20,5 +20,5 @@ A2D_XL_RESOURCES(
 	)
 )
 
-// Drawable x = R::frames::$1::drawables::wallpaper;
-// Drawable x2 = R::frames::$2::drawables::wallpaper;
+Drawable x = R::frames::$1::drawables::wallpaper;
+Drawable x2 = R::frames::$2::drawables::wallpaper;
