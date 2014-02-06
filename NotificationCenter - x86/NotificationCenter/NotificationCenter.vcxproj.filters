@@ -550,9 +550,6 @@
     <ClInclude Include="BorderRadiiListener.h">
       <Filter>Include\NotificationCenter</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DANIMATABLEFLOAT1.h">
-      <Filter>Include\AuroraSDK\Core</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCOMPONENTFUNCTIONPTR.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
@@ -569,6 +566,9 @@
       <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DINTERPOLATORFLOAT.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DANIMATABLEFLOATX.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
   </ItemGroup>

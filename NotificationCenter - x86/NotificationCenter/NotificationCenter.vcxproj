@@ -258,7 +258,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2D.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DResources.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DANIMATABLEFLOAT1.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DANIMATABLEFLOATX.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DBORDERSET4.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCOMPONENTFUNCTIONPTR.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DDISTANCESET2.h" />
