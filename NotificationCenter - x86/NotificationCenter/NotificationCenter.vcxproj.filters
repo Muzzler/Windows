@@ -556,9 +556,6 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Animator.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCACHEDANIMATION.h">
-      <Filter>Include\AuroraSDK\Core</Filter>
-    </ClInclude>
     <ClInclude Include="Resources.h">
       <Filter>Include\NotificationCenter</Filter>
     </ClInclude>
@@ -569,6 +566,9 @@
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DANIMATABLEFLOATX.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCACHEDANIMATIONX.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
   </ItemGroup>
