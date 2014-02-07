@@ -68,7 +68,7 @@ void Launcher::run(int xThreadId)
 	Panel& panel = *new Panel;
 	G_SAFELY(panel.initialize());
 	panel.setSize(Styles::PIXEL, 600, Styles::PIXEL, 200);
-	panel.setMargins(Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0);
+	panel.setMargins(Styles::PIXEL, 0, Styles::PIXEL, 300, Styles::PIXEL, 0, Styles::PIXEL, 0);
 	panel.setDisplay(Styles::INLINE_BLOCK);
 	panel.setBackgroundImage(bar);
 
@@ -76,7 +76,7 @@ void Launcher::run(int xThreadId)
 
 	CustomPanel& item4 = *new CustomPanel;
 	G_SAFELY(item4.initialize());
-	item4.setPosition(Styles::RELATIVE_);
+	//item4.setPosition(Styles::ABSOLUTE_);
 	item4.setSize(Styles::PIXEL, 300, Styles::PIXEL, 300);
 	item4.setMargins(Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0);
 	item4.setDisplay(Styles::INLINE_BLOCK);
