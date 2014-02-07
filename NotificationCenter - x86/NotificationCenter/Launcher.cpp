@@ -77,7 +77,7 @@ void Launcher::run(int xThreadId)
 	CustomPanel& item4 = *new CustomPanel;
 	G_SAFELY(item4.initialize());
 	//item4.setPosition(Styles::ABSOLUTE_);
-	item4.setSize(Styles::PIXEL, 300, Styles::PIXEL, 300);
+	item4.setSize(Styles::PIXEL, 600, Styles::PIXEL, 200);
 	item4.setMargins(Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0);
 	item4.setDisplay(Styles::INLINE_BLOCK);
 	item4.setBackgroundImage(sample);
