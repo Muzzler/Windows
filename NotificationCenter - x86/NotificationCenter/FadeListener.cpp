@@ -16,7 +16,7 @@ void FadeListener::mouseExited(MouseEvent * xEvent)
 	}
 
 	m_animation = source->animate(Component::ANIMATE_OPACITY, Easing::OUT_QUAD, 0.2f, 1000, NULL, NULL);
-
+	
 	xEvent->setConsumed(true);
 }
 

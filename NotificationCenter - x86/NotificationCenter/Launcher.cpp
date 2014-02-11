@@ -43,13 +43,7 @@ void Launcher::run(int xThreadId)
 		SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
 
 		Panel& root = aFrame->getRootPane(); // Reference to make syntax easier
-
-		/*
 		
-		
-		
-		*/
-
 		Paint salmon(0xB9090BFF);
 		Paint dark_black(0x11171cFF);
 		Paint dark_black2(0x00000000);
@@ -60,6 +54,7 @@ void Launcher::run(int xThreadId)
 		panel.setId(0x4500);
 		panel.setSize(Style::PERCENTAGE, 100, Style::PERCENTAGE, 100);
 		panel.setBackgroundImage(hero);
+		panel.setScroll(0, -100);
 
 		componentManager.add(root, panel);
 		
