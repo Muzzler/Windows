@@ -231,6 +231,9 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Fonts.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\Label.cpp">
+      <Filter>Source\AuroraSDK\Windows</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\images\small.ico">
@@ -527,6 +530,9 @@
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\FontVertex.h">
+      <Filter>Include\AuroraSDK\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Label.h">
       <Filter>Include\AuroraSDK\Windows</Filter>
     </ClInclude>
   </ItemGroup>

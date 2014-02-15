@@ -1,5 +1,6 @@
 
 #include "CustomPanel.h"
+#include "../../../Aurora-SDK/Include/Windows/Label.h"
 
 using namespace A2D;
 

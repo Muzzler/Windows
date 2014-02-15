@@ -187,6 +187,7 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\Graphics.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\Label.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\QuadExpansionShader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -296,6 +297,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\WindowListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Structure\Graphics.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\FontVertex.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Label.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\QuadExpansionShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Text.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\TextFactory.h" />

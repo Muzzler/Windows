@@ -12,7 +12,7 @@ Launcher::Launcher(HINSTANCE xHInstance)
 void Launcher::runOnEventDispatchingThread()
 {
 	G_SAFELY(aFrame->initialize());
-	
+
 	Toolkit::getSystemEventQueue(aFrame->id())->invokeLater(this); // To create the window!
 }
 
@@ -22,8 +22,8 @@ void Launcher::run(int xThreadId)
 		dvd2 = L"Assets/images/dvd2.jpg",
 		netflix = L"Assets/images/netflix.jpg",
 		dvd3 = L"Assets/images/dvd3.jpg",
-	sample = L"Assets/images/texture_sample.png",
-	bar = L"Assets/images/dark_bar.jpg";
+		sample = L"Assets/images/texture_sample.png",
+		bar = L"Assets/images/dark_bar.jpg";
 
 	ComponentManager& componentManager = *aFrame->getComponentManager();
 
@@ -41,7 +41,7 @@ void Launcher::run(int xThreadId)
 	SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
 
 	Panel& root = aFrame->getRootPane(); // Reference to make syntax easier
-		
+
 	Paint salmon(0xB9090BFF);
 	Paint dark_black(0x11171cFF);
 	Paint dark_black2(0xFFFFFFFF);
@@ -74,15 +74,26 @@ void Launcher::run(int xThreadId)
 
 	componentManager.add(main2, panel);
 
-	CustomPanel& item4 = *new CustomPanel;
-	G_SAFELY(item4.initialize());
-	//item4.setPosition(Styles::ABSOLUTE_);
-	item4.setSize(Styles::PIXEL, 600, Styles::PIXEL, 200);
-	item4.setMargins(Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	item4.setDisplay(Styles::INLINE_BLOCK);
-	item4.setBackgroundImage(sample);
+	//CustomPanel& item4 = *new CustomPanel;
+	//G_SAFELY(item4.initialize());
+	////item4.setPosition(Styles::ABSOLUTE_);
+	//item4.setSize(Styles::PIXEL, 600, Styles::PIXEL, 200);
+	//item4.setMargins(Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0);
+	//item4.setDisplay(Styles::INLINE_BLOCK);
+	//item4.setBackgroundImage(sample);
 
-	componentManager.add(panel, item4);
+	//componentManager.add(panel, item4);
+
+	Label& text = *new Label;
+	G_SAFELY(text.initialize());
+	//text.setPosition(Styles::RELATIVE_);
+	text.setSize(Styles::PIXEL, 600, Styles::PIXEL, 200);
+	text.setMargins(Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0);
+	text.setDisplay(Styles::INLINE_BLOCK);
+	text.setDrawLineLocation(199);
+	text.setBackgroundImage(sample);
+
+	componentManager.add(panel, text);
 
 	aFrame->setVisible(true);
 

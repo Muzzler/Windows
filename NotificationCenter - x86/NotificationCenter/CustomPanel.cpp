@@ -14,8 +14,8 @@ void CustomPanel::paintComponent()
 
 	Graphics& graphics = *aGraphics;
 
-	aOptBackgroundRegion.aWidth = 2048;
-	aOptBackgroundRegion.aHeight = 2048;
+	//aOptBackgroundRegion.aWidth = 2048;
+	//aOptBackgroundRegion.aHeight = 2048;
 
-	graphics.drawString(&aPipeline, aOptBackgroundRegion);
+	//graphics.drawString(&aPipeline, aOptBackgroundRegion);
 }
