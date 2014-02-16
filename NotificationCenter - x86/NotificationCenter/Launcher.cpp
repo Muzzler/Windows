@@ -78,11 +78,12 @@ void Launcher::run(int xThreadId)
 		item7.setSize(Style::PIXEL, 200, Style::PIXEL, 200);
 		item7.setMargins(Style::PERCENTAGE, 10, Style::PERCENTAGE, 10, Style::PIXEL, 0, Style::PIXEL, 0);
 		item7.setDisplay(Style::INLINE_BLOCK);
-		item7.setBorderColor(0xf10da2FF, 0xf10da2FF, 0xf10da2FF, 0xf10da2FF);
+		item7.setPositioning(Style::PIXEL, 10, Style::PIXEL, -120, Style::PIXEL, 0, Style::PIXEL, 0);
+		item7.setBorderColor(0xf10da2FF, 0x0000FFFF, 0x00FF00FF, 0xFF0000FF);
 		item7.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
 		item7.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
 		item7.setBackgroundImage(dvd3);
-		item7.addMouseListener(new ResizeListener());
+		item7.addMouseListener(new BorderRadiiListener());
 
 		componentManager.add(panel, item7);
 
@@ -96,7 +97,7 @@ void Launcher::run(int xThreadId)
 		item8.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
 		item8.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
 		item8.setBackgroundImage(dvd3);
-		item8.addMouseListener(new BorderRadiiListener());
+		item8.addMouseListener(new ResizeListener());
 
 		componentManager.add(panel, item8);
 				
