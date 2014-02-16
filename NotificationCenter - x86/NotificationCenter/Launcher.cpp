@@ -54,7 +54,7 @@ void Launcher::run(int xThreadId)
 		panel.setId(0x4500);
 		panel.setSize(Style::PERCENTAGE, 100, Style::PERCENTAGE, 100);
 		panel.setBackgroundImage(hero);
-		panel.setScroll(0, 0);
+		panel.setScroll(0, -100);
 
 		componentManager.add(root, panel);
 		
