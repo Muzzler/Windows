@@ -577,10 +577,10 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Math.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\S_Rect.h">
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\SETPOINT.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\S_Point.h">
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\SETRECT.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
   </ItemGroup>

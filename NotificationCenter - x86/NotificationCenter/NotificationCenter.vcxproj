@@ -312,8 +312,8 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\RepaintManager.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Runnable.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Style.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\S_Point.h" />
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\S_Rect.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\SETPOINT.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\SETRECT.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Toolkit.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Easing.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\UnorderedList.h" />
