@@ -78,7 +78,7 @@ void Launcher::run(int xThreadId)
 		item7.setSize(Style::PIXEL, 200, Style::PIXEL, 200);
 		item7.setMargins(Style::PERCENTAGE, 10, Style::PERCENTAGE, 10, Style::PIXEL, 0, Style::PIXEL, 0);
 		item7.setDisplay(Style::INLINE_BLOCK);
-		item7.setPositioning(Style::PIXEL, 10, Style::PIXEL, -120, Style::PIXEL, 0, Style::PIXEL, 0);
+		item7.setPositioning(Style::PIXEL, 10, Style::PIXEL, 400, Style::PIXEL, 0, Style::PIXEL, 0);
 		item7.setBorderColor(0xf10da2FF, 0x0000FFFF, 0x00FF00FF, 0xFF0000FF);
 		item7.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
 		item7.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
