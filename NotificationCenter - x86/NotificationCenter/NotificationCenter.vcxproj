@@ -264,6 +264,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCOMPONENTFUNCTIONPTR.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DDISTANCESET2.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DDISTANCESET4.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DFLOAT4.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DINTERPOLATORFLOAT.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DPIXELDISTANCESETINT4.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DPIXELDISTANCESETUINT2.h" />
@@ -297,6 +298,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\GXSettings.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCACHEDANIMATIONX.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ImageProperties.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Math.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\MouseEvent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\MouseListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\MouseMotionListener.h" />

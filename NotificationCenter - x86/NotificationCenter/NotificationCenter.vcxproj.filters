@@ -571,6 +571,12 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCACHEDANIMATIONX.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DFLOAT4.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Math.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\Aurora-SDK\Lib\Assets\Shaders\color.fx">
