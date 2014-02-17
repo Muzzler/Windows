@@ -46,11 +46,16 @@ void Launcher::run(int xThreadId)
 		SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
 
 		Panel& root = aFrame->getRootPane(); // Reference to make syntax easier
-		
+		G_SAFELY(root.initialize());
+		root.setBackgroundImage(background); // Force to black
+
 		Panel& panel = *new Panel;
 		G_SAFELY(panel.initialize());
 		panel.setId(0x4500);
-		panel.setSize(Style::PERCENTAGE, 100, Style::PERCENTAGE, 100);
+		panel.setBorderColor(0, 0xFFFFFF33, 0, 0);
+		panel.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 1, Style::PIXEL, 0, Style::PIXEL, 0);
+		panel.setPosition(Style::Position::ABSOLUTE_);
+		panel.setPositioning(Style::PIXEL, 0, Style::PIXEL, 1, Style::PIXEL, 0, Style::PIXEL, 0);
 		panel.setBackgroundImage(background);
 		panel.addMouseListener(new ClientScrollListener());
 
@@ -61,7 +66,7 @@ void Launcher::run(int xThreadId)
 			Panel& albumArtPanel = *new Panel;
 			G_SAFELY(albumArtPanel.initialize());
 			albumArtPanel.setId(0x4500 | i);
-			albumArtPanel.setSize(Style::PIXEL, 200, Style::PIXEL, 200);
+			albumArtPanel.setSize(Style::PIXEL, 300, Style::PIXEL, 300);
 			albumArtPanel.setDisplay(Style::INLINE_BLOCK);
 		//	albumArtPanel.setBorderColor(0xB9090BFF, 0xB9090BFF, 0xB9090BFF, 0xB9090BFF);
 		//	albumArtPanel.setBorderRadii(Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
@@ -69,7 +74,7 @@ void Launcher::run(int xThreadId)
 
 			componentManager.add(panel, albumArtPanel);
 		}
-				
+
 		aFrame->setVisible(true);
 	}
 }
