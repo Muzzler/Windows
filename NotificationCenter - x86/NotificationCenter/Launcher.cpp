@@ -63,8 +63,8 @@ void Launcher::run(int xThreadId)
 			albumArtPanel.setId(0x4500 | i);
 			albumArtPanel.setSize(Style::PIXEL, 200, Style::PIXEL, 200);
 			albumArtPanel.setDisplay(Style::INLINE_BLOCK);
-			albumArtPanel.setBorderColor(0xB9090BFF, 0xB9090BFF, 0xB9090BFF, 0xB9090BFF);
-			albumArtPanel.setBorderRadii(Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
+		//	albumArtPanel.setBorderColor(0xB9090BFF, 0xB9090BFF, 0xB9090BFF, 0xB9090BFF);
+		//	albumArtPanel.setBorderRadii(Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
 			albumArtPanel.setBackgroundImage(albumArt[i]);
 
 			componentManager.add(panel, albumArtPanel);
