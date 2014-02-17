@@ -216,6 +216,7 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\Window.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ClientScrollListener.cpp" />
     <ClCompile Include="CustomPanel.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -340,6 +341,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\Window.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DDebug.h" />
     <ClInclude Include="BorderRadiiListener.h" />
+    <ClInclude Include="ClientScrollListener.h" />
     <ClInclude Include="CustomPanel.h" />
     <ClInclude Include="FadeListener.h" />
     <ClInclude Include="Launcher.h" />

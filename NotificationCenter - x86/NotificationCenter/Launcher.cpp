@@ -4,6 +4,7 @@
 #include "FadeListener.h"
 #include "ResizeListener.h"
 #include "BorderRadiiListener.h"
+#include "ClientScrollListener.h"
 
 Launcher::Launcher(HINSTANCE xHInstance)
 {
@@ -54,7 +55,7 @@ void Launcher::run(int xThreadId)
 		panel.setId(0x4500);
 		panel.setSize(Style::PERCENTAGE, 100, Style::PERCENTAGE, 100);
 		panel.setBackgroundImage(hero);
-		panel.setScroll(0, 200);
+		panel.addMouseListener(new ClientScrollListener());
 
 		componentManager.add(root, panel);
 		

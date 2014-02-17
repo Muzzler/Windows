@@ -24,8 +24,6 @@ void ResizeListener::mouseExited(MouseEvent * xEvent)
 
 	m_animation_width = Animator::animate(source, m_widthShrinkAnimation);
 	m_animation_height = Animator::animate(source, m_heightShrinkAnimation);
-
-	xEvent->setConsumed(true);
 }
 
 void ResizeListener::mouseEntered(MouseEvent * xEvent)
@@ -40,6 +38,4 @@ void ResizeListener::mouseEntered(MouseEvent * xEvent)
 
 	m_animation_width = Animator::animate(source, m_widthGrowthAnimation);
 	m_animation_height = Animator::animate(source, m_heightGrowthAnimation);
-
-	xEvent->setConsumed(true);
 }

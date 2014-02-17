@@ -16,7 +16,6 @@ void BorderRadiiListener::mouseExited(MouseEvent * xEvent)
 	}
 
 	m_animation_radii = source->animate(Component::ANIMATE_BORDER_RADII_UNIFIED, Easing::OUT_QUAD, 0, 1000, NULL, NULL);
-	xEvent->setConsumed(true);
 }
 
 void BorderRadiiListener::mouseEntered(MouseEvent * xEvent)
@@ -29,7 +28,4 @@ void BorderRadiiListener::mouseEntered(MouseEvent * xEvent)
 	}
 
 	m_animation_radii = source->animate(Component::ANIMATE_BORDER_RADII_UNIFIED, Easing::OUT_QUAD, 100, 200, NULL, NULL);
-
-
-	xEvent->setConsumed(true);
 }
