@@ -54,7 +54,7 @@ void Launcher::run(int xThreadId)
 		panel.setId(0x4500);
 		panel.setSize(Style::PERCENTAGE, 100, Style::PERCENTAGE, 100);
 		panel.setBackgroundImage(hero);
-		panel.setScroll(0, -100);
+		panel.setScroll(0, 200);
 
 		componentManager.add(root, panel);
 		
@@ -65,7 +65,7 @@ void Launcher::run(int xThreadId)
 		item6.setMargins(Style::PERCENTAGE, 10, Style::PERCENTAGE, 10, Style::PIXEL, 0, Style::PIXEL, 0);
 		item6.setDisplay(Style::INLINE_BLOCK);
 		item6.setBorderColor(0xB9090BFF, 0xB9090BFF, 0xB9090BFF, 0xB9090BFF);
-		item6.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
+		item6.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 20, Style::PIXEL, 60);
 		item6.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
 		item6.setBackgroundImage(dvd3);
 		item6.addMouseListener(new FadeListener());

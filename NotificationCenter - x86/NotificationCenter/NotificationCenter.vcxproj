@@ -128,9 +128,7 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Color3D.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Component.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Component.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentEvent.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentEventSource.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentManager.cpp" />
