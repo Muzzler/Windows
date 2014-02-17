@@ -20,13 +20,15 @@ void Launcher::runOnEventDispatchingThread()
 
 void Launcher::run(int xThreadId)
 {
-	wchar_t 
-		*dvd1 = L"Assets/images/dvd1.jpg",
-		*dvd2 = L"Assets/images/dvd2.jpg",
-		*netflix = L"Assets/images/netflix.jpg",
-		*dvd3 = L"Assets/images/circleTest.png",
-		*sample = L"Assets/images/texture_sample.png",
-		*hero = L"Assets/images/hero-introV5.jpg";
+	wchar_t * background = L"Assets/images/background radial-black.jpg";
+	wchar_t * albumArt [] = { L"Assets/images/album-art/art 1.jpg",
+							  L"Assets/images/album-art/art 2.jpg",
+							  L"Assets/images/album-art/art 3.jpg",
+							  L"Assets/images/album-art/art 4.jpg",
+							  L"Assets/images/album-art/art 5.jpg",
+							  L"Assets/images/album-art/art 6.jpg",
+							  L"Assets/images/album-art/art 7.jpg",
+							  L"Assets/images/album-art/art 8.jpg" };
 
 	const ComponentManager& componentManager = *aFrame->getComponentManager();
 
@@ -45,62 +47,28 @@ void Launcher::run(int xThreadId)
 
 		Panel& root = aFrame->getRootPane(); // Reference to make syntax easier
 		
-		Paint salmon(0xB9090BFF);
-		Paint dark_black(0x11171cFF);
-		Paint dark_black2(0x00000000);
-		Paint darkRed(0x8A0809FF);
-
 		Panel& panel = *new Panel;
 		G_SAFELY(panel.initialize());
 		panel.setId(0x4500);
 		panel.setSize(Style::PERCENTAGE, 100, Style::PERCENTAGE, 100);
-		panel.setBackgroundImage(hero);
+		panel.setBackgroundImage(background);
 		panel.addMouseListener(new ClientScrollListener());
 
 		componentManager.add(root, panel);
 		
-		Panel& item6 = *new Panel;
-		G_SAFELY(item6.initialize());
-		item6.setId(0x4502);
-		item6.setSize(Style::PIXEL, 200, Style::PIXEL, 200);
-		item6.setMargins(Style::PERCENTAGE, 10, Style::PERCENTAGE, 10, Style::PIXEL, 0, Style::PIXEL, 0);
-		item6.setDisplay(Style::INLINE_BLOCK);
-		item6.setBorderColor(0xB9090BFF, 0xB9090BFF, 0xB9090BFF, 0xB9090BFF);
-		item6.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 20, Style::PIXEL, 60);
-		item6.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
-		item6.setBackgroundImage(dvd3);
-		item6.addMouseListener(new FadeListener());
+		for (int i = 0; i < 8; i++)
+		{
+			Panel& albumArtPanel = *new Panel;
+			G_SAFELY(albumArtPanel.initialize());
+			albumArtPanel.setId(0x4500 | i);
+			albumArtPanel.setSize(Style::PIXEL, 200, Style::PIXEL, 200);
+			albumArtPanel.setDisplay(Style::INLINE_BLOCK);
+			albumArtPanel.setBorderColor(0xB9090BFF, 0xB9090BFF, 0xB9090BFF, 0xB9090BFF);
+			albumArtPanel.setBorderRadii(Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
+			albumArtPanel.setBackgroundImage(albumArt[i]);
 
-		componentManager.add(panel, item6);
-
-		Panel& item7 = *new Panel;
-		G_SAFELY(item7.initialize());
-		item7.setId(0x4502);
-		item7.setSize(Style::PIXEL, 200, Style::PIXEL, 200);
-		item7.setMargins(Style::PERCENTAGE, 10, Style::PERCENTAGE, 10, Style::PIXEL, 0, Style::PIXEL, 0);
-		item7.setDisplay(Style::INLINE_BLOCK);
-		item7.setPositioning(Style::PIXEL, 10, Style::PIXEL, 400, Style::PIXEL, 0, Style::PIXEL, 0);
-		item7.setBorderColor(0xf10da2FF, 0x0000FFFF, 0x00FF00FF, 0xFF0000FF);
-		item7.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
-		item7.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
-		item7.setBackgroundImage(dvd3);
-		item7.addMouseListener(new BorderRadiiListener());
-
-		componentManager.add(panel, item7);
-
-		Panel& item8 = *new Panel;
-		G_SAFELY(item8.initialize());
-		item8.setId(0x4502);
-		item8.setSize(Style::PIXEL, 200, Style::PIXEL, 200);
-		item8.setMargins(Style::PERCENTAGE, 10, Style::PERCENTAGE, 10, Style::PIXEL, 0, Style::PIXEL, 0);
-		item8.setDisplay(Style::INLINE_BLOCK);
-		item8.setBorderColor(0x2ecc71FF, 0x2ecc71FF, 0x2ecc71FF, 0x2ecc71FF);
-		item8.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
-		item8.setBorderRadii(Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100, Style::PIXEL, 100);
-		item8.setBackgroundImage(dvd3);
-		item8.addMouseListener(new ResizeListener());
-
-		componentManager.add(panel, item8);
+			componentManager.add(panel, albumArtPanel);
+		}
 				
 		aFrame->setVisible(true);
 	}
