@@ -40,7 +40,7 @@ void Launcher::run(int xThreadId)
 		aFrame->setBackground(45, 45, 48);
 		aFrame->setBorder(0xFF, 200, 200, 200, 0.0f);
 		aFrame->setShadow(0xFF, 0, 0, 0, 40.0f);
-		aFrame->setBounds(0, 0, 900, 600);
+		aFrame->setBounds(0, 0, 600, 600);
 		aFrame->setLocationRelativeTo(NULL);
 
 		SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
