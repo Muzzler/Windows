@@ -3,7 +3,7 @@
 using namespace A2D;
 
 ClientScrollListener::ClientScrollListener() :
-m_scrollTopAnimation(Animator::COMPONENT_SCROLL_TOP, Easing::OUT_CIRC, -3000, 600, NULL, NULL),
+m_scrollTopAnimation(Animator::COMPONENT_SCROLL_TOP, Easing::OUT_CIRC, -3000, 1200, NULL, NULL),
 m_scrollTopReturnAnimation(Animator::COMPONENT_SCROLL_TOP, Easing::OUT_BOUNCE, 0, 4000, NULL, NULL)
 {
 }
