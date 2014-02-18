@@ -70,6 +70,8 @@
       <Parallelization>true</Parallelization>
       <Cpp0xSupport>true</Cpp0xSupport>
       <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <Optimization>MaxSpeed</Optimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
