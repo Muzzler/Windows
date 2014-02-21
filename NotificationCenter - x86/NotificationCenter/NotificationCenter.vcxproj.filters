@@ -562,9 +562,6 @@
     <ClInclude Include="Resources.h">
       <Filter>Include\NotificationCenter</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DResources.h">
-      <Filter>Include\AuroraSDK</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DINTERPOLATORFLOAT.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
@@ -582,6 +579,9 @@
     </ClInclude>
     <ClInclude Include="ClientScrollListener.h">
       <Filter>Include\NotificationCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DResources.h">
+      <Filter>Include\AuroraSDK</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
