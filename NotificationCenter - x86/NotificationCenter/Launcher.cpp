@@ -28,7 +28,32 @@ void Launcher::run(void * x_param, int xThreadId)
 							  L"Assets/images/500px/art 5.jpg",
 							  L"Assets/images/500px/art 6.jpg",
 							  L"Assets/images/500px/art 7.jpg",
-							  L"Assets/images/500px/art 8.jpg" };
+							  L"Assets/images/500px/art 8.jpg",
+							  L"Assets/images/500px/art 9.jpg",
+							  L"Assets/images/500px/art 10.jpg",
+							  L"Assets/images/500px/art 11.jpg",
+							  L"Assets/images/500px/art 12.jpg",
+							  L"Assets/images/500px/art 13.jpg",
+							  L"Assets/images/500px/art 14.jpg",
+							  L"Assets/images/500px/art 15.jpg",
+							  L"Assets/images/500px/art 16.jpg",
+							  L"Assets/images/500px/art 17.jpg",
+							  L"Assets/images/500px/art 18.jpg",
+							  L"Assets/images/500px/art 19.jpg",
+							  L"Assets/images/500px/art 20.jpg",
+							  L"Assets/images/500px/art 21.jpg",
+							  L"Assets/images/500px/art 22.jpg",
+							  L"Assets/images/500px/art 23.jpg",
+							  L"Assets/images/500px/art 24.jpg",
+							  L"Assets/images/500px/art 25.jpg",
+							  L"Assets/images/500px/art 26.jpg",
+							  L"Assets/images/500px/art 27.jpg",
+							  L"Assets/images/500px/art 28.jpg",
+							  L"Assets/images/500px/art 29.jpg",
+							  L"Assets/images/500px/art 30.jpg",
+							  L"Assets/images/500px/art 31.jpg",
+							  L"Assets/images/500px/art 32.jpg",
+							  L"Assets/images/500px/art 33.jpg" };
 
 	const ComponentManager& componentManager = *aFrame->getComponentManager();
 
@@ -40,7 +65,7 @@ void Launcher::run(void * x_param, int xThreadId)
 		aFrame->setBackground(45, 45, 48);
 		aFrame->setBorder(0xFF, 200, 200, 200, 1.0f);
 		aFrame->setShadow(0x55, 0, 0, 0, 20.0f);
-		aFrame->setBounds(0, 0, 609, 600);
+		aFrame->setBounds(0, 0, 853, 853);
 		aFrame->setLocationRelativeTo(NULL);
 
 		SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
@@ -62,43 +87,18 @@ void Launcher::run(void * x_param, int xThreadId)
 		panel.setBackgroundImage(background);
 		panel.addMouseListener(scrollMovement);
 		
-		for (int i = 0; i < 8; i++)
+		for (int i = 0; i < 33; i++)
 		{
 			Panel& albumArtPanel = *new Panel;
 			componentManager.add(panel, albumArtPanel);
 
 			albumArtPanel.setId(0x4500 | i);
 			albumArtPanel.setMargins(Style::PIXEL, 3, Style::PIXEL, 3, Style::PIXEL, 0, Style::PIXEL, 0);
-			albumArtPanel.setSize(Style::PIXEL, 300, Style::PIXEL, 300);
+			albumArtPanel.setSize(Style::PIXEL, 280, Style::PIXEL, 280);
 			albumArtPanel.setDisplay(Style::INLINE_BLOCK);
 			//albumArtPanel.setBorderColor(0xB9090BFF, 0xB9FF0BFF, 0xB90FFBFF, 0xB9090BFF);
 			//albumArtPanel.setBorderWidths(Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
 			//albumArtPanel.setBorderRadii(Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
-			albumArtPanel.setBackgroundImage(albumArt[i]);
-		}
-
-		for (int i = 0; i < 8; i++)
-		{
-			Panel& albumArtPanel = *new Panel;
-			componentManager.add(panel, albumArtPanel);
-
-			albumArtPanel.setId(0x4500 | i);
-			albumArtPanel.setSize(Style::PIXEL, 300, Style::PIXEL, 300);
-			albumArtPanel.setMargins(Style::PIXEL, 3, Style::PIXEL, 3, Style::PIXEL, 0, Style::PIXEL, 0);
-			albumArtPanel.setDisplay(Style::INLINE_BLOCK);
-			albumArtPanel.setBackgroundImage(albumArt[i]);
-		}
-
-
-		for (int i = 0; i < 8; i++)
-		{
-			Panel& albumArtPanel = *new Panel;
-			componentManager.add(panel, albumArtPanel);
-
-			albumArtPanel.setId(0x4500 | i);
-			albumArtPanel.setSize(Style::PIXEL, 300, Style::PIXEL, 300);
-			albumArtPanel.setMargins(Style::PIXEL, 3, Style::PIXEL, 3, Style::PIXEL, 0, Style::PIXEL, 0);
-			albumArtPanel.setDisplay(Style::INLINE_BLOCK);
 			albumArtPanel.setBackgroundImage(albumArt[i]);
 		}
 
