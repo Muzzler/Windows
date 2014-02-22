@@ -55,23 +55,23 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>
       </SDLCheck>
       <BrowseInformation>true</BrowseInformation>
       <ShowIncludes>false</ShowIncludes>
       <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
-      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
       <OptimizeForWindowsApplication>true</OptimizeForWindowsApplication>
       <Parallelization>true</Parallelization>
       <Cpp0xSupport>true</Cpp0xSupport>
       <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
-      <Optimization>Disabled</Optimization>
-      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <Optimization>Full</Optimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -283,6 +283,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ActionListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Animator.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\BorderSet.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Callable.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ChangeListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\CameraProperties.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\CascadingLayout.h" />
@@ -349,6 +350,7 @@
     <ClInclude Include="ClientScrollListener.h" />
     <ClInclude Include="CustomPanel.h" />
     <ClInclude Include="FadeListener.h" />
+    <ClInclude Include="Header.h" />
     <ClInclude Include="Launcher.h" />
     <ClInclude Include="NotificationCenter.h" />
     <ClInclude Include="Resources.h" />

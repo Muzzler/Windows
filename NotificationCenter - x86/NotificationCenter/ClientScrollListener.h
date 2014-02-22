@@ -31,7 +31,7 @@ using namespace std;
 
 namespace A2D {
 
-	class ClientScrollListener : public MouseListener
+	class ClientScrollListener : public MouseListener, public Callable
 	{
 		HANIMATION				m_scroll_top = NULL;
 
@@ -42,6 +42,8 @@ namespace A2D {
 		ClientScrollListener();
 		~ClientScrollListener();
 
+		void					assignComponent(Component& x_component);
+		virtual void			callback(void * x_param);
 		void					mouseExited(MouseEvent * xEvent);
 		void					mouseEntered(MouseEvent * xEvent);
 	};
