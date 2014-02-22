@@ -234,6 +234,9 @@
     <ClCompile Include="ClientScrollListener.cpp">
       <Filter>Source\NotificationCenter</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Drawable.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\images\small.ico">
@@ -582,6 +585,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DResources.h">
       <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Drawable.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ChangeListener.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

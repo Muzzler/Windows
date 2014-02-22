@@ -62,16 +62,16 @@
       <BrowseInformation>true</BrowseInformation>
       <ShowIncludes>false</ShowIncludes>
       <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
       <OptimizeForWindowsApplication>true</OptimizeForWindowsApplication>
       <Parallelization>true</Parallelization>
       <Cpp0xSupport>true</Cpp0xSupport>
       <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
-      <Optimization>MaxSpeed</Optimization>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <Optimization>Disabled</Optimization>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -134,6 +134,7 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentEvent.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentEventSource.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ComponentManager.cpp" />
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Drawable.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Easing.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\EventSource.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\FocusEvent.cpp" />
@@ -282,6 +283,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ActionListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Animator.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\BorderSet.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ChangeListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\CameraProperties.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\CascadingLayout.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Color.h" />
@@ -292,6 +294,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ComponentManager.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCOMPONENTRENDERSTYLESET.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Dims.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Drawable.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\EventSource.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ExtLibs.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\FocusEvent.h" />

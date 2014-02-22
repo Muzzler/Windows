@@ -18,7 +18,7 @@ void Launcher::runOnEventDispatchingThread()
 	Toolkit::getSystemEventQueue(aFrame->id())->invokeLater(this); // To create the window!
 }
 
-void Launcher::run(int xThreadId)
+void Launcher::run(void * x_param, int xThreadId)
 {
 	wchar_t * background = L"Assets/images/background radial-black.jpg";
 	wchar_t * albumArt [] = { L"Assets/images/album-art/art 1.jpg",
@@ -46,11 +46,11 @@ void Launcher::run(int xThreadId)
 		SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
 
 		Panel& root = aFrame->getRootPane(); // Reference to make syntax easier
-		G_SAFELY(root.initialize());
 		root.setBackgroundImage(background); // Force to black
 
 		Panel& panel = *new Panel;
-		G_SAFELY(panel.initialize());
+		componentManager.add(root, panel);
+
 		panel.setId(0x4500);
 		panel.setBorderColor(0, 0xFFFFFF33, 0, 0);
 		panel.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 1, Style::PIXEL, 0, Style::PIXEL, 0);
@@ -59,46 +59,45 @@ void Launcher::run(int xThreadId)
 		panel.setBackgroundImage(background);
 		panel.addMouseListener(new ClientScrollListener());
 
-		componentManager.add(root, panel);
 		
 		for (int i = 0; i < 8; i++)
 		{
 			Panel& albumArtPanel = *new Panel;
-			G_SAFELY(albumArtPanel.initialize());
+			componentManager.add(panel, albumArtPanel);
+
 			albumArtPanel.setId(0x4500 | i);
+			albumArtPanel.setMargins(Style::PIXEL, 3, Style::PIXEL, 3, Style::PIXEL, 0, Style::PIXEL, 0);
 			albumArtPanel.setSize(Style::PIXEL, 300, Style::PIXEL, 300);
 			albumArtPanel.setDisplay(Style::INLINE_BLOCK);
 			//albumArtPanel.setBorderColor(0xB9090BFF, 0xB9FF0BFF, 0xB90FFBFF, 0xB9090BFF);
 			//albumArtPanel.setBorderWidths(Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
 			//albumArtPanel.setBorderRadii(Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
 			albumArtPanel.setBackgroundImage(albumArt[i]);
-
-			componentManager.add(panel, albumArtPanel);
 		}
 
 		for (int i = 0; i < 8; i++)
 		{
 			Panel& albumArtPanel = *new Panel;
-			G_SAFELY(albumArtPanel.initialize());
+			componentManager.add(panel, albumArtPanel);
+
 			albumArtPanel.setId(0x4500 | i);
 			albumArtPanel.setSize(Style::PIXEL, 300, Style::PIXEL, 300);
+			albumArtPanel.setMargins(Style::PIXEL, 3, Style::PIXEL, 3, Style::PIXEL, 0, Style::PIXEL, 0);
 			albumArtPanel.setDisplay(Style::INLINE_BLOCK);
 			albumArtPanel.setBackgroundImage(albumArt[i]);
-
-			componentManager.add(panel, albumArtPanel);
 		}
 
 
 		for (int i = 0; i < 8; i++)
 		{
 			Panel& albumArtPanel = *new Panel;
-			G_SAFELY(albumArtPanel.initialize());
+			componentManager.add(panel, albumArtPanel);
+
 			albumArtPanel.setId(0x4500 | i);
 			albumArtPanel.setSize(Style::PIXEL, 300, Style::PIXEL, 300);
+			albumArtPanel.setMargins(Style::PIXEL, 3, Style::PIXEL, 3, Style::PIXEL, 0, Style::PIXEL, 0);
 			albumArtPanel.setDisplay(Style::INLINE_BLOCK);
 			albumArtPanel.setBackgroundImage(albumArt[i]);
-
-			componentManager.add(panel, albumArtPanel);
 		}
 
 		aFrame->setVisible(true);
