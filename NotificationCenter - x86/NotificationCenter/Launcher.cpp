@@ -38,8 +38,8 @@ void Launcher::run(void * x_param, int xThreadId)
 
 		aFrame->setName(L"Muzzler - Notification Center");                                // Set the title
 		aFrame->setBackground(45, 45, 48);
-		aFrame->setBorder(0xFF, 200, 200, 200, 0.0f);
-		aFrame->setShadow(0xFF, 0, 0, 0, 40.0f);
+		aFrame->setBorder(0xFF, 200, 200, 200, 1.0f);
+		aFrame->setShadow(0x55, 0, 0, 0, 20.0f);
 		aFrame->setBounds(0, 0, 609, 600);
 		aFrame->setLocationRelativeTo(NULL);
 
@@ -54,11 +54,11 @@ void Launcher::run(void * x_param, int xThreadId)
 		ClientScrollListener * scrollMovement = new ClientScrollListener();
 		scrollMovement->assignComponent(panel);
 
-		panel.setId(0x4500);
+		panel.setId(0x4500);/*
 		panel.setBorderColor(0, 0xFFFFFF33, 0, 0);
-		panel.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 1, Style::PIXEL, 0, Style::PIXEL, 0);
+		panel.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 1, Style::PIXEL, 0, Style::PIXEL, 0);*/
 		panel.setPosition(Style::Position::ABSOLUTE_);
-		panel.setPositioning(Style::PIXEL, 0, Style::PIXEL, 1, Style::PIXEL, 0, Style::PIXEL, 0);
+		panel.setPositioning(Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, 0);
 		panel.setBackgroundImage(background);
 		panel.addMouseListener(scrollMovement);
 		
