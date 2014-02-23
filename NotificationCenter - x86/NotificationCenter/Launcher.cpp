@@ -20,7 +20,8 @@ void Launcher::runOnEventDispatchingThread()
 
 void Launcher::run(void * x_param, int xThreadId)
 {
-	wchar_t * background = L"Assets/images/background radial-black.jpg";
+	wchar_t * background = L"Assets/images/background black.jpg";
+	wchar_t * backgroundGray = L"Assets/images/background gray.jpg";
 	wchar_t * albumArt [] = { L"Assets/images/500px/art 1.jpg",
 							  L"Assets/images/500px/art 2.jpg",
 							  L"Assets/images/500px/art 3.jpg",
@@ -70,8 +71,12 @@ void Launcher::run(void * x_param, int xThreadId)
 
 		SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
 
+		//---------------------------------------------------------
+
 		Panel& root = aFrame->getRootPane(); // Reference to make syntax easier
 		root.setBackgroundImage(background); // Force to black
+
+		//---------------------------------------------------------
 
 		Panel& panel = *new Panel;
 		componentManager.add(root, panel);
@@ -83,10 +88,23 @@ void Launcher::run(void * x_param, int xThreadId)
 		panel.setBorderColor(0, 0xFFFFFF33, 0, 0);
 		panel.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 1, Style::PIXEL, 0, Style::PIXEL, 0);*/
 		panel.setPosition(Style::Position::ABSOLUTE_);
-		panel.setPositioning(Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, 0);
+		panel.setPositioning(Style::PIXEL, 0, Style::PIXEL, 80, Style::PIXEL, 0, Style::PIXEL, 0);
 		panel.setBackgroundImage(background);
 		panel.addMouseListener(scrollMovement);
-		
+
+		//---------------------------------------------------------
+
+		Panel& header = *new Panel;
+		componentManager.add(root, header);
+
+		header.setId(0x4500);
+		header.setPosition(Style::Position::ABSOLUTE_);
+		header.setPositioning(Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, Style::AUTO);
+		header.setSize(Style::PIXEL, Style::AUTO, Style::PIXEL, 77);
+		header.setBackgroundImage(backgroundGray);
+
+		//---------------------------------------------------------
+
 		for (int i = 0; i < 33; i++)
 		{
 			Panel& albumArtPanel = *new Panel;
