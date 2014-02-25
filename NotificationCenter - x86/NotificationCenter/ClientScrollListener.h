@@ -36,6 +36,10 @@ namespace A2D {
 		HANIMATION				m_scroll_top = NULL;
 
 		A2DCACHEDANIMATION		m_scrollTopAnimation;
+		float m_total_pos = 0;
+		float m_total_neg = 0;
+		double m_input_pos = 0.0;
+		double m_input_neg = 0.0;
 
 	public:
 		ClientScrollListener();

@@ -29,7 +29,7 @@ void ClientScrollListener::actionPerformed(ActionEvent * xEvent)
 	}
 
 	source.captureScroll();
-
+	
 	m_scrollTopAnimation.m_to_a = source.getScrollTop() + Toolkit::SCROLL_DELTA * 500;
 	// m_scrollTopAnimation.m_period += abs__(Toolkit::SCROLL_DELTA) * 2000;
 
