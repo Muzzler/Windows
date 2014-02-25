@@ -83,11 +83,12 @@ void Launcher::run(int xThreadId)
 	//item4.setBackgroundImage(sample);
 
 	//componentManager.add(panel, item4);
-
 	Label& text = *new Label;
 	G_SAFELY(text.initialize());
 	//text.setPosition(Styles::RELATIVE_);
 	text.setSize(Styles::PIXEL, 600, Styles::PIXEL, 200);
+	text.setText("hello.");
+	text.setFontSize(5);
 	text.setMargins(Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0);
 	text.setDisplay(Styles::INLINE_BLOCK);
 	text.setDrawLineLocation(199);
