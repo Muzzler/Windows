@@ -31,12 +31,11 @@ using namespace std;
 
 namespace A2D {
 
-	class ClientScrollListener : public MouseListener, public Callable
+	class ClientScrollListener : public ActionListener, public Callable
 	{
 		HANIMATION				m_scroll_top = NULL;
 
 		A2DCACHEDANIMATION		m_scrollTopAnimation;
-		A2DCACHEDANIMATION		m_scrollTopReturnAnimation;
 
 	public:
 		ClientScrollListener();
@@ -44,8 +43,7 @@ namespace A2D {
 
 		void					assignComponent(Component& x_component);
 		virtual void			callback(void * x_param);
-		void					mouseExited(MouseEvent * xEvent);
-		void					mouseEntered(MouseEvent * xEvent);
+		virtual void			actionPerformed(ActionEvent * xEvent);
 	};
 
 }

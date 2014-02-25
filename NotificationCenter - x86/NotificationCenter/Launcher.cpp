@@ -90,7 +90,7 @@ void Launcher::run(void * x_param, int xThreadId)
 		panel.setPosition(Style::Position::ABSOLUTE_);
 		panel.setPositioning(Style::PIXEL, 0, Style::PIXEL, 80, Style::PIXEL, 0, Style::PIXEL, 0);
 		panel.setBackgroundImage(background);
-		panel.addMouseListener(scrollMovement);
+		panel.addActionListener(scrollMovement);
 
 		//---------------------------------------------------------
 
