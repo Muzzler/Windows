@@ -1,8 +1,10 @@
 
 #include "Launcher.h"
 #include "CustomPanel.h"
-
-#include <time.h>
+#include "FadeListener.h"
+#include "ResizeListener.h"
+#include "BorderRadiiListener.h"
+#include "ClientScrollListener.h"
 
 Launcher::Launcher(HINSTANCE xHInstance)
 {
@@ -16,136 +18,108 @@ void Launcher::runOnEventDispatchingThread()
 	Toolkit::getSystemEventQueue(aFrame->id())->invokeLater(this); // To create the window!
 }
 
-void Launcher::run(int xThreadId)
+void Launcher::run(void * x_param, int xThreadId)
 {
-	LPCTSTR dvd1 = L"Assets/images/dvd1.jpg",
-		dvd2 = L"Assets/images/dvd2.jpg",
-		netflix = L"Assets/images/netflix.jpg",
-		dvd3 = L"Assets/images/dvd3.jpg",
-	sample = L"Assets/images/texture_sample.png";
+	wchar_t * background = L"Assets/images/background black.jpg";
+	wchar_t * backgroundGray = L"Assets/images/background gray.jpg";
+	wchar_t * albumArt [] = { L"Assets/images/500px/art 1.jpg",
+							  L"Assets/images/500px/art 2.jpg",
+							  L"Assets/images/500px/art 3.jpg",
+							  L"Assets/images/500px/art 4.jpg",
+							  L"Assets/images/500px/art 5.jpg",
+							  L"Assets/images/500px/art 6.jpg",
+							  L"Assets/images/500px/art 7.jpg",
+							  L"Assets/images/500px/art 8.jpg",
+							  L"Assets/images/500px/art 9.jpg",
+							  L"Assets/images/500px/art 10.jpg",
+							  L"Assets/images/500px/art 11.jpg",
+							  L"Assets/images/500px/art 12.jpg",
+							  L"Assets/images/500px/art 13.jpg",
+							  L"Assets/images/500px/art 14.jpg",
+							  L"Assets/images/500px/art 15.jpg",
+							  L"Assets/images/500px/art 16.jpg",
+							  L"Assets/images/500px/art 17.jpg",
+							  L"Assets/images/500px/art 18.jpg",
+							  L"Assets/images/500px/art 19.jpg",
+							  L"Assets/images/500px/art 20.jpg",
+							  L"Assets/images/500px/art 21.jpg",
+							  L"Assets/images/500px/art 22.jpg",
+							  L"Assets/images/500px/art 23.jpg",
+							  L"Assets/images/500px/art 24.jpg",
+							  L"Assets/images/500px/art 25.jpg",
+							  L"Assets/images/500px/art 26.jpg",
+							  L"Assets/images/500px/art 27.jpg",
+							  L"Assets/images/500px/art 28.jpg",
+							  L"Assets/images/500px/art 29.jpg",
+							  L"Assets/images/500px/art 30.jpg",
+							  L"Assets/images/500px/art 31.jpg",
+							  L"Assets/images/500px/art 32.jpg",
+							  L"Assets/images/500px/art 33.jpg" };
 
-	ComponentManager& componentManager = *aFrame->getComponentManager();
+	const ComponentManager& componentManager = *aFrame->getComponentManager();
 
-	clock_t tStart = clock();
+	timeblock__("Launcher started in - "){
 
-	srand(xThreadId);
+		srand(xThreadId);
 
-	aFrame->setName(L"Muzzler - Notification Center");                                // Set the title
-	aFrame->setBackground(45, 45, 48);
-	aFrame->setBorder(0xFF, 200, 200, 200, 1.0f);
-	aFrame->setShadow(0xFF, 0, 0, 0, 10.0f);
-	aFrame->setBounds(0, 0, 800, 600);
-	aFrame->setLocationRelativeTo(NULL);
+		aFrame->setName(L"Muzzler - Notification Center");                                // Set the title
+		aFrame->setBackground(45, 45, 48);
+		aFrame->setBorder(0xFF, 200, 200, 200, 1.0f);
+		aFrame->setShadow(0x55, 0, 0, 0, 20.0f);
+		aFrame->setBounds(0, 0, 853, 853);
+		aFrame->setLocationRelativeTo(NULL);
 
-	SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
+		SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
 
-	Panel& root = aFrame->getRootPane(); // Reference to make syntax easier
-		
-	Paint salmon(0xB9090BFF);
-	Paint dark_black(0x11171cFF);
-	Paint dark_black2(0x000000FF);
-	Paint darkRed(0x8A0809FF);
+		//---------------------------------------------------------
 
-	Panel& panel = *new Panel;
-	G_SAFELY(panel.initialize());
-	panel.setSize(Styles::PERCENTAGE, 100, Styles::PERCENTAGE, 100);
-	panel.setBackgroundPaint(Paint::BLACK);
+		Panel& root = aFrame->getRootPane(); // Reference to make syntax easier
+		root.setBackgroundImage(background); // Force to black
 
-	componentManager.add(root, panel);
+		//---------------------------------------------------------
 
-	Panel& sidebar = *new Panel;
-	G_SAFELY(sidebar.initialize());
-	sidebar.setSize(Styles::PIXEL, 250, Styles::PERCENTAGE, 100);
-	sidebar.setDisplay(Styles::INLINE_BLOCK);
-	sidebar.setBackgroundPaint(dark_black);
+		Panel& panel = *new Panel;
+		componentManager.add(root, panel);
 
-	componentManager.add(panel, sidebar);
-	
-	Panel& sidebar_top = *new Panel;
-	G_SAFELY(sidebar_top.initialize());
-	sidebar_top.setSize(Styles::PERCENTAGE, 100, Styles::PIXEL, 90);
-	sidebar_top.setDisplay(Styles::INLINE_BLOCK);
-	sidebar_top.setBackgroundImage(netflix);
+		ClientScrollListener * scrollMovement = new ClientScrollListener();
+		scrollMovement->assignComponent(panel);
 
-	componentManager.add(sidebar, sidebar_top);
+		panel.setId(0x4500);/*
+		panel.setBorderColor(0, 0xFFFFFF33, 0, 0);
+		panel.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 1, Style::PIXEL, 0, Style::PIXEL, 0);*/
+		panel.setPosition(Style::Position::ABSOLUTE_);
+		panel.setPositioning(Style::PIXEL, 0, Style::PIXEL, 80, Style::PIXEL, 0, Style::PIXEL, 0);
+		panel.setBackgroundImage(background);
+		panel.addMouseListener(scrollMovement);
 
-	Panel& sidebar_right = *new Panel;
-	G_SAFELY(sidebar_right.initialize());
-	sidebar_right.setPosition(Styles::ABSOLUTE_);
-	sidebar_right.setSize(Styles::PIXEL, 250, Styles::PERCENTAGE, 100);
-	sidebar_right.setPositioning(Styles::PIXEL, Styles::AUTO, Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	sidebar_right.setDisplay(Styles::INLINE_BLOCK);
-	sidebar_right.setBackgroundPaint(darkRed);
+		//---------------------------------------------------------
 
-	componentManager.add(panel, sidebar_right);
-	
-	Panel& main = *new Panel;
-	G_SAFELY(main.initialize());
-	main.setPosition(Styles::ABSOLUTE_);
-	main.setPositioning(Styles::PIXEL, 250, Styles::PIXEL, 0, Styles::PIXEL, 250, Styles::PIXEL, 0);
-	main.setSize(Styles::PIXEL, Styles::AUTO, Styles::PERCENTAGE, Styles::AUTO);
-	main.setDisplay(Styles::INLINE_BLOCK);
-	main.setBackgroundPaint(dark_black2);
+		Panel& header = *new Panel;
+		componentManager.add(root, header);
 
-	componentManager.add(panel, main);
-	
-	Panel& item = *new Panel;
-	G_SAFELY(item.initialize());
-	item.setSize(Styles::PIXEL, 165, Styles::PIXEL, 225);
-	item.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	item.setDisplay(Styles::INLINE_BLOCK);
-	item.setBackgroundImage(dvd1);
+		header.setId(0x4500);
+		header.setPosition(Style::Position::ABSOLUTE_);
+		header.setPositioning(Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, Style::AUTO);
+		header.setSize(Style::PIXEL, Style::AUTO, Style::PIXEL, 77);
+		header.setBackgroundImage(backgroundGray);
 
+		//---------------------------------------------------------
 
-	componentManager.add(main, item);
+		for (int i = 0; i < 33; i++)
+		{
+			Panel& albumArtPanel = *new Panel;
+			componentManager.add(panel, albumArtPanel);
 
-	Panel& item2 = *new Panel;
-	G_SAFELY(item2.initialize());
-	item2.setSize(Styles::PIXEL, 165, Styles::PIXEL, 225);
-	item2.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	item2.setDisplay(Styles::INLINE_BLOCK);
-	item2.setBackgroundImage(dvd2);
+			albumArtPanel.setId(0x4500 | i);
+			albumArtPanel.setMargins(Style::PIXEL, 3, Style::PIXEL, 3, Style::PIXEL, 0, Style::PIXEL, 0);
+			albumArtPanel.setSize(Style::PIXEL, 280, Style::PIXEL, 280);
+			albumArtPanel.setDisplay(Style::INLINE_BLOCK);
+			//albumArtPanel.setBorderColor(0xB9090BFF, 0xB9FF0BFF, 0xB90FFBFF, 0xB9090BFF);
+			//albumArtPanel.setBorderWidths(Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
+			//albumArtPanel.setBorderRadii(Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
+			albumArtPanel.setBackgroundImage(albumArt[i]);
+		}
 
-	componentManager.add(main, item2);
-
-	Panel& item3 = *new Panel;
-	G_SAFELY(item3.initialize());
-	item3.setSize(Styles::PIXEL, 165, Styles::PIXEL, 225);
-	item3.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	item3.setDisplay(Styles::INLINE_BLOCK);
-	item3.setBackgroundImage(dvd3);
-
-	componentManager.add(main, item3);
-
-	CustomPanel& item4 = *new CustomPanel;
-	G_SAFELY(item4.initialize());
-	item4.setSize(Styles::PIXEL, 600, Styles::PIXEL, 600);
-	item4.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	item4.setDisplay(Styles::INLINE_BLOCK);
-	item4.setBackgroundImage(sample);
-
-	componentManager.add(main, item4);
-	
-	Panel& item5 = *new Panel;
-	G_SAFELY(item5.initialize());
-	item5.setSize(Styles::PIXEL, 165, Styles::PIXEL, 225);
-	item5.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	item5.setDisplay(Styles::INLINE_BLOCK);
-	item5.setBackgroundImage(dvd2);
-
-	componentManager.add(main, item5);
-	
-	Panel& item6 = *new Panel;
-	G_SAFELY(item6.initialize());
-	item6.setSize(Styles::PIXEL, 165, Styles::PIXEL, 225);
-	item6.setMargins(Styles::PERCENTAGE, 5, Styles::PERCENTAGE, 5, Styles::PIXEL, 0, Styles::PIXEL, 0);
-	item6.setDisplay(Styles::INLINE_BLOCK);
-	item6.setBackgroundImage(dvd3);
-
-	componentManager.add(main, item6);
-	item.addMouseListener(new MouseListener());
-	item.addMouseListener(NULL);
-	aFrame->setVisible(true);
-
-	SYSOUT_F("Time taken: %.9fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
+		aFrame->setVisible(true);
+	}
 }

@@ -8,7 +8,7 @@ int WINAPI WinMain( HINSTANCE xHInstance, HINSTANCE	xPrevInstance, LPSTR xLpCmdL
 {
 	UNREFERENCED_PARAMETER(xPrevInstance);
 	UNREFERENCED_PARAMETER(xHInstance);
-		
+	
 	Launcher launcher(xHInstance);
 
 	launcher.runOnEventDispatchingThread();

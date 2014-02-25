@@ -37,9 +37,6 @@
     <Filter Include="Assets\NotificationCenter">
       <UniqueIdentifier>{915695ea-ce31-41e7-8903-f311ce790c86}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Include\AuroraSDK\Windows">
-      <UniqueIdentifier>{a1a2397a-486a-4c56-a06f-a2e71c1bd1af}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Include\AuroraSDK\Linux">
       <UniqueIdentifier>{3533dbb1-1d3c-4f45-b63b-94a682c2c72c}</UniqueIdentifier>
     </Filter>
@@ -57,6 +54,9 @@
     </Filter>
     <Filter Include="Include\AuroraSDK\Structure">
       <UniqueIdentifier>{cd904880-9c45-465b-81d9-f6e19d89d628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\AuroraSDK\Windows">
+      <UniqueIdentifier>{a1a2397a-486a-4c56-a06f-a2e71c1bd1af}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -135,12 +135,6 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Color3D.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Component.cpp">
-      <Filter>Source\AuroraSDK\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Dims.cpp">
-      <Filter>Source\AuroraSDK\Core</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\ImageProperties.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
@@ -217,6 +211,30 @@
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\CascadingLayout.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Easing.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="FadeListener.cpp">
+      <Filter>Source\NotificationCenter</Filter>
+    </ClCompile>
+    <ClCompile Include="ResizeListener.cpp">
+      <Filter>Source\NotificationCenter</Filter>
+    </ClCompile>
+    <ClCompile Include="BorderRadiiListener.cpp">
+      <Filter>Source\NotificationCenter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Animator.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Component.cpp">
+      <Filter>Source\AuroraSDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientScrollListener.cpp">
+      <Filter>Source\NotificationCenter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Drawable.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
   </ItemGroup>
@@ -412,13 +430,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\RepaintManager.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\RootPane.h">
-      <Filter>Include\AuroraSDK\Core</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Runnable.h">
-      <Filter>Include\AuroraSDK\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Styles.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Toolkit.h">
@@ -497,6 +509,93 @@
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\BorderSet.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Pipelineable.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Point.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Style.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCOMPONENTRENDERSTYLESET.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DDISTANCESET2.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DPIXELDISTANCESETUINT2.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DPIXELDISTANCESETUINT4.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DPIXELDISTANCESETINT4.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DBORDERSET4.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DDISTANCESET4.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DUINT4.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Easing.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="FadeListener.h">
+      <Filter>Include\NotificationCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="ResizeListener.h">
+      <Filter>Include\NotificationCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="BorderRadiiListener.h">
+      <Filter>Include\NotificationCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCOMPONENTFUNCTIONPTR.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Animator.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources.h">
+      <Filter>Include\NotificationCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DINTERPOLATORFLOAT.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DANIMATABLEFLOATX.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DCACHEDANIMATIONX.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\A2DFLOAT4.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Math.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientScrollListener.h">
+      <Filter>Include\NotificationCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\A2DResources.h">
+      <Filter>Include\AuroraSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Drawable.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ChangeListener.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Callable.h">
       <Filter>Include\AuroraSDK\Core</Filter>
     </ClInclude>
   </ItemGroup>

@@ -13,7 +13,7 @@ public:
 
 private:
 	Frame * aFrame;
-	void run(int xThreadId);
+	void run(void * x_param, int xThreadId);
 
 	ComponentManager * aComponentManager;
 	
