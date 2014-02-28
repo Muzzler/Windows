@@ -23,8 +23,8 @@ void Launcher::run(int xThreadId)
 		netflix = L"Assets/images/netflix.jpg",
 		dvd3 = L"Assets/images/dvd3.jpg",
 		sample = L"Assets/images/texture_sample.png",
-		bar = L"Assets/images/dark_bar.jpg";
-
+		bar = L"Assets/images/dark_bar.jpg",
+		bg = L"Assets/images/bg-demo.png";
 	ComponentManager& componentManager = *aFrame->getComponentManager();
 
 	clock_t tStart = clock();
@@ -34,8 +34,8 @@ void Launcher::run(int xThreadId)
 	aFrame->setName(L"Muzzler - Notification Center");                                // Set the title
 	aFrame->setBackground(45, 45, 48);
 	aFrame->setBorder(0xFF, 200, 200, 200, 1.0f);
-	aFrame->setShadow(0xFF, 0, 0, 0, 10.0f);
-	aFrame->setBounds(0, 0, 800, 600);
+	aFrame->setShadow(0xFF, 0, 0, 0, 30.0f);
+	aFrame->setBounds(0, 0, 700, 700);
 	aFrame->setLocationRelativeTo(NULL);
 
 	SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
@@ -67,10 +67,10 @@ void Launcher::run(int xThreadId)
 
 	Panel& panel = *new Panel;
 	G_SAFELY(panel.initialize());
-	panel.setSize(Styles::PIXEL, 600, Styles::PIXEL, 200);
-	panel.setMargins(Styles::PIXEL, 0, Styles::PIXEL, 300, Styles::PIXEL, 0, Styles::PIXEL, 0);
+	panel.setSize(Styles::PIXEL, 700, Styles::PIXEL, 700);
+	panel.setMargins(Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0);
 	panel.setDisplay(Styles::INLINE_BLOCK);
-	panel.setBackgroundImage(bar);
+	panel.setBackgroundImage(bg);
 
 	componentManager.add(main2, panel);
 
@@ -87,12 +87,15 @@ void Launcher::run(int xThreadId)
 	G_SAFELY(text.initialize());
 	//text.setPosition(Styles::RELATIVE_);
 	text.setSize(Styles::PIXEL, 600, Styles::PIXEL, 200);
-	text.setText("hello.");
-	text.setFontSize(5);
-	text.setMargins(Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0, Styles::PIXEL, 0);
+	text.setText("Aurora");
+	text.setFontSize(2.3f);
+	text.setShadowColor(new Color3D(0x00000000));
+	text.setTextColor(&Color3D::WHITE);
+	text.setMargins(Styles::PIXEL, 200, Styles::PIXEL, 150, Styles::PIXEL, 0, Styles::PIXEL, 0);
 	text.setDisplay(Styles::INLINE_BLOCK);
 	text.setDrawLineLocation(199);
 	text.setBackgroundImage(sample);
+	text.addMouseListener(new DemoListener());
 
 	componentManager.add(panel, text);
 
