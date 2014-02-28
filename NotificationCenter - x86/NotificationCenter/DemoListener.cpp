@@ -14,7 +14,6 @@ void DemoListener::mousePressed(MouseEvent * xEvent)
 	Label * label = (Label*)c;
 	if (m_counter == 0)
 	{
-		label->setText("Aurora");
 		label->setFontSize(2.3f);
 		label->setShadowColor(new Color3D(0x00000000));
 		label->setTextColor(&Color3D::WHITE);
