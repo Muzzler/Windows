@@ -5,6 +5,7 @@ using namespace A2D;
 ClientScrollListener::ClientScrollListener() :
 m_scrollTopAnimation(Animator::COMPONENT_SCROLL_TOP, Easing::OUT_CUBIC, -3000, 2000, this, NULL, NULL)
 {
+	m_time = nanotime__;
 }
 
 ClientScrollListener::~ClientScrollListener(){}
@@ -23,17 +24,28 @@ void ClientScrollListener::actionPerformed(ActionEvent * xEvent)
 {
 	Component& source = *(Component*) xEvent->getSource();
 	
+	float z = Toolkit::SCROLL_DELTA;	
+
+	if (((nanotime__ - m_time) * 1000.0f) < 400.0f && (m_last_z / z > 0))
+	{
+		return;
+	}
+
+	m_time = nanotime__;
+	m_last_z = z;
+
 	if (m_scroll_top)
 	{
 		Animator::stop(source, m_scroll_top);
+		source.releaseScroll();
 	}
-
-	source.captureScroll();
 	
-	m_scrollTopAnimation.m_to_a = source.getScrollTop() + Toolkit::SCROLL_DELTA * 500;
-	// m_scrollTopAnimation.m_period += abs__(Toolkit::SCROLL_DELTA) * 2000;
-
-	m_scroll_top = Animator::animate(source, m_scrollTopAnimation);
+	if (z != 0.0f)
+	{
+		source.captureScroll();		
+		m_scrollTopAnimation.m_to_a = source.getScrollTop() + z * 500;
+		m_scroll_top = Animator::animate(source, m_scrollTopAnimation);
+	}
 
 	xEvent->setConsumed(true);
 }

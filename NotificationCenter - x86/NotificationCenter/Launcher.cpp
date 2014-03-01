@@ -64,9 +64,9 @@ void Launcher::run(void * x_param, int xThreadId)
 
 		aFrame->setName(L"Muzzler - Notification Center");                                // Set the title
 		aFrame->setBackground(45, 45, 48);
-		aFrame->setBorder(0xFF, 200, 200, 200, 1.0f);
-		aFrame->setShadow(0x55, 0, 0, 0, 20.0f);
-		aFrame->setBounds(0, 0, 853, 853);
+		aFrame->setBorder(0xFF, 200, 200, 200, 0.0f);
+		aFrame->setShadow(0xFF, 0, 0, 0, 50.0f);
+		aFrame->setBounds(0, 0, 569, 569);
 		aFrame->setLocationRelativeTo(NULL);
 
 		SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
@@ -88,12 +88,12 @@ void Launcher::run(void * x_param, int xThreadId)
 		panel.setBorderColor(0, 0xFFFFFF33, 0, 0);
 		panel.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 1, Style::PIXEL, 0, Style::PIXEL, 0);*/
 		panel.setPosition(Style::Position::ABSOLUTE_);
-		panel.setPositioning(Style::PIXEL, 0, Style::PIXEL, 80, Style::PIXEL, 0, Style::PIXEL, 0);
+		panel.setPositioning(Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, 0);
 		panel.setBackgroundImage(background);
 		panel.addActionListener(scrollMovement);
 
 		//---------------------------------------------------------
-
+/*
 		Panel& header = *new Panel;
 		componentManager.add(root, header);
 
@@ -101,9 +101,11 @@ void Launcher::run(void * x_param, int xThreadId)
 		header.setPosition(Style::Position::ABSOLUTE_);
 		header.setPositioning(Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, Style::AUTO);
 		header.setSize(Style::PIXEL, Style::AUTO, Style::PIXEL, 77);
-		header.setBackgroundImage(backgroundGray);
+		header.setBackgroundImage(backgroundGray);*/
 
 		//---------------------------------------------------------
+
+		int y = 0;
 
 		for (int i = 0; i < 33; i++)
 		{
@@ -118,6 +120,14 @@ void Launcher::run(void * x_param, int xThreadId)
 			//albumArtPanel.setBorderWidths(Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
 			//albumArtPanel.setBorderRadii(Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
 			albumArtPanel.setBackgroundImage(albumArt[i]);
+
+			if (i == 32)
+			{
+				if (y++ < 15)
+				{
+					i = 0;
+				}
+			}
 		}
 
 		aFrame->setVisible(true);
