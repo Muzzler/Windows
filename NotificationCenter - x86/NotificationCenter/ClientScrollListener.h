@@ -36,7 +36,7 @@ namespace A2D {
 		HANIMATION				m_scroll_top = NULL;
 
 		A2DCACHEDANIMATION		m_scrollTopAnimation;
-		float m_last_z = 0;
+		float m_last_z = 1.0f;
 		float m_total_neg = 0;
 		double m_time = 0.0;
 		double m_time_last = 0.0;
