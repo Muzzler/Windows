@@ -17,5 +17,5 @@ void CustomPanel::paintComponent()
 	m_backgroundRegion.m_width = 330;
 	m_backgroundRegion.m_height = 420;
 
-	graphics.drawString(&m_pipeline, m_backgroundRegion);
+//	graphics.drawString(&m_pipeline, m_backgroundRegion);
 }

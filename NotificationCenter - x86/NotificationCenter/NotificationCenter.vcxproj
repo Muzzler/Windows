@@ -283,6 +283,7 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ActionListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Animator.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\BorderSet.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Bufferable.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Callable.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\ChangeListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\CameraProperties.h" />

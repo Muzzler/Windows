@@ -31,8 +31,6 @@ void ClientScrollListener::actionPerformed(ActionEvent * xEvent)
 		return;
 	}
 
-	SYSOUT_FLT(z);
-
 	m_time = nanotime__;
 	m_last_z = z;
 
