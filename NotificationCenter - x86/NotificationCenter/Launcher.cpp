@@ -21,7 +21,7 @@ void Launcher::runOnEventDispatchingThread()
 void Launcher::run(void * x_param, int xThreadId)
 {
 	wchar_t * background = L"Assets/images/background black.jpg";
-	wchar_t * backgroundGray = L"Assets/images/background gray.jpg";
+	wchar_t * backgroundGray = L"Assets/images/background gray translucent.png";
 	wchar_t * albumArt [] = { L"Assets/images/500px/art 1.jpg",
 							  L"Assets/images/500px/art 2.jpg",
 							  L"Assets/images/500px/art 3.jpg",
@@ -92,18 +92,6 @@ void Launcher::run(void * x_param, int xThreadId)
 		panel.setBackgroundImage(background);
 		panel.addActionListener(scrollMovement);
 
-		//---------------------------------------------------------
-/*
-		Panel& header = *new Panel;
-		componentManager.add(root, header);
-
-		header.setId(0x4500);
-		header.setPosition(Style::Position::ABSOLUTE_);
-		header.setPositioning(Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, Style::AUTO);
-		header.setSize(Style::PIXEL, Style::AUTO, Style::PIXEL, 77);
-		header.setBackgroundImage(backgroundGray);*/
-
-		//---------------------------------------------------------
 
 		int y = 0;
 
@@ -129,6 +117,20 @@ void Launcher::run(void * x_param, int xThreadId)
 				}
 			}
 		}
+
+		//---------------------------------------------------------
+		
+		Panel& header = *new Panel;
+		componentManager.add(panel, header);
+
+		header.setId(0x8550);
+		header.setDoubleBuffered(true);
+		header.setPosition(Style::Position::ABSOLUTE_);
+		header.setPositioning(Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, Style::AUTO);
+		header.setSize(Style::PIXEL, Style::AUTO, Style::PIXEL, 77);
+		header.setBackgroundImage(backgroundGray);
+
+		//---------------------------------------------------------
 
 		aFrame->setVisible(true);
 	}

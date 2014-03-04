@@ -195,6 +195,7 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\Graphics.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\HorizontalBlurShader.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\QuadExpansionShader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -216,6 +217,7 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\VertexTypes.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\VerticalBlurShader.cpp" />
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\Window.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -324,8 +326,10 @@
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\WindowEvent.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\WindowListener.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Structure\Graphics.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\HorizontalBlurShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\QuadExpansionShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\VertexTypes.h" />
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\VerticalBlurShader.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DCommon.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\_A2DLinkers.h" />
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\AbstractShader.h" />

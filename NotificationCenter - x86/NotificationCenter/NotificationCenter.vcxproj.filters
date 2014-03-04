@@ -237,6 +237,12 @@
     <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Core\Drawable.cpp">
       <Filter>Source\AuroraSDK\Core</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\HorizontalBlurShader.cpp">
+      <Filter>Source\AuroraSDK\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Aurora-SDK\Lib\Source\Windows\VerticalBlurShader.cpp">
+      <Filter>Source\AuroraSDK\Windows</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\images\small.ico">
@@ -600,6 +606,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Aurora-SDK\Include\Core\Bufferable.h">
       <Filter>Include\AuroraSDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\HorizontalBlurShader.h">
+      <Filter>Include\AuroraSDK\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Aurora-SDK\Include\Windows\VerticalBlurShader.h">
+      <Filter>Include\AuroraSDK\Windows</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
