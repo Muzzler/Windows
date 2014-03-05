@@ -127,7 +127,7 @@ void Launcher::run(void * x_param, int xThreadId)
 		header.setDoubleBuffered(true);
 		header.setPosition(Style::Position::ABSOLUTE_);
 		header.setPositioning(Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, Style::AUTO);
-		header.setSize(Style::PIXEL, Style::AUTO, Style::PIXEL, 77);
+		header.setSize(Style::PIXEL, Style::AUTO, Style::PIXEL, 70);
 		header.setBackgroundImage(backgroundGray);
 
 		//---------------------------------------------------------
