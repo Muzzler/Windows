@@ -22,15 +22,39 @@ void Launcher::run(void * x_param, int xThreadId)
 {
 	wchar_t * background = L"Assets/images/background black.jpg";
 	wchar_t * backgroundGray = L"Assets/images/background gray translucent.png";
-	wchar_t * albumArt [] = { L"Assets/images/album-art/art 1.jpg",
-							  L"Assets/images/album-art/art 2.jpg",
-							  L"Assets/images/album-art/art 3.jpg",
-							  L"Assets/images/album-art/art 4.jpg",
-							  L"Assets/images/album-art/art 5.jpg",
-							  L"Assets/images/album-art/art 6.jpg",
-							  L"Assets/images/album-art/art 7.jpg",
-							  L"Assets/images/album-art/art 8.jpg",
-							  L"Assets/images/album-art/art 9.jpg", };
+wchar_t * albumArt [] = { L"Assets/images/500px/art 1.jpg",
+							  L"Assets/images/500px/art 2.jpg",
+							  L"Assets/images/500px/art 3.jpg",
+							  L"Assets/images/500px/art 4.jpg",
+							  L"Assets/images/500px/art 5.jpg",
+							  L"Assets/images/500px/art 6.jpg",
+							  L"Assets/images/500px/art 7.jpg",
+							  L"Assets/images/500px/art 8.jpg",
+							  L"Assets/images/500px/art 9.jpg",
+							  L"Assets/images/500px/art 10.jpg",
+							  L"Assets/images/500px/art 11.jpg",
+							  L"Assets/images/500px/art 12.jpg",
+							  L"Assets/images/500px/art 13.jpg",
+							  L"Assets/images/500px/art 14.jpg",
+							  L"Assets/images/500px/art 15.jpg",
+							  L"Assets/images/500px/art 16.jpg",
+							  L"Assets/images/500px/art 17.jpg",
+							  L"Assets/images/500px/art 18.jpg",
+							  L"Assets/images/500px/art 19.jpg",
+							  L"Assets/images/500px/art 20.jpg",
+							  L"Assets/images/500px/art 21.jpg",
+							  L"Assets/images/500px/art 22.jpg",
+							  L"Assets/images/500px/art 23.jpg",
+							  L"Assets/images/500px/art 24.jpg",
+							  L"Assets/images/500px/art 25.jpg",
+							  L"Assets/images/500px/art 26.jpg",
+							  L"Assets/images/500px/art 27.jpg",
+							  L"Assets/images/500px/art 28.jpg",
+							  L"Assets/images/500px/art 29.jpg",
+							  L"Assets/images/500px/art 30.jpg",
+							  L"Assets/images/500px/art 31.jpg",
+							  L"Assets/images/500px/art 32.jpg",
+							  L"Assets/images/500px/art 33.jpg" };
 
 	const ComponentManager& componentManager = *aFrame->getComponentManager();
 
@@ -71,7 +95,7 @@ void Launcher::run(void * x_param, int xThreadId)
 
 		int y = 0;
 
-		for (int i = 0; i < 9; i++)
+		for (int i = 0; i < 33; i++)
 		{
 			Panel& albumArtPanel = *new Panel;
 			componentManager.add(panel, albumArtPanel);
@@ -85,7 +109,7 @@ void Launcher::run(void * x_param, int xThreadId)
 			//albumArtPanel.setBorderRadii(Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
 			albumArtPanel.setBackgroundImage(albumArt[i]);
 
-			if (i == 8)
+			if (i == 32)
 			{
 				if (y++ < 15)
 				{
