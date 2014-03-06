@@ -131,18 +131,9 @@ void Launcher::run(void * x_param, int xThreadId)
 		sidebar.css_id(0x8552);
 		sidebar.css_background_blur(enable);
 		sidebar.css_position(absolute);
-		sidebar.css_positioning(
-			left(0 px), 
-			top(0 px),
-			right(automatic), 
-			bottom(0 px)
-		);		
-		sidebar.css_size(
-			width(250 px),
-			height(100 pct)
-		);
-
 		sidebar.css_background_image(backgroundGray);
+		sidebar.css_positioning(left(0 px), top(0 px), right(automatic), bottom(0 px));		
+		sidebar.css_size(width(250 px),	height(100 pct));
 
 		//---------------------------------------------------------
 
