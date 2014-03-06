@@ -14,7 +14,7 @@ Launcher::Launcher(HINSTANCE xHInstance)
 void Launcher::runOnEventDispatchingThread()
 {
 	G_SAFELY(aFrame->initialize());
-	
+
 	Toolkit::getSystemEventQueue(aFrame->id())->invokeLater(this); // To create the window!
 }
 
@@ -22,39 +22,39 @@ void Launcher::run(void * x_param, int xThreadId)
 {
 	wchar_t * background = L"Assets/images/background black.jpg";
 	wchar_t * backgroundGray = L"Assets/images/background gray translucent.png";
-wchar_t * albumArt [] = { L"Assets/images/500px/art 1.jpg",
-							  L"Assets/images/500px/art 2.jpg",
-							  L"Assets/images/500px/art 3.jpg",
-							  L"Assets/images/500px/art 4.jpg",
-							  L"Assets/images/500px/art 5.jpg",
-							  L"Assets/images/500px/art 6.jpg",
-							  L"Assets/images/500px/art 7.jpg",
-							  L"Assets/images/500px/art 8.jpg",
-							  L"Assets/images/500px/art 9.jpg",
-							  L"Assets/images/500px/art 10.jpg",
-							  L"Assets/images/500px/art 11.jpg",
-							  L"Assets/images/500px/art 12.jpg",
-							  L"Assets/images/500px/art 13.jpg",
-							  L"Assets/images/500px/art 14.jpg",
-							  L"Assets/images/500px/art 15.jpg",
-							  L"Assets/images/500px/art 16.jpg",
-							  L"Assets/images/500px/art 17.jpg",
-							  L"Assets/images/500px/art 18.jpg",
-							  L"Assets/images/500px/art 19.jpg",
-							  L"Assets/images/500px/art 20.jpg",
-							  L"Assets/images/500px/art 21.jpg",
-							  L"Assets/images/500px/art 22.jpg",
-							  L"Assets/images/500px/art 23.jpg",
-							  L"Assets/images/500px/art 24.jpg",
-							  L"Assets/images/500px/art 25.jpg",
-							  L"Assets/images/500px/art 26.jpg",
-							  L"Assets/images/500px/art 27.jpg",
-							  L"Assets/images/500px/art 28.jpg",
-							  L"Assets/images/500px/art 29.jpg",
-							  L"Assets/images/500px/art 30.jpg",
-							  L"Assets/images/500px/art 31.jpg",
-							  L"Assets/images/500px/art 32.jpg",
-							  L"Assets/images/500px/art 33.jpg" };
+	wchar_t * albumArt[] = { L"Assets/images/500px/art 1.jpg",
+		L"Assets/images/500px/art 2.jpg",
+		L"Assets/images/500px/art 3.jpg",
+		L"Assets/images/500px/art 4.jpg",
+		L"Assets/images/500px/art 5.jpg",
+		L"Assets/images/500px/art 6.jpg",
+		L"Assets/images/500px/art 7.jpg",
+		L"Assets/images/500px/art 8.jpg",
+		L"Assets/images/500px/art 9.jpg",
+		L"Assets/images/500px/art 10.jpg",
+		L"Assets/images/500px/art 11.jpg",
+		L"Assets/images/500px/art 12.jpg",
+		L"Assets/images/500px/art 13.jpg",
+		L"Assets/images/500px/art 14.jpg",
+		L"Assets/images/500px/art 15.jpg",
+		L"Assets/images/500px/art 16.jpg",
+		L"Assets/images/500px/art 17.jpg",
+		L"Assets/images/500px/art 18.jpg",
+		L"Assets/images/500px/art 19.jpg",
+		L"Assets/images/500px/art 20.jpg",
+		L"Assets/images/500px/art 21.jpg",
+		L"Assets/images/500px/art 22.jpg",
+		L"Assets/images/500px/art 23.jpg",
+		L"Assets/images/500px/art 24.jpg",
+		L"Assets/images/500px/art 25.jpg",
+		L"Assets/images/500px/art 26.jpg",
+		L"Assets/images/500px/art 27.jpg",
+		L"Assets/images/500px/art 28.jpg",
+		L"Assets/images/500px/art 29.jpg",
+		L"Assets/images/500px/art 30.jpg",
+		L"Assets/images/500px/art 31.jpg",
+		L"Assets/images/500px/art 32.jpg",
+		L"Assets/images/500px/art 33.jpg" };
 
 	const ComponentManager& componentManager = *aFrame->getComponentManager();
 
@@ -84,14 +84,11 @@ wchar_t * albumArt [] = { L"Assets/images/500px/art 1.jpg",
 		ClientScrollListener * scrollMovement = new ClientScrollListener();
 		scrollMovement->assignComponent(panel);
 
-		panel.setId(0x4500);/*
-		panel.setBorderColor(0, 0xFFFFFF33, 0, 0);
-		panel.setBorderWidths(Style::PIXEL, 0, Style::PIXEL, 1, Style::PIXEL, 0, Style::PIXEL, 0);*/
-		panel.setPosition(Style::Position::ABSOLUTE_);
-		panel.setPositioning(Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, 0);
-		panel.setBackgroundImage(background);
+		panel.css_id(0x4500);
+		panel.css_position(absolute);
+		panel.css_size(100 pct, 100 pct);
+		panel.css_background_image(background);
 		panel.addActionListener(scrollMovement);
-
 
 		int y = 0;
 
@@ -100,14 +97,10 @@ wchar_t * albumArt [] = { L"Assets/images/500px/art 1.jpg",
 			Panel& albumArtPanel = *new Panel;
 			componentManager.add(panel, albumArtPanel);
 
-			albumArtPanel.setId(0x4500 | i);
-		//	albumArtPanel.setMargins(Style::PIXEL, 3, Style::PIXEL, 3, Style::PIXEL, 0, Style::PIXEL, 0);
-			albumArtPanel.setSize(Style::PIXEL, 280, Style::PIXEL, 280);
-			albumArtPanel.setDisplay(Style::INLINE_BLOCK);
-			//albumArtPanel.setBorderColor(0xB9090BFF, 0xB9FF0BFF, 0xB90FFBFF, 0xB9090BFF);
-			//albumArtPanel.setBorderWidths(Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
-			//albumArtPanel.setBorderRadii(Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10, Style::PIXEL, 10);
-			albumArtPanel.setBackgroundImage(albumArt[i]);
+			albumArtPanel.css_id(0x4500 | i);
+			albumArtPanel.css_size(280 px, 280 px);
+			albumArtPanel.css_display(block);
+			albumArtPanel.css_background_image(albumArt[i]);
 
 			if (i == 32)
 			{
@@ -119,16 +112,28 @@ wchar_t * albumArt [] = { L"Assets/images/500px/art 1.jpg",
 		}
 
 		//---------------------------------------------------------
-		
+
 		Panel& header = *new Panel;
 		componentManager.add(panel, header);
 
-		header.setId(0x8550);
-		header.setDoubleBuffered(true);
-		header.setPosition(Style::Position::ABSOLUTE_);
-		header.setPositioning(Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, 0, Style::PIXEL, Style::AUTO);
-		header.setSize(Style::PIXEL, Style::AUTO, Style::PIXEL, 150);
-		header.setBackgroundImage(backgroundGray);
+		header.css_id(0x8550);
+		header.css_background_blur(enable);
+		header.css_position(absolute);
+		header.css_positioning(250 px, 0 px, 0 px, automatic);
+		header.css_size(automatic, 150 px);
+		header.css_background_image(backgroundGray);
+
+		//---------------------------------------------------------
+
+		Panel& sidebar = *new Panel;
+		componentManager.add(panel, sidebar);
+
+		sidebar.css_id(0x8552);
+		sidebar.css_background_blur(enable);
+		sidebar.css_position(absolute);
+		sidebar.css_positioning(0 px, 0 px, automatic, 0 px);
+		sidebar.css_size(250 px, 100 pct);
+		sidebar.css_background_image(backgroundGray);
 
 		//---------------------------------------------------------
 
