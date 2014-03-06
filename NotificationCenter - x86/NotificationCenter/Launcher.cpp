@@ -66,7 +66,7 @@ wchar_t * albumArt [] = { L"Assets/images/500px/art 1.jpg",
 		aFrame->setBackground(45, 45, 48);
 		aFrame->setBorder(0xFF, 200, 200, 200, 0.0f);
 		aFrame->setShadow(0xFF, 0, 0, 0, 50.0f);
-		aFrame->setBounds(0, 0, 569, 569);
+		aFrame->setBounds(0, 0, 1120, 840);
 		aFrame->setLocationRelativeTo(NULL);
 
 		SYSOUT_F("%s - 0x%X\n", (xThreadId == 0 ? "Main Thread" : "Event Dispatching Thread"), xThreadId);
@@ -101,7 +101,7 @@ wchar_t * albumArt [] = { L"Assets/images/500px/art 1.jpg",
 			componentManager.add(panel, albumArtPanel);
 
 			albumArtPanel.setId(0x4500 | i);
-			albumArtPanel.setMargins(Style::PIXEL, 3, Style::PIXEL, 3, Style::PIXEL, 0, Style::PIXEL, 0);
+		//	albumArtPanel.setMargins(Style::PIXEL, 3, Style::PIXEL, 3, Style::PIXEL, 0, Style::PIXEL, 0);
 			albumArtPanel.setSize(Style::PIXEL, 280, Style::PIXEL, 280);
 			albumArtPanel.setDisplay(Style::INLINE_BLOCK);
 			//albumArtPanel.setBorderColor(0xB9090BFF, 0xB9FF0BFF, 0xB90FFBFF, 0xB9090BFF);
